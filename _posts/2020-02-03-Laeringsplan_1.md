@@ -11,19 +11,19 @@ Trin 1
 Formålet med første iteration er at have et minimum produkt, ud for de krav vi har indsamlet hos PO.
 
 Jeg skal kunne opsætte et basalt workflow og have en mindre forståelse for DevOps.
-  1. Jeg researcher for at kunne forstå begreberne der bliver brugt. Samt danne et overblik over, hvordan DevOps fungere og hænger sammen.
+  1. Jeg researcher for at kunne forstå begreberne der bliver brugt. Samt danne et overblik over, hvordan DevOps fungere og hænger sammen.<br>
     - Google, Stackoverflow
     - Snakker med underviser
     - Snakker med medstuderende
     - Bruger InLearning
     - Finder videoer på nettet
-  2. Jeg finder frem til en basal pipeline der giver mening for projektet.
+  2. Jeg finder frem til en basal pipeline der giver mening for projektet.<br>
     - Snakker med medstuderende om hvad de har gjort
     - Snakker med underviser / vejleder for evt. råd
     - Gennemgår / bruger den viden jeg har indsamlet
-  4. Jeg skal opsætte den basale pipeline.
+  4. Jeg skal opsætte den basale pipeline.<br>
     - Gennemgår tutorials på nettet, enten videoer eller skrevet fra f.eks. Medium
-  5. Jeg kigger på hvor effektiv min løsning er i forhold til Continues Deployment.
+  5. Jeg kigger på hvor effektiv min løsning er i forhold til Continues Deployment.<br>
     - Spørger min produktgruppe om tilfredsheden omkring den valgte pipeline / workflow
     - Kigger på, hvor lang tid det tager at gå fra Commit til Deployment.
 
