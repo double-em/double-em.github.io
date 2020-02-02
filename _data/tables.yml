@@ -12,7 +12,7 @@
           criterias:
             - line: Jeg kan forstå en faglig tekst omkring DevOps
             - line: Jeg kender til konceptet bag DevOps
-          evaluations: 
+          evaluations:
 
         - name: Jeg finder frem til en basal pipeline der giver mening for projektet.
           tools:
@@ -21,14 +21,14 @@
             - line: Gennemgår / bruger den viden jeg har indsamlet
           criterias:
             - line: Det er en pipeline der er kendt og dokumenteret
-          evaluations: 
-        
+          evaluations:
+
         - name: Jeg skal opsætte den basale pipeline.
           tools:
             - line: Gennemgår tutorials på nettet, enten videoer eller skrevet fra f.eks. Medium
           criterias:
             - line: Den kan bygge et projekt succesfyldt
-          evaluations: 
+          evaluations:
 
         - name: Jeg kigger på hvor effektiv min løsning er i forhold til Continues Deployment.
           tools:
@@ -36,4 +36,4 @@
             - line: Kigger på, hvor lang tid det tager at gå fra Commit til Deployment
           criterias:
             - line: Jeg har en idé om, hvor god løsningen er
-          evaluations: 
+          evaluations:

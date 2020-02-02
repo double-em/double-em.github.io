@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Læringsplaner
+title: Laeringsplaner
 permalink: /blog/categories/Laeringsplaner
 ---
  

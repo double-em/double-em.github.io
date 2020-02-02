@@ -9,7 +9,7 @@ thumbnail: learn.png
 ---
 Formålet med første iteration er at have et minimalt produkt, ud for de krav vi har indsamlet hos PO.
 
-{% include table.html %}
+{%- include table.html -%}
 
 <p>START 2</p>
 
@@ -28,7 +28,7 @@ Formålet med første iteration er at have et minimalt produkt, ud for de krav v
     <td>Test</td>
     <td>Test</td>
   </tr>
-  {% for goal in site.data.tables[0].goals %}
+  {% for goal in table %}
     {% for technique in goal.techniques %}
       <tr>
         <td>{{ goal.name }}</td>
