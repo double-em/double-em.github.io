@@ -11,6 +11,44 @@ Formålet med første iteration er at have et minimalt produkt, ud for de krav v
 
 {% include table.html %}
 
+<p>START 2</p>
+
+{% assign table = site.data.tables | where: "name", "Læringsplan_1" %}
+
+<table>
+  <tr>
+    <th>Mål</th>
+    <th>Teknik / Værktøj</th>
+    <th>Kriterier</th>
+    <th>Evaluering</th>
+  </tr>
+  {% for goal in table.goals %}
+    {% for technique in goal.techniques %}
+      <tr>
+        <td>{{ goal.name }}</td>
+        <td>
+          {{ technique.name }}<br><br>
+          {% for tool in technique.tools %}
+          - {{ tool.line }}<br>
+          {% endfor %}
+        </td>
+        <td>
+          {% for criteria in technique.criterias %}
+          {{ criteria.line }}<br><br>
+          {% endfor %}
+        </td>
+        <td>
+          {% for evaluation in technique.evaluations %}
+          {{ evaluation.line }}<br><br>
+          {% endfor %}
+        </td>
+      </tr>
+    {% endfor %}
+  {% endfor %}
+</table>
+
+<p>END</p>
+
 Mål | Teknik / Værktøj | Kriterier | Evaluering
 ----|------------------|-----------|-----------
 Jeg skal kunne opsætte et basalt workflow og have en mindre forståelse for DevOps. | Jeg researcher for at kunne forstå begreberne der bliver brugt. Samt danne et overblik over, hvordan DevOps fungere og hænger sammen.<br><br>- Google, Stackoverflow<br>- Snakker med underviser<br>- Snakker med medstuderende<br>- Bruger InLearning<br>- Finder videoer på nettet | Jeg kan forstå en faglig tekst omkring DevOps<br><br>Jeg kender til konceptet bag DevOps | 
