@@ -20,16 +20,16 @@ urls:
       url: /blog
     #- text: Shop
     #  url : /shop
-    - text: Sample Page
-      url: /sample-page
-    - text: Contact Me
-      url : /contact
+    #- text: Sample Page
+    #  url: /sample-page
+    #- text: Contact Me
+    #  url : /contact
 
 # Author Details
 
 author_logo: #profile.jpg
 author: Mike Meldgaard
-author_bio: Hi, My Name is Sujay Kundu. I love to Code and Design. devlopr-jekyll is a theme built for developers.  
+author_bio: Hi!  
 author_email: "meldgaardmike@gmail.com"
 author_location: Denmark
 author_website_url: "https://zxited.github.io"
@@ -75,7 +75,7 @@ author_education_details:
 
 author_project_details:
               - project_thumbnail: gamershub.png
-                project_title: Trendlog Productoin Administrator
+                project_title: Trendlog Production Administrator
                 project_description: Mobile Application that let's a user see and get predition on their production and future errors or maintenance.
                 project_url: https://github.io
                 visibility: true
