@@ -1,4 +1,4 @@
-- name: Læringsplan_1
+- name: Laeringsplan_1
   goals:
     - name: Jeg skal kunne opsætte et basalt workflow og have en mindre forståelse for DevOps.
       techniques:
