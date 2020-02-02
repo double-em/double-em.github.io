@@ -2,7 +2,7 @@
 # Site Settings
 
 title: Mike Meldgaard  # Your Title 
-subtitle: Software Developer / Datamatiker 4. Sem. Student
+subtitle: Software Developer / Datamatiker Student
 email: meldgaardmike@gmail.com  # Your Email
 description: >-  
   Software Developer
@@ -59,13 +59,19 @@ author_work_experiences:
               description: Customer Support, Diagnosis and Error Correction, Software / Server Solutions Setups and Upgrades
               visibility: true
             - company_name: #Microsoft
-              company_logo: #microsoft.png
+              company_logo: noimage.jpg
               company_url: #https://microsoft.com
               designation: Electrician
               description: House and Powerplant Installations
               visibility: true
 
 author_education_details:
+              - college_logo: ucl.svg
+                college_name: UCL - Erhvervsakademi og Professionshøjskole
+                college_url: https://ucl.dk
+                college_degree: Erhvervsakademisk
+                description: Datamatiker
+                visibility: true
               - college_logo: sde.svg
                 college_name: Syddansk Erhvervsskole
                 college_url: https://sde.dk
