@@ -10,15 +10,28 @@ thumbnail: learn.png
 Trin 1
 Formålet med første iteration er at have et minimum produkt, ud for de krav vi har indsamlet hos PO.
 
-Jeg skal kunne opsætte et basalt workflow og skabe en forståelse for DevOps.
-  - Begrebsdannelse.
-  - Jeg skal finde mere om hvordan DevOps fungere og danne et overblik.
-  - Jeg skal så kunne finde frem til en meget basal form for at kunne opsætte en pipeline.
-  - Så jeg skal undersøge forskellige former for pipelines.
-  - Jeg skal finde ud af hvordan de forskellige pipelines fungere.
-  - Jeg skal så kunne finde den bedste opsætning ud for den basale viden jeg har anskaffet.
+Jeg skal kunne opsætte et basalt workflow og have en mindre forståelse for DevOps.
+  1. Jeg researcher for at kunne forstå begreberne der bliver brugt. Samt danne et overblik over, hvordan DevOps fungere og hænger sammen.
+    - Google, Stackoverflow
+    - Snakker med underviser
+    - Snakker med medstuderende
+    - Bruger InLearning
+    - Finder videoer på nettet
+  2. Jeg finder frem til en basal pipeline der giver mening for projektet.
+    - Snakker med medstuderende om hvad de har gjort
+    - Snakker med underviser / vejleder for evt. råd
+    - Gennemgår / bruger den viden jeg har indsamlet
+  4. Jeg skal opsætte den basale pipeline.
+    - Gennemgår tutorials på nettet, enten videoer eller skrevet fra f.eks. Medium
+  5. Jeg kigger på hvor effektiv min løsning er i forhold til Continues Deployment.
+    - Spørger min produktgruppe om tilfredsheden omkring den valgte pipeline / workflow
+    - Kigger på, hvor lang tid det tager at gå fra Commit til Deployment.
 
-Jeg skal kunne have en lille forståelse for Machine Learning.
-  - Jeg skal skabe en begrebsforståelse
-  - Forstå hvilke typer af ML der findes.
-  - Indsamle viden på basalt niveau hvordan ML fungere.
+Jeg skal kunne have en lille forståelse for Machine Learning. Jeg skal udføre en meget lille form for analysering af noget data.
+  1. Jeg skaber en begrebsforståelse.
+  2. Jeg finder hvilke typer af ML der findes.
+  3. Jeg undersøger hvordan ML fungere på basalt niveau, hvad der driver det.
+  4. Jeg finder ud af hvordan det udføres i praktsis.
+  5. Jeg vælger hvilken type ML jeg skal bruge.
+  6. Jeg udføre min analyse.
+  7. Jeg reflektere over, hvad der skete og hvorfor det skete.
