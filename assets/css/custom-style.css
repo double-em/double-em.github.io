@@ -1,3 +1,9 @@
 body{
     background-color: #111;
 }
+
+.card-img-top {
+    width: 50%;
+    margin: auto;
+    justify-content: space-around;
+}
