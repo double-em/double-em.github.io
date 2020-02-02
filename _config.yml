@@ -27,7 +27,7 @@ urls:
 
 # Author Details
 
-author_logo: #profile.jpg
+author_logo: noimage.jpg
 author: Mike Meldgaard
 author_bio: Software Developer / Datamatiker 4. Sem. Student, Produktgruppe 15, Procesvejledning 8, ERFA Machine Learning 2, ERFA DevOps
 author_email: "meldgaardmike@gmail.com"
@@ -66,7 +66,7 @@ author_work_experiences:
               visibility: true
 
 author_education_details:
-              - college_logo: ucl.svg
+              - college_logo: ucl.jpg
                 college_name: UCL - Erhvervsakademi og Professionshøjskole
                 college_url: https://ucl.dk
                 college_degree: Erhvervsakademisk
@@ -103,8 +103,8 @@ highlighter: rouge
 permalink: pretty
 
 # pagination of posts
-paginate: 4
-per_page: 5
+paginate: 0
+per_page: 500
 paginate_path: "/blog/page/:num/"
 
 # Search ( add algolia credentials below )
