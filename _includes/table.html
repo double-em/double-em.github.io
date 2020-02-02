@@ -1,7 +1,6 @@
-Mål | Teknik / Værktøj | Kriterier | Evaluering
-----|------------------|-----------|-----------
+<p>START</p>
 
-{% assign table = site.data.tables | where: "name", include.tablename %}
+{% assign table = site.data.tables | where: "name", "Læringsplan_1" %}
 
 <table>
   <tr>
@@ -34,3 +33,5 @@ Mål | Teknik / Værktøj | Kriterier | Evaluering
     {% endfor %}
   {% endfor %}
 </table>
+
+<p>END</p>

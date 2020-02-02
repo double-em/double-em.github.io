@@ -9,7 +9,7 @@ thumbnail: learn.png
 ---
 Formålet med første iteration er at have et minimalt produkt, ud for de krav vi har indsamlet hos PO.
 
-{% include table.md tablename="Læringsplan_1" %}
+{% include table.html tablename="Læringsplan_1" %}
 
 Mål | Teknik / Værktøj | Kriterier | Evaluering
 ----|------------------|-----------|-----------
