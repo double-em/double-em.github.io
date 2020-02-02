@@ -1,6 +1,6 @@
-<p>START 11</p>
+<!--{% assign table = site.data.tables | where: "name", include.tablename %}-->
 
-{% assign table = site.data.tables | where: "name", include.tablename %}
+{% assign table = site.data.tables[include.tablenumber] %}
 
 <table style="border: solid;">
   <tr>
@@ -33,5 +33,3 @@
     {% endfor %}
   {% endfor %}
 </table>
-
-<p>END</p>

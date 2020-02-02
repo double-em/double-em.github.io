@@ -9,51 +9,9 @@ thumbnail: learn.png
 ---
 Formålet med første iteration er at have et minimalt produkt, ud for de krav vi har indsamlet hos PO.
 
-{%- include table.html tablename="Laeringsplan_1" -%}
+<!--{%- include table.html tablename="Laeringsplan_1" -%}-->
 
-<p>START 2</p>
-
-{% assign table = site.data.tables | where: "name", "Laeringsplan_1" %}
-
-<table>
-  <tr>
-    <th>Mål</th>
-    <th>Teknik / Værktøj</th>
-    <th>Kriterier</th>
-    <th>Evaluering</th>
-  </tr>
-  <tr>
-    <td>Test</td>
-    <td>Test</td>
-    <td>Test</td>
-    <td>Test</td>
-  </tr>
-  {% for goal in table %}
-    {% for technique in goal.techniques %}
-      <tr>
-        <td>{{ goal.name }}</td>
-        <td>
-          {{ technique.name }}<br><br>
-          {% for tool in technique.tools %}
-          - {{ tool.line }}<br>
-          {% endfor %}
-        </td>
-        <td>
-          {% for criteria in technique.criterias %}
-          {{ criteria.line }}<br><br>
-          {% endfor %}
-        </td>
-        <td>
-          {% for evaluation in technique.evaluations %}
-          {{ evaluation.line }}<br><br>
-          {% endfor %}
-        </td>
-      </tr>
-    {% endfor %}
-  {% endfor %}
-</table>
-
-<p>END</p>
+{% include table.html tablenumber=0 %}
 
 Mål | Teknik / Værktøj | Kriterier | Evaluering
 ----|------------------|-----------|-----------
