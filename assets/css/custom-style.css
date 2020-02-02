@@ -6,3 +6,7 @@ body{
     width: 50% !important;
     margin: auto;
 }
+
+.learnTable th,td {
+    border: 1px solid;
+}
