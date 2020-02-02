@@ -10,7 +10,7 @@ thumbnail: learn.png
 Formålet med første iteration er at have et minimum produkt, ud for de krav vi har indsamlet hos PO.
 
 **Jeg skal kunne opsætte et basalt workflow og have en mindre forståelse for DevOps.**
-*. Jeg researcher for at kunne forstå begreberne der bliver brugt. Samt danne et overblik over, hvordan DevOps fungere og hænger sammen.
+* Jeg researcher for at kunne forstå begreberne der bliver brugt. Samt danne et overblik over, hvordan DevOps fungere og hænger sammen.
 
   * Metoder:
     * Google, Stackoverflow
