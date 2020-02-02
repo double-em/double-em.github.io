@@ -3,7 +3,6 @@ body{
 }
 
 .card-img-top {
-    width: 50%;
+    width: 50% !important;
     margin: auto;
-    justify-content: space-around;
 }
