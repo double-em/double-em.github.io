@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Læringsplan 1 03/02 - 16/02 (2020)"
+title:  "Læringsplan 1"
 author: Mike Meldgaard
 date:   2020-02-03 #01:00:12 +0530
 category: Læringsplaner
-summary: Læringsplan for første cyklys.
-thumbnail: hello.jpg
+summary: 03/02 - 16/02 (2020) Læringsplan for første cyklys.
+thumbnail: learn.png
 ---
 Trin 1
 Formålet med første iteration er at have et minimum produkt, ud for de krav vi har indsamlet hos PO.
