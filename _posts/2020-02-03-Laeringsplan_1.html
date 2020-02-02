@@ -28,7 +28,7 @@ Formålet med første iteration er at have et minimalt produkt, ud for de krav v
     <td>Test</td>
     <td>Test</td>
   </tr>
-  {% for goal in table.goals %}
+  {% for goal in site.data.tables[0].goals %}
     {% for technique in goal.techniques %}
       <tr>
         <td>{{ goal.name }}</td>
