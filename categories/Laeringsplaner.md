@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Laeringsplaner
-permalink: /blog/categories/Laeringsplaner
+title: Læringsplaner
+permalink: /blog/categories/Læringsplaner
 ---
  
 <h5> Posts by Category : {{ page.title }} </h5>
