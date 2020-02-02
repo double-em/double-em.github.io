@@ -37,3 +37,62 @@
           criterias:
             - line: Jeg har en idé om, hvor god løsningen er
           evaluations:
+
+    - name: Jeg skal kunne have en lille forståelse for Machine Learning. Jeg skal udføre en meget lille form for analysering af noget data.
+      techniques:
+        - name: Jeg researcher emnet for, at danne en begrebsforståelse, samt finde typer af ML for at skabe et overblik.
+          tools:
+            - line: Læse udleveret materiale fra underviser
+            - line: Stackoverflow, Google, Internettet
+            - line: Snakke med medstuderende
+          criterias:
+            - line: Jeg kan forstå en samtale om emnet
+            - line: Jeg kender til flere forskellige typer af ML
+          evaluations:
+
+        - name: Jeg undersøger hvordan ML fungere på basalt niveau, hvad der driver det.
+          tools:
+            - line: Kurser, InLearning
+            - line: Online videoer, litteratur
+            - line: Sparring med medstuderende
+            - line: Samtale med underviser / vejleder
+          criterias:
+            - line: Jeg kender til det der ligger under motorhjelmen
+          evaluations:
+
+        - name: Jeg finder ud af hvordan det bruges i virkeligheden.
+          tools:
+            - line: Nyheder
+            - line: Opslag fra Internettet
+            - line: Kigge på tech firmaers websites f.eks. Microsoft, Google, Facebook, Amazon
+          criterias:
+            - line: Jeg har eksempler på virksomheder som bruger ML
+            - line: Jeg kender til forskellige brug af ML i virkeligheden
+          evaluations:
+
+        - name: Jeg vælger hvilken læeringstype og/eller algoritmer jeg skal bruge.
+          tools:
+            - line: Undersøger hvilke måder maskiner lære på
+            - line: Materiale på openai's website
+            - line: Online litteratur
+          criterias:
+            - line: Jeg kender til forskellige metoder maksiner lære
+            - line: Jeg kender til forskellige algoritmer brugt til ML
+          evaluations:
+
+        - name: Jeg udføre min analyse.
+          tools:
+            - line: Følge online tutorials
+          criterias:
+            - line: Jeg får et resultat på den data jeg har givet
+          evaluations:
+
+        - name: Jeg reflektere over, hvad der skete og hvorfor det skete.
+          tools:
+            - line: Fik jeg faktisk en maskine til at lære?
+            - line: Er resultatet præcist / realistisk?
+            - line: Gennemgå hvorfor det gik godt, eller hvorfor det ikke gjorde
+            - line: Notere mine svar og resultater
+          criterias:
+            - line: Jeg har notater omkring mine resultater
+          evaluations:
