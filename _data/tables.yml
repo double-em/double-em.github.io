@@ -1,0 +1,39 @@
+- name: Læringsplan_1
+  goals:
+    - name: Jeg skal kunne opsætte et basalt workflow og have en mindre forståelse for DevOps.
+      techniques:
+        - name: Jeg researcher for at kunne forstå begreberne der bliver brugt. Samt danne et overblik over, hvordan DevOps fungere og hænger sammen.
+          tools:
+            - line: Google, Stackoverflow
+            - line: Snakker med underviser
+            - line: Snakker med medstuderende
+            - line: Bruger InLearning
+            - line: Finder videoer på nettet
+          criterias:
+            - line: Jeg kan forstå en faglig tekst omkring DevOps
+            - line: Jeg kender til konceptet bag DevOps
+          evaluations: 
+
+        - name: Jeg finder frem til en basal pipeline der giver mening for projektet.
+          tools:
+            - line: Snakker med medstuderende om hvad de har gjort
+            - line: Snakker med underviser / vejleder for evt. råd
+            - line: Gennemgår / bruger den viden jeg har indsamlet
+          criterias:
+            - line: Det er en pipeline der er kendt og dokumenteret
+          evaluations: 
+        
+        - name: Jeg skal opsætte den basale pipeline.
+          tools:
+            - line: Gennemgår tutorials på nettet, enten videoer eller skrevet fra f.eks. Medium
+          criterias:
+            - line: Den kan bygge et projekt succesfyldt
+          evaluations: 
+
+        - name: Jeg kigger på hvor effektiv min løsning er i forhold til Continues Deployment.
+          tools:
+            - line: Spørger min produktgruppe om tilfredsheden omkring den valgte pipeline / workflow
+            - line: Kigger på, hvor lang tid det tager at gå fra Commit til Deployment
+          criterias:
+            - line: Jeg har en idé om, hvor god løsningen er
+          evaluations: 
