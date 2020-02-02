@@ -76,7 +76,7 @@ author_education_details:
 author_project_details:
               - project_thumbnail: gamershub.png
                 project_title: Trendlog Production Administrator
-                project_description: Mobile Application that let's a user see and get predition on their production and future errors or maintenance.
+                project_description: Mobile Application that let's a user see and get predictions on their production and future errors or maintenance.
                 project_url: https://github.io
                 visibility: true
               - project_thumbnail: programmingebooks.png
@@ -86,10 +86,10 @@ author_project_details:
                 visibility: false
                 
 #for comments using disqus
-disqus_shortname: sujay-kundu  
+disqus_shortname: 
 
 # wakatime username
-wakatime_username: sujaykundu777
+wakatime_username: 
 
 # syntax highlighter
 markdown: kramdown
