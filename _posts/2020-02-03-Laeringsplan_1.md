@@ -7,20 +7,19 @@ category: Læringsplaner
 summary: 03/02 - 16/02 (2020) Læringsplan for første cyklys.
 thumbnail: learn.png
 ---
-Trin 1
 Formålet med første iteration er at have et minimum produkt, ud for de krav vi har indsamlet hos PO.
 
 **Jeg skal kunne opsætte et basalt workflow og have en mindre forståelse for DevOps.**
 1. Jeg researcher for at kunne forstå begreberne der bliver brugt. Samt danne et overblik over, hvordan DevOps fungere og hænger sammen.
 
-    Metoder:
+    * Metoder:
       - Google, Stackoverflow
       - Snakker med underviser
       - Snakker med medstuderende
       - Bruger InLearning
       - Finder videoer på nettet
 
-    Krav:
+    * Krav:
       - Jeg kan forstå en faglig tekst omkring DevOps
       - Jeg kender til konceptet bag DevOps
 
