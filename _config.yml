@@ -6,9 +6,9 @@ subtitle: Software Developer Student
 email: meldgaardmike@gmail.com  # Your Email
 description: >-  
   Software Developer
-baseurl: "/devlopr-starter" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://zxited.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: xplor4r
+#twitter_username: xplor4r
 github_username:  Zxited
 
 # Navigation 
@@ -18,8 +18,8 @@ urls:
       url: /
     - text: Blog
       url: /blog
-    - text: Shop
-      url : /shop
+    #- text: Shop
+    #  url : /shop
     - text: Sample Page
       url: /sample-page
     - text: Contact Me
@@ -27,28 +27,28 @@ urls:
 
 # Author Details
 
-author_logo: profile.jpg
-author: Sujay Kundu
+author_logo: #profile.jpg
+author: Mike Meldgaard
 author_bio: Hi, My Name is Sujay Kundu. I love to Code and Design. devlopr-jekyll is a theme built for developers.  
-author_email: "sujaykundu777@gmail.com"
-author_location: India
-author_website_url: "https://sujaykundu.com"
+author_email: "meldgaardmike@gmail.com"
+author_location: Denmark
+author_website_url: "https://zxited.github.io"
 
 # social links
-twitter_username: xplor4r
-github_username:  sujaykundu777
-facebook_username: sujay.kundu2
-linkedin_username: sujaykundu
-behance_username: sujaykundu
-instagram_username: xplor4r
-medium_username: sujaykundu
-telegram_username: sujaykundu
-dribbble_username: sujaykundu777
-flickr_username: sujaykundu777
+#twitter_username: xplor4r
+github_username:  Zxited
+#facebook_username: sujay.kundu2
+#linkedin_username: sujaykundu
+#behance_username: sujaykundu
+#instagram_username: xplor4r
+#medium_username: sujaykundu
+#telegram_username: sujaykundu
+#dribbble_username: sujaykundu777
+#flickr_username: sujaykundu777
 
 # Choose what to show ( true - display or false - don't display)
-show_author_work_experiences: true
-show_author_education_details: true
+show_author_work_experiences: false
+show_author_education_details: false
 show_author_project_details: true
 
 author_work_experiences: 
@@ -75,15 +75,15 @@ author_education_details:
 
 author_project_details:
               - project_thumbnail: gamershub.png
-                project_title: Gamers Hub
-                project_description: A Platform built for Gamers and Game Devs
-                project_url: https://gamershub.in
+                project_title: Trendlog Productoin Administrator
+                project_description: Mobile Application that let's a user see and get predition on their production and future errors or maintenance.
+                project_url: https://github.io
                 visibility: true
               - project_thumbnail: programmingebooks.png
                 project_title: Programming Ebooks
                 project_description: A Platform to easily find and read programming books
                 project_url: https://programmingebooks.com
-                visibility: true
+                visibility: false
                 
 #for comments using disqus
 disqus_shortname: sujay-kundu  
