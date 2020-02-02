@@ -10,17 +10,17 @@ thumbnail: learn.png
 Trin 1
 Formålet med første iteration er at have et minimum produkt, ud for de krav vi har indsamlet hos PO.
 
-Jeg skal kunne opsætte et basalt workflow og have en mindre forståelse for DevOps.
+**Jeg skal kunne opsætte et basalt workflow og have en mindre forståelse for DevOps.**
 1. Jeg researcher for at kunne forstå begreberne der bliver brugt. Samt danne et overblik over, hvordan DevOps fungere og hænger sammen.
 
-    Metoder:
+  Metoder:
     - Google, Stackoverflow
     - Snakker med underviser
     - Snakker med medstuderende
     - Bruger InLearning
     - Finder videoer på nettet
 
-    Krav:
+  Krav:
     - Jeg kan forstå en faglig tekst omkring DevOps
     - Jeg kender til konceptet bag DevOps
 
@@ -51,7 +51,7 @@ Jeg skal kunne opsætte et basalt workflow og have en mindre forståelse for Dev
     Krav:
     - Jeg har en idé om, hvor god løsningen er
 
-Jeg skal kunne have en lille forståelse for Machine Learning. Jeg skal udføre en meget lille form for analysering af noget data.
+**Jeg skal kunne have en lille forståelse for Machine Learning. Jeg skal udføre en meget lille form for analysering af noget data.**
 1. Jeg researcher emnet for, at danne en begrebsforståelse, samt finde typer af ML for at skabe et overblik.<br>
 
     Metoder:
@@ -85,6 +85,7 @@ Jeg skal kunne have en lille forståelse for Machine Learning. Jeg skal udføre 
 
     Metoder:
     - Følge online tutorials<br>
+
 7. Jeg reflektere over, hvad der skete og hvorfor det skete.<br>
 
     Metoder:
