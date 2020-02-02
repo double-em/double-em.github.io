@@ -1,8 +1,8 @@
-<p>START 1</p>
+<p>START 11</p>
 
-{% assign table = site.data.tables | where: "name", "Laeringsplan_1" %}
+{% assign table = site.data.tables | where: "name", include.tablename %}
 
-<table>
+<table style="border: solid;">
   <tr>
     <th>Mål</th>
     <th>Teknik / Værktøj</th>
