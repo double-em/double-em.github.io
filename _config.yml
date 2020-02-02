@@ -2,7 +2,7 @@
 # Site Settings
 
 title: Mike Meldgaard  # Your Title 
-subtitle: Software Developer Student 
+subtitle: Software Developer / Datamatiker 4. Sem. Student
 email: meldgaardmike@gmail.com  # Your Email
 description: >-  
   Software Developer
@@ -29,7 +29,7 @@ urls:
 
 author_logo: #profile.jpg
 author: Mike Meldgaard
-author_bio: Hi!  
+author_bio: Software Developer / Datamatiker 4. Sem. Student, Produktgruppe 15, Procesvejledning 8, ERFA Machine Learning 2, ERFA DevOps
 author_email: "meldgaardmike@gmail.com"
 author_location: Denmark
 author_website_url: "https://zxited.github.io"
