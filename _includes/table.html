@@ -11,8 +11,14 @@
   </tr>
   {% for goal in table.goals %}
     {% for technique in goal.techniques %}
+      {% assign nameDisplay = true %}
       <tr>
-        <td>{{ goal.name }}</td>
+        <td>
+          {% if nameDisplay == true%}
+            {{ goal.name }}
+            {% assign nameDisplay = false %}
+          {% endif %}
+        </td>
         <td>
           {{ technique.name }}<br><br>
           {% for tool in technique.tools %}
