@@ -10,11 +10,11 @@
     <th>Evaluering</th>
   </tr>
   {% for goal in table.goals %}
+  {% assign nameDisplay = true %}
     {% for technique in goal.techniques %}
-      {% assign nameDisplay = true %}
       <tr>
         <td>
-          {% if nameDisplay == true%}
+          {% if nameDisplay == true %}
             {{ goal.name }}
             {% assign nameDisplay = false %}
           {% endif %}
