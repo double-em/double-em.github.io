@@ -2,7 +2,7 @@
 layout: post
 title:  "Machine Learning Udvikling 1"
 author: Mike Meldgaard
-date:   2020-02-03 #01:00:12 +0530
+date:   2020-02-10 #01:00:12 +0530
 category: MachineLearning
 summary: Machine Learning de første skridt
 thumbnail: learn.png
