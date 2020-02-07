@@ -41,4 +41,10 @@ Dette problem ved at fastsætte en huspris ville være et Reggression problem, d
 
 For at finde ud af, hvor præcis en model er findes der forskellige måder at regne det på afhængig af typen af model.
 
-Ved Classification er nok den mest simple. Da man dividere rigtige svar med antalle af forespørgsler.
+Ved Classification er nok den mest simple. Da man dividere rigtige svar med antallet af forespørgsler.
+
+Ved Linear Regression beregner man R^2 i stedet for metrisk. Da man i Regression måler, hvor tæt den kommer på målet.
+
+Ved Ridge Regression beregner man OLS + Sum af Koefficienterne^2 * Alpha.
+
+Ved Lasso Regression bruger man OLS + Abselut værdi af hver Koefficient^2 * Alpha
