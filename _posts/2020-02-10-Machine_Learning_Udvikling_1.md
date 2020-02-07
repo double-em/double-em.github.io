@@ -3,7 +3,7 @@ layout: post
 title:  "Machine Learning Udvikling 1"
 author: Mike Meldgaard
 date:   2020-02-03 #01:00:12 +0530
-category: Machine Learning
+category: MachineLearning
 summary: Machine Learning de første skridt
 thumbnail: learn.png
 ---
@@ -48,3 +48,5 @@ Ved Linear Regression beregner man R^2 i stedet for metrisk. Da man i Regression
 Ved Ridge Regression beregner man OLS + Sum af Koefficienterne^2 * Alpha.
 
 Ved Lasso Regression bruger man OLS + Abselut værdi af hver Koefficient^2 * Alpha
+
+Når man skal effektivisere en model skal man tænke over Discision Boundary, Model Complecity, Overfitting og Underfitting.
