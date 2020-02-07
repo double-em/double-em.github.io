@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Machine Learning
-permalink: /blog/categories/machinelearning
+permalink: /blog/categories/MachineLearning
 ---
  
 <h5> Posts by Category : {{ page.title }} </h5>
