@@ -96,7 +96,7 @@ Dette er en guide til hvordan man får Minikube(Lokal Kubernetes) til at køre p
 
     * Tilføj brugeren til gruppe, så vi igen ikke har behov for root
     `sudo usermod -aG libvirt $(whoami) && newgrp libvirt`
-    Denne kommando opretter også en nye gruppe der hedde `libvirt` i tilfælde af den ikke eksistere.
+    Denne kommando opretter også en nye gruppe der hedde **libvirt** i tilfælde af den ikke eksistere.
 
     * Download Minikube
     `curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64`
@@ -122,25 +122,31 @@ Dette er en guide til hvordan man får Minikube(Lokal Kubernetes) til at køre p
     * Kør Minikube (Bare Metal / Direkte på maskinens OS)
     Tilføj port-rækkevidden [8443 10250] til firewallen, da disse porte bliver brugt til kommunikationen udadtil
     `firewall-cmd --add-port=8443-10250/tcp`
-    For at tilføje firewall reglen permanent, så den er aktiv efter genstart
-    `firewall-cmd --add-port=8443-10250/tcp --permanent`
-    Deaktiver SELinux for at den ikke blockere starten af minikube
-    `sudo setenforce 0`
-    Dette deaktivere kun for den nuværende session og SELinux køre igen efter genstart.
-    For at deaktivere SELinux permanent skal man redigere .code /etc/sysconfig/selinux - filen. Dette kan gøres med en text-editor som f.eks. nano
-    `nano /etc/sysconfig/selinux`
-    Hvor man ændre linjen `SELINUX=enforcing` til `SELinux=disabled`
-    Herefter genstarter man med `reboot`
-    Brug `sestatus` for at tjekke om SELinux er slået fra. Kommandoen skulle gerne vise `Permissive` under `Current mode` eller `Disabled`, hvis SELinux permanent er deaktiveret.
-    Minikube kan herefter køres (Kræver root rettigheder)
-    `sudo minikube start --vm-driver none`
+
+        For at tilføje firewall reglen permanent, så den er aktiv efter genstart
+        `firewall-cmd --add-port=8443-10250/tcp --permanent`
+
+        Deaktiver SELinux for at den ikke blockere starten af minikube
+        `sudo setenforce 0`
+        Dette deaktivere kun for den nuværende session og SELinux køre igen efter genstart.
+
+        For at deaktivere SELinux permanent skal man redigere **/etc/sysconfig/selinux** - filen. Dette kan gøres med en text-editor som f.eks. nano
+        `nano /etc/sysconfig/selinux`
+        Hvor man ændre linjen **SELINUX=enforcing** til **SELinux=disabled**
+        
+        Herefter genstarter man med **reboot**
+
+        Brug **sestatus** for at tjekke om SELinux er slået fra. Kommandoen skulle gerne vise **Permissive** under **Current mode** eller **Disabled**, hvis SELinux permanent er deaktiveret.
+
+        Minikube kan herefter køres (Kræver root rettigheder)
+        `sudo minikube start --vm-driver none`
 
 6. Konfigurering af Minikube (Optional)
 Minikube har en række standard værdier man kan sætte for gøre start kommandoen mere simpel.
-Man kan sætte vm-driveren standard til f.eks. Docker
-`minikube config set vm-driver docker`
-På den måde slipper man for at skrive `--vm-driver docker`
-hver gang minikube skal startes.
+
+    Man kan sætte vm-driveren standard til f.eks. Docker
+    `minikube config set vm-driver docker`
+    På den måde slipper man for at skrive **--vm-driver docker** hver gang minikube skal startes.
 
 **Kilder**
 * https://medium.com/learning-cloud-native-go/setting-up-a-fedora-31-workstation-for-go-cloud-native-application-development-77700467bf7b
