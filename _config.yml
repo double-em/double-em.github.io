@@ -98,7 +98,7 @@ disqus_shortname:
 wakatime_username: 
 
 # syntax highlighter
-markdown: kramdown
+markdown: kramdown-gfm
 highlighter: rouge
 permalink: pretty
 
