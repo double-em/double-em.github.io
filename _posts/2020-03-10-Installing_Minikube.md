@@ -158,7 +158,7 @@ Minikube har en række standard værdier man kan sætte for gøre start kommando
     For at se alle konfigurerbar værdier kan man bruge
     `minikube config -h`
 
-    **NOTE:** Hvis man skriver **sudo** foran alle config kommandoerne, så bliver de sat for root brugeren og ikke den bruger der skriver kommandoen. Det er derfor vigtigt, at huske om man bruger en **vm-driver** der kræver root rettigheder eller ej, da man så skal huske at sætte værdierne for den rettige bruger.
+    **NOTE:** Hvis man skriver **sudo** foran alle config kommandoerne, så bliver de sat for root brugeren og ikke den bruger der skriver kommandoen. Det er derfor vigtigt, at huske om man bruger en **vm-driver** der kræver root rettigheder eller ej, da man så skal huske at sætte værdierne for den rigtige bruger.
 
 
 **Kilder**
