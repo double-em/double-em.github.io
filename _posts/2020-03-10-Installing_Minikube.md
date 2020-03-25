@@ -5,7 +5,7 @@ author: Mike Meldgaard
 date:   2020-03-25 #01:00:12 +0530
 category: DevOps
 summary: Installering og opsætning af Minikube, samt kørsel.
-thumbnail: learn.png
+thumbnail: development.png
 ---
 Dette er en guide til hvordan man får Minikube(Lokal Kubernetes) til at køre på en Linux Fedora maskine.
 

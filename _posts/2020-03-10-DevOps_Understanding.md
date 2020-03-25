@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DevOps Udvikling 1"
+title:  "DevOps Fundamental Begrebsdannelse"
 author: Mike Meldgaard
 date:   2020-03-10 #01:00:12 +0530
 category: DevOps

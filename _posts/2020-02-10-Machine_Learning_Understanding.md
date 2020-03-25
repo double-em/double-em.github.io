@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Machine Learning Udvikling 1"
+title:  "Machine Learning Fundamental Begrebsdannelse"
 author: Mike Meldgaard
 date:   2020-02-10 #01:00:12 +0530
 category: MachineLearning
