@@ -127,7 +127,7 @@ Dette er en guide til hvordan man får Minikube(Lokal Kubernetes) til at køre p
     Deaktiver SELinux for at den ikke blockere starten af minikube
     `sudo setenforce 0`
     Dette deaktivere kun for den nuværende session og SELinux køre igen efter genstart.
-    For at deaktivere SELinux permanent skal man redigere `/etc/sysconfig/selinux` - filen. Dette kan gøres med en text-editor som f.eks. nano
+    For at deaktivere SELinux permanent skal man redigere .code /etc/sysconfig/selinux - filen. Dette kan gøres med en text-editor som f.eks. nano
     `nano /etc/sysconfig/selinux`
     Hvor man ændre linjen `SELINUX=enforcing` til `SELinux=disabled`
     Herefter genstarter man med `reboot`
