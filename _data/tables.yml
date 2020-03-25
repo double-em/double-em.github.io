@@ -1,6 +1,6 @@
 - name: Laeringsplan_1
   goals:
-    - name: Jeg skal kunne opsætte et basalt workflow og have en mindre forståelse for DevOps.
+    - name: (DevOps) Jeg skal kunne opsætte et basalt workflow og have en mindre forståelse for DevOps.
       techniques:
         - name: Jeg researcher for at kunne forstå begreberne der bliver brugt. Samt danne et overblik over, hvordan DevOps fungere og hænger sammen.
           tools:
@@ -42,7 +42,7 @@
           evaluations:
             - line: Igen har vi ikke noget til projektet, da vi ikke har noget system som sådan. Men i forhold til CD til min blog er det ganske udemærket, da den bygger og deployer automatisk.
 
-    - name: Jeg skal kunne have en lille forståelse for Machine Learning. Jeg skal udføre en meget lille form for analysering af noget data.
+    - name: (Machine Learning) Jeg skal kunne have en lille forståelse for Machine Learning. Jeg skal udføre en meget lille form for analysering af noget data.
       techniques:
         - name: Jeg researcher emnet for, at danne en begrebsforståelse, samt finde typer af ML for at skabe et overblik.
           tools:
@@ -94,7 +94,7 @@
           criterias:
             - line: Jeg får et resultat på den data jeg har givet
           evaluations:
-            - line: Dette har jeg ikke nået.
+            - line: Dette har jeg kun udført i Datacamp lektionerne.
 
         - name: Jeg reflektere over, hvad der skete og hvorfor det skete.
           tools:
@@ -105,4 +105,84 @@
           criterias:
             - line: Jeg har notater omkring mine resultater
           evaluations:
-            - line: Jeg har ingen resultater.
+            - line: Jeg har de forventet resultater baseret på Datacamp lektionerne.
+
+- name: Laeringsplan_2
+  goals:
+    - name: (DevOps) Jeg skal kunne sætte et workflow op med noget automatisering.
+      techniques:
+        - name: Jeg researcher de mere tekniske dele af Deployment i DevOps.
+          tools:
+            - line: Kubernetes kursus
+            - line: Snakke med underviser
+            - line: Bruge InLearning
+            - line: Finde guides på nettet
+          criterias:
+            - line: Jeg skal kunne forstå hvordan en automatiserings kæde ser ud.
+          evaluations:
+
+        - name: Jeg undersøger hvordan man Deployer en applikation ud til en container orchestrator.
+          tools:
+            - line: Kubernetes dokumentationen
+            - line: Kubernetes kursus
+            - line: Guides på nettet
+          criterias:
+            - line: Jeg skal kunne forstå hvordan man deployer en applikation ud til en container orchestrator.
+            - line: Jeg skal kunne komme med et eksempel på hvordan det ville kunne gøres for en given applikation.
+            - line: Jeg skal kunne nævne hver del i proccessen når man deployer en containerized applikation.
+          evaluations:
+
+        - name: Jeg laver forskellige forsøg med Deployment af små applikationer
+          tools:
+            - line: Minikube (Lokal Kubernetes)
+            - line: Kubectl
+            - line: Guides på nettet
+          criterias:
+            - line: Jeg skal have deployet minimum 1 applikation
+            - line: Jeg skal have deployet applikationer på forskellige måder
+          evaluations:
+
+        - name: Jeg evaluere over mine forskellige fund omkring automatisering.
+          tools:
+            - line: Gør brug af ERFA DevOps gruppen
+            - line: Snak med PO omkring deres setup
+            - line: Portefølje
+            - line: Stil kritiske spørgsmål overfor fundne f.eks. er de brugebare eller relevante for projektet?
+          criterias:
+            - line: Jeg har noter omkring mine fund
+            - line: Jeg har blog indlæg der dokumentere mine fund
+            - line: Jeg har en idé om hvad automatisering indebære
+          evaluations:
+
+    - name: (Machine Learning) Jeg skal kunne kode mit eget lille Machine Learning projekt
+      techniques:
+        - name: Jeg undersøger den mere tekniske og kodemæssige del af Machine Learning
+          tools:
+            - line: Datacamp PBA Track
+            - line: Artikler
+            - line: Guides på nettet til de forskellige frameworks
+          criterias:
+            - line: Jeg har en forståelse for hvorfor forskellige frameworks bruges
+            - line: Jeg har en forståelse for hvordan et Machine Learnings projekt er opstillet
+          evaluations:
+
+        - name: Jeg lære de forskellige frameworks at kende på meget basal plan og opsætter små forsøg
+          tools:
+            - line: Diverse forskellige frameworks
+            - line: Dokumentation fra de forskellige frameworks websider
+          criterias:
+            - line: Jeg har dannet et overblik over de forskellige frameworks der bruges
+            - line: Jeg har en forståelse for, hvorfor der findes forskellige måder at gøre tingene på afhængig af opgaven
+          evaluations:
+
+        - name: Jeg koder en lille prototybe der kan analysere den samme type data som bruges i vores projekt
+          tools:
+            - line: Visual Studio Code
+            - line: De frameworks jeg finder frem til
+            - line: Guides på nettet
+            - line: Artikler
+          criterias:
+            - line: Jeg skal kunne analysere data der minder om den vi skal bruge i projektet
+            - line: Jeg skal selv have kodet opsætningen af projektet
+          evaluations:
+

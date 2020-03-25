@@ -8,15 +8,32 @@ summary: 03/02 - 16/02 (2020) Læringsplan for første cyklys.
 thumbnail: learn.png
 ---
 Formålet med første iteration er at have et minimalt produkt, ud for de krav vi har indsamlet hos PO.
-<br><br>
 
-<h3>Læringsplan</h3>
+
+### Læringsplan 1
 {% include table.html tablenumber=0 %}
 
-<h3>Opsummering</h3>
-<p>Der har været en del udfordringer såsom jeg har været syg og skiftet medicin samt andre personlige forhold som har gjort at indsatsen ikke har været acceptabel ifølge mig selv. Jeg har dog stadig lært noget, men jeg føler ikke det har været tilstrækkeligt. Jeg har svært ved at dokumentere min læring og opdatere min blog, så det er noget jeg skal fokusere mere på. Samtidig skal jeg tage mig mere tid til studiet og prøve at udsætte diverse andre ting</p>
+### Opsummering
+Der har været en del udfordringer såsom jeg har været syg og skiftet medicin samt andre personlige forhold som har gjort at indsatsen ikke har været acceptabel ifølge mig selv. Jeg har dog stadig lært noget, men jeg føler ikke det har været tilstrækkeligt. Jeg har svært ved at dokumentere min læring og opdatere min blog, så det er noget jeg skal fokusere mere på. Samtidig skal jeg tage mig mere tid til studiet og prøve at udsætte diverse andre ting.
 
+Omkring projektets fremgang har vi en lille mobil platform og møder med PO en gang om måneden. Så projektets fregang er nok passende.
 
+Jeg skal blive bedre til at hænge op i mig selv og opdatere min blog.
+
+### Kilder brugt
+- <http://course18.fast.ai/lessonsml1/lesson1.html>
+
+- Datacamp PBA Track
+
+- <https://www.analyticsvidhya.com/blog/2018/10/predicting-stock-price-machine-learningnd-deep-learning-techniques-python/>
+
+- <https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/>
+
+- LinkedIn Learning "DevOps Fundamentals"
+
+- Udemy "Kubernetes Fundamentals"
+
+- <https://legacy.gitbook.com/book/leonardoaraujosantos/artificial-inteligence/details>
 <!--
 Mål | Teknik / Værktøj | Kriterier | Evaluering
 ----|------------------|-----------|-----------
