@@ -17,7 +17,7 @@ Dette er en guide til hvordan man får Minikube(Lokal Kubernetes) til at køre p
 2. **Installer Docker**
 
     * Ændre cgroups til 1 (Første metode)
-        * Installer din foretrukne text-editor (Jeg bruger nano her)
+        * Installer din foretrukne <code>text-editor</code> (Jeg bruger nano her)
         `sudo dnf install nano`
 
         * Rediger grub filen

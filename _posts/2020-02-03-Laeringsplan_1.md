@@ -16,6 +16,7 @@ Formålet med første iteration er at have et minimalt produkt, ud for de krav v
 <h3>Opsummering</h3>
 <p>Der har været en del udfordringer såsom jeg har været syg og skiftet medicin samt andre personlige forhold som har gjort at indsatsen ikke har været acceptabel ifølge mig selv. Jeg har dog stadig lært noget, men jeg føler ikke det har været tilstrækkeligt. Jeg har svært ved at dokumentere min læring og opdatere min blog, så det er noget jeg skal fokusere mere på. Samtidig skal jeg tage mig mere tid til studiet og prøve at udsætte diverse andre ting</p>
 
+
 <!--
 Mål | Teknik / Værktøj | Kriterier | Evaluering
 ----|------------------|-----------|-----------
