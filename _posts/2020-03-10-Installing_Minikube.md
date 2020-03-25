@@ -148,6 +148,19 @@ Minikube har en række standard værdier man kan sætte for gøre start kommando
     `minikube config set vm-driver docker`
     På den måde slipper man for at skrive **--vm-driver docker** hver gang minikube skal startes.
 
+    Samtidig kan man også sætte mængden af hukkommelse der bliver tildelt minikube med
+    `minikube config set momory 1024`
+    Dette brugte jeg personligt en del til at begrænse resourcerne den tog på min bæbare computer.
+
+    For at tjekke en specifik config værdi som f.eks. vm-driveren kan man skrive
+    `minikube config get vm-driver`
+
+    For at se alle konfigurerbar værdier kan man bruge
+    `minikube config -h`
+
+    **NOTE:** Hvis man skriver **sudo** foran alle config kommandoerne, så bliver de sat for root brugeren og ikke den bruger der skriver kommandoen. Det er derfor vigtigt, at huske om man bruger en **vm-driver** der kræver root rettigheder eller ej, da man så skal huske at sætte værdierne for den rettige bruger.
+
+
 **Kilder**
 * https://medium.com/learning-cloud-native-go/setting-up-a-fedora-31-workstation-for-go-cloud-native-application-development-77700467bf7b
 
