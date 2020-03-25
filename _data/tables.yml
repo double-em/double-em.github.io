@@ -13,6 +13,7 @@
             - line: Jeg kan forstå en faglig tekst omkring DevOps
             - line: Jeg kender til konceptet bag DevOps
           evaluations:
+            - line: Ja efter et par kurser i DevOps fundamentals har jeg en rimelig forståelse for emnet.
 
         - name: Jeg finder frem til en basal pipeline der giver mening for projektet.
           tools:
@@ -22,13 +23,15 @@
           criterias:
             - line: Det er en pipeline der er kendt og dokumenteret
           evaluations:
+            - line: Til projektet fandt jeg ikke nogen pipeline, da det er for tidligt endnu. Men til min egen blog bruger jeg Github actions som pipeline og har en smule forståelse for det.
 
         - name: Jeg skal opsætte den basale pipeline.
           tools:
             - line: Gennemgår tutorials på nettet, enten videoer eller skrevet fra f.eks. Medium
           criterias:
-            - line: Den kan bygge et projekt succesfyldt
+            - line: Den kan bygge et projekt succesfuldt
           evaluations:
+            - line: Github actions bygger mine side succesfuldt og jeg kan tjekke logs og fejl under mit Github projekt.
 
         - name: Jeg kigger på hvor effektiv min løsning er i forhold til Continues Deployment.
           tools:
@@ -37,6 +40,7 @@
           criterias:
             - line: Jeg har en idé om, hvor god løsningen er
           evaluations:
+            - line: Igen har vi ikke noget til projektet, da vi ikke har noget system som sådan. Men i forhold til CD til min blog er det ganske udemærket, da den bygger og deployer automatisk.
 
     - name: Jeg skal kunne have en lille forståelse for Machine Learning. Jeg skal udføre en meget lille form for analysering af noget data.
       techniques:
@@ -49,6 +53,7 @@
             - line: Jeg kan forstå en samtale om emnet
             - line: Jeg kender til flere forskellige typer af ML
           evaluations:
+            - line: Jeg har læst et par artikler samt kørt lidt lektioner på Datacamp. Og mener at dette har dannet en grund forståelse.
 
         - name: Jeg undersøger hvordan ML fungere på basalt niveau, hvad der driver det.
           tools:
@@ -59,6 +64,7 @@
           criterias:
             - line: Jeg kender til det der ligger under motorhjelmen
           evaluations:
+            - line: Jeg forstår hvordan forskellige former af ML fungere og også hvordan nogle af dem gør brug af neurale netværk. Jeg har ikke deltaget i ERFA Machine Learning, da jeg har været syg og glemt det.
 
         - name: Jeg finder ud af hvordan det bruges i virkeligheden.
           tools:
@@ -69,6 +75,7 @@
             - line: Jeg har eksempler på virksomheder som bruger ML
             - line: Jeg kender til forskellige brug af ML i virkeligheden
           evaluations:
+            - line: Jeg har set en dokumentar-serie på nettet kaldet "The Age Of A.I." omkring hvordan Machine Learning bruges og udvikler sig. Samt så bruger næsten alle større virksomheder en form for Machine Learning i dag især, hvis de er tech eller web baseret.
 
         - name: Jeg vælger hvilken læeringstype og/eller algoritmer jeg skal bruge.
           tools:
@@ -79,6 +86,7 @@
             - line: Jeg kender til forskellige metoder maksiner lære
             - line: Jeg kender til forskellige algoritmer brugt til ML
           evaluations:
+            - line: Både og. Jeg kender nogle få basale algoritmer såsom kNN.
 
         - name: Jeg udføre min analyse.
           tools:
@@ -86,6 +94,7 @@
           criterias:
             - line: Jeg får et resultat på den data jeg har givet
           evaluations:
+            - line: Dette har jeg ikke nået.
 
         - name: Jeg reflektere over, hvad der skete og hvorfor det skete.
           tools:
@@ -96,3 +105,4 @@
           criterias:
             - line: Jeg har notater omkring mine resultater
           evaluations:
+            - line: Jeg har ingen resultater.

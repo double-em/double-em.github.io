@@ -9,7 +9,7 @@ thumbnail: learn.png
 ---
 Dette er en status på min udvikling indenfor Machine Learning
 
-<h3>Machine Learning Fundamentals</h3>
+### Machine Learning Fundamentals
 
 Hvad har jeg udført?:
 - Datacamp Pba Track
@@ -23,7 +23,7 @@ Hvad har jeg udført?:
     - Artificial Intelligence Foundations: Machine Learning
     - Artificial Intelligence Foundations: Thinking Machines
 
-<h3>Begreber og Forståelse</h3>
+### Begreber og Forståelse
 Imens jeg har undersøgt Machine Learning er jeg støt på en række begreber. Disse begreber skriver jeg herunder og min forståelse af dem indtil videre.
 
 Indenfor Machine Learning er der nogle begreber som betyder det samme.
