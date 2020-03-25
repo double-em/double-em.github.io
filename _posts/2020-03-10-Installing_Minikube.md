@@ -162,10 +162,10 @@ Minikube har en række standard værdier man kan sætte for gøre start kommando
 
 
 **Kilder**
-* https://medium.com/learning-cloud-native-go/setting-up-a-fedora-31-workstation-for-go-cloud-native-application-development-77700467bf7b
+* <https://medium.com/learning-cloud-native-go/setting-up-a-fedora-31-workstation-for-go-cloud-native-application-development-77700467bf7b>
 
-* https://docs.docker.com/install/linux/docker-ce/fedora/
+* <https://docs.docker.com/install/linux/docker-ce/fedora/>
 
-* https://askubuntu.com/questions/162564/how-can-i-tell-if-my-system-was-booted-as-efi-uefi-or-bios
+* <https://askubuntu.com/questions/162564/how-can-i-tell-if-my-system-was-booted-as-efi-uefi-or-bios>
 
-* https://www.tecmint.com/disable-selinux-in-centos-rhel-fedora/
+* <https://www.tecmint.com/disable-selinux-in-centos-rhel-fedora>
