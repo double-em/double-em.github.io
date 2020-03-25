@@ -18,7 +18,7 @@ Der har været en del udfordringer såsom jeg har været syg og skiftet medicin 
 
 Omkring projektets fremgang har vi en lille mobil platform og møder med PO en gang om måneden. Så projektets fregang er nok passende.
 
-Jeg skal blive bedre til at hænge op i mig selv og opdatere min blog.
+Jeg skal blive bedre til at hænge op i mig selv og opdatere min blog. Samt skal jeg snakke med min vejleder for, at kunne få råd og vejledning omkring, hvordan jeg bedre håndtere mine personlige udfordringer.
 
 ### Kilder brugt
 - <http://course18.fast.ai/lessonsml1/lesson1.html>
