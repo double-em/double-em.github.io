@@ -21,19 +21,20 @@ Omkring projektets fremgang har vi en lille mobil platform og møder med PO en g
 Jeg skal blive bedre til at hænge op i mig selv og opdatere min blog. Samt skal jeg snakke med min vejleder for, at kunne få råd og vejledning omkring, hvordan jeg bedre håndtere mine personlige udfordringer.
 
 ### Kilder brugt
-- <http://course18.fast.ai/lessonsml1/lesson1.html>
 
-- Datacamp PBA Track
+- Datacamp [PBA-track](https://learn.datacamp.com/skill-tracks/2662) - Afsnit 1, Del 1 - 2
 
-- <https://www.analyticsvidhya.com/blog/2018/10/predicting-stock-price-machine-learningnd-deep-learning-techniques-python/>
+- LinkedIn Learning "[DevOps Foundations](https://www.linkedin.com/learning/devops-foundations/)" - 2h 63m (Ikke færdig)
 
-- <https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/>
-
-- LinkedIn Learning "DevOps Fundamentals"
-
-- Udemy "Kubernetes Fundamentals"
+- Udemy "[Learn DevOps: The Complete Kubernetes Course](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/)" - 13,5h (Ikke færdig)
 
 - <https://legacy.gitbook.com/book/leonardoaraujosantos/artificial-inteligence/details>
+
+- LinkedIn Learning "[Artificial Intelligence Foundations: Machine Learning](https://www.linkedin.com/learning/artificial-intelligence-foundations-machine-learning/)" - 1h 17m
+
+- LinkedIn Learning "[Artificial Intelligence Foundations: Thinking Machines](https://www.linkedin.com/learning/artificial-intelligence-foundations-thinking-machines/)" - 1h 27m
+
+- LinkedIn Learning "[Artificial Intelligence Foundations: Neural Networks](https://www.linkedin.com/learning/artificial-intelligence-foundations-neural-networks/)" - 1h 16m
 
 
 <!--
