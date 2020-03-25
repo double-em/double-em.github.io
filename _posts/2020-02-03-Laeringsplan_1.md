@@ -34,6 +34,8 @@ Jeg skal blive bedre til at hænge op i mig selv og opdatere min blog. Samt skal
 - Udemy "Kubernetes Fundamentals"
 
 - <https://legacy.gitbook.com/book/leonardoaraujosantos/artificial-inteligence/details>
+
+
 <!--
 Mål | Teknik / Værktøj | Kriterier | Evaluering
 ----|------------------|-----------|-----------
