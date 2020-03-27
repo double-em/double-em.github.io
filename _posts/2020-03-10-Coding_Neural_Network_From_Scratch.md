@@ -60,3 +60,132 @@ Hvis vi tager følgende netværk
 ![Neural Network Example](/assets/img/posts/CodingNetworkFromScratch/NNExample.png)
 
 Hvert tal ud fra en streg er en vægt og hver streg til en b - værdi er nodens bias.
+
+**Trin 1.**
+Vi starter med at indsætte vores 3 input, de 3 resultater og vælger nogle tilfælidge vægte og bias.
+
+![Neural Network Example](/assets/img/posts/CodingNetworkFromScratch/NNTable1.png)
+
+X = Inputs
+y = Outputs
+
+wh = Wheights for Hidden layer
+bh = Bias for Hidden layer
+
+wout = Weights for Output layer
+bout = Bias for Output layer
+
+**Trin 2**
+Vi udregner inputværdierne til Hidden layer, som gøres ved at gange inputs med vægtene plusset med vores bias.
+
+F.eks. ved første input runde(In 1) som har værdierne 1, 0, 1, 0. Der tager vi værdierne og ganger med hver vægt(0.42, 0.10, 0.60, 0.92) til første gemte node(Rød) og samler i et total som vi plusser med vores bias for første gemte node(Rød) som giver os vores input til den node for første runde.
+
+![Table Matrix Dot Prodcut Example](/assets/img/posts/CodingNetworkFromScratch/NN_Table_Matrix_Dot_Product.png)
+
+Så vi får for at beregne alle værdier:
+`hidden_layer_input = matrix_dot_product(X,wh) + bh`
+
+![Calculated hidden layer input](/assets/img/posts/CodingNetworkFromScratch/HiddenLayerInput.png)
+
+**Trin 3**
+Vi bruger Sigmoid som ikke-linær transformations funktions(aktiverings funktion) og den kan beskrives som:
+`1/(1 + exp(-x))`
+Exp() står for eksponentiel funktion som python har. Det gør vores funktion også kan skrives som:
+`1/(1 + e^-x)`
+I tilfælde af man ikke har exp() til rådighed.
+
+Dette gøres for hver værdi, så de alle er mellem 0 og 1.
+
+![Calculated hidden layer activations](/assets/img/posts/CodingNetworkFromScratch/HiddenLayerActivations.png)
+
+Dette skriver vi som:
+`hidden_layer_activations = sigmoid(hidden_layer_input)`
+
+**Trin 4**
+Vi laver så trin 2 og 3 for output i stedet.
+
+Så vi finder først inputtet til output laget ved at gange aktiveringerne i det gemte lag med vægtene til output laget plusset med bias for output laget:
+`output_layer_input = matrix_dot_product(hidden_layer_activations * wout) + bout`
+
+Derefter transformere vi tallet igen ved hjælp af vores aktiverings funktion for at få et tal mellem 0 og 1.
+`output = sigmoid(output_layer_input)`
+
+![Calculated Output](/assets/img/posts/CodingNetworkFromScratch/NNTableOutput.png)
+
+**Tring 5**
+Vi beregner graden af fejl ved at trække output fra vores kendte svar:
+`E = y-output`
+
+![Calculated Output Error](/assets/img/posts/CodingNetworkFromScratch/NNOutputError.png)
+
+**Trin 6**
+Vi beregner nu hældingen / derivatives sigmoid for hver aktivering. Som er hvor følsom funktionen er overfor ændringer på det givet punkt. Slope siger noget om grafens position. Et positivt tal betyder den er stigende fra venstra mod højte. Et negativt tal betyder den er faldende fra venstre mod højre. Jo stærkere positiv eller negativ desto stejlere er grafen i det punkt. Og derfor fortæller den os meget hurtigt, hvor følsom funktionen er lige der.
+
+Derivatives Sigmoid kan skrives som:
+`x * (1 – x)`
+Dette gøres for alle vores akriverings punkter. Dvs. båede output og hidden_layer_activations.
+
+`Slope_hidden_layer = derivatives_sigmoid(hidden_layer_activations)`
+`Slope_output = derivatives_sigmoid(output)`
+
+![Calculated Slopes](/assets/img/posts/CodingNetworkFromScratch/NNSlope.png)
+
+**Trin 7**
+Nu beregner vi delta for ouput laget som er den mængde vi skal tilpasse med. Dette gør vi ved at gange fejlgraden med hældningen for hvert output.
+`d_output = E * Slope_output`
+
+![Calculated Delta for Output](/assets/img/posts/CodingNetworkFromScratch/NNDeltaOutput.png)
+
+**Trin 8**
+Vi beregner så fejlgraden i det gemte lag, da ændringerne skal høres tilbage igennem hele netværket.
+
+Dette gør vi ved at gange ændringen i output laget med vægtene til de tidligere neuroner i det gemte lag.
+`Error_at_hidden_layer = matrix_dot_product(d_output, wout.Transpose)`
+
+![Calculated Error at hidden layer](/assets/img/posts/CodingNetworkFromScratch/NNErrorHiddenLayer.png)
+
+Bemærk det er nødvendigt at lave wout om til wout.T, da hvert inputs ændring i output skal ganges på hver vægt til tidligere neuroner.
+
+**Trin 9**
+Der skal nu beregnes ændringerne til det gemte lag. Det gør vi ved at gange fejlgarden i det gemte lag med hældningerne i det gemte lag.
+
+`d_hiddenlayer = Error_at_hidden_layer * Slope_hidden_layer`
+
+![Calculated Error at hidden layer](/assets/img/posts/CodingNetworkFromScratch/deltaHiddenLayer.png)
+
+**Trin 10**
+Så opdatere vi vægtene for både output og hidden layer.
+Det gør vi ved, at gange de respektive aktiveringsværdier med forskels værdierne ganget en valgt læringsrate og ligge det oveni de nuværende vægte, så vi får:
+`wh = wh + matrix_dot_product(X.Transpose, d_hiddenlayer) * learning_rate`
+
+![Calculated new wh](/assets/img/posts/CodingNetworkFromScratch/NNWHNew.png)
+
+`wout = wout + matrix_dot_product(hidden_layer_activations.Transpose, d_output) * learning_rate`
+
+![Calculated new wout](/assets/img/posts/CodingNetworkFromScratch/NNWoutNew.png)
+
+**Trin 11**
+Vi mangler kun nu at indstille bias værdierne. Det kan gøres ved at vi tager summen af en kolonne fra en tabel med forskelsværdier(delta) og summere den og ganger med vores læringsrate og ligger oveni den eksisterende tilhørende bias.
+
+Dvs. vi får noget lignende:
+`bh = bh + sum(d_hiddenlayer, axis=0) * learning_rate`
+
+![Calculated new bh](/assets/img/posts/CodingNetworkFromScratch/bhnew.png)
+
+`bout = bout + sum(d_output, axis=0) * learning_rate`
+
+![Calculated new bout](/assets/img/posts/CodingNetworkFromScratch/boutnew.png)
+
+Vi burde nu have en total model der ser ligeledes sådan ud:
+
+![Calculated final model](/assets/img/posts/CodingNetworkFromScratch/NNFinalModel.png)
+
+Vi har nu kørt en trænings iteration også kaldet Epoch.
+Bemærk at Trin 1 - 4 er kendt som "Forward Propagatoin" og Trin 5 - 11 er kendt som "Backward Propagation".
+
+### Kilder
+- <https://www.analyticsvidhya.com/blog/2017/05/neural-network-from-scratch-in-python-and-r/>
+
+- <https://stats.stackexchange.com/questions/154879/a-list-of-cost-functions-used-in-neural-networks-alongside-applications>
+
+- <https://towardsdatascience.com/the-most-intuitive-and-easiest-guide-for-artificial-neural-network-6a3f2bc0eecb>
