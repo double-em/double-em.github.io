@@ -183,7 +183,7 @@ Vi burde nu have en total model der ser ligeledes sådan ud:
 Vi har nu kørt en trænings iteration også kaldet Epoch.
 Bemærk at Trin 1 - 4 er kendt som "Forward Propagatoin" og Trin 5 - 11 er kendt som "Backward Propagation".
 
-Alt det forrige kan gøre i kode:
+Alt det forrige kan gøres i kode:
 <script src="https://gist.github.com/Zxited/7a9deb05e08a62c4a872636bb59420a6.js"></script>
 
 ### Kilder
