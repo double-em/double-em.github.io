@@ -41,8 +41,8 @@ thumbnail: learn.png
 **Færdigheder - Den studerende kan**
 - <span style="color: green;">Udvælge, beskrive og foretage litteratursøgning af en selvvalgt it - faglig pro - blemstilling</span>
 - <span style="color: green;">Diskutere samfundsmæssige aspekter knyttet til det/de valgte emner.</span>
-- <span style="color: yellow;">Vurdere problemstillinger og opstille løsningsmuligheder i forhold til det/de valgte emner.</span>
-- <span style="color: yellow;">Formidle centrale resultater.</span>
+- <span style="color: gold;">Vurdere problemstillinger og opstille løsningsmuligheder i forhold til det/de valgte emner.</span>
+- <span style="color: gold;">Formidle centrale resultater.</span>
 
 **Kompetencer - Den studerende kan**
 - <span style="color: green;">Selvstændigt sætte sig ind i nye emner inden for fagområdets teori og/eller praksis.</span>
