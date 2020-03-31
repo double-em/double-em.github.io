@@ -2,7 +2,7 @@
 layout: post
 title:  "DevOps Fundamental Begrebsdannelse"
 author: Mike Meldgaard
-date:   2020-03-10 #01:00:12 +0530
+date:   2020-03-31 #01:00:12 +0530
 category: DevOps
 summary: DevOps de første skridt
 thumbnail: learn.png
