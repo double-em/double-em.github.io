@@ -15,21 +15,21 @@ thumbnail: learn.png
 
 **Viden - Den studerende har viden om**
 - (DevOps) <span style="color: green;">DevOps kerneværdier "CAMS" </span>(Systemudvikling)
-- (DevOps) <span style="color: yellow;">Værtktøjer (Praksisser) brugt i et succesfuldt DevOps miljø</span> (Systemudvikling / Teknologi)
-- (DevOps) <span style="color: yellow;">Nøglemetodologier ofte brugt i DevOps</span> (Systemudvikling)<br><br>
+- (DevOps) <span style="color: gold;">Værtktøjer (Praksisser) brugt i et succesfuldt DevOps miljø</span> (Systemudvikling / Teknologi)
+- (DevOps) <span style="color: gold;">Nøglemetodologier ofte brugt i DevOps</span> (Systemudvikling)<br><br>
 - (Machine Learning) <span style="color: green;">Brug af Machine Learning i virkeligheden</span> (Teknologi / Virksomheden)
 - (Machine Learning) <span style="color: green;">Hvordan Neurale Netværk er opbygget</span> (Teknologi / Programmering)
-- (Machine Learning) <span style="color: yellow;">Forskellige eksisterende algoritmer og arkitekture brugt i Machine Learning</span> (Teknologi / Programmering)
+- (Machine Learning) <span style="color: gold;">Forskellige eksisterende algoritmer og arkitekture brugt i Machine Learning</span> (Teknologi / Programmering)
 
 **Færdigheder - Den studerende kan**
-- (DevOps) <span style="color: yellow;">Brug af Pipelines som værktøj til CI/CD</span> (Teknologi)
-- (DevOps) <span style="color: yellow;">Valg og brug af de rigrige værktøjer i ens værktøjsbælte, så de komplementere hinanden, teamet og systemet. </span> (Systemudvikling / Teknologi)
-- (DevOps) <span style="color: yellow;">Implementering af Configuration Management</span> (Teknologi)<br><br>
-- (Machine Learning) <span style="color: yellow;">Implementering af Machine Learning i praksis</span> (Programmering)
-- (Machine Learning) <span style="color: yellow;">Brug af forskellige algoritmer</span> (Programmering)
+- (DevOps) <span style="color: gold;">Brug af Pipelines som værktøj til CI/CD</span> (Teknologi)
+- (DevOps) <span style="color: gold;">Valg og brug af de rigrige værktøjer i ens værktøjsbælte, så de komplementere hinanden, teamet og systemet. </span> (Systemudvikling / Teknologi)
+- (DevOps) <span style="color: gold;">Implementering af Configuration Management</span> (Teknologi)<br><br>
+- (Machine Learning) <span style="color: gold;">Implementering af Machine Learning i praksis</span> (Programmering)
+- (Machine Learning) <span style="color: gold;">Brug af forskellige algoritmer</span> (Programmering)
 
 **Kompetencer - Den studerende kan**
-- (DevOps) <span style="color: yellow;">Implementering og tilpasning af det korrekte workflow til opgaven</span> (Systemudvikling)<br><br>
+- (DevOps) <span style="color: gold;">Implementering og tilpasning af det korrekte workflow til opgaven</span> (Systemudvikling)<br><br>
 - (Machine Learning) <span style="color: red;">Fortolkning og tilpasning af en Machine Learning algoritme for, at løse en given problemstilling </span> (Teknologi)
 
 ### Generelle læringsmål
