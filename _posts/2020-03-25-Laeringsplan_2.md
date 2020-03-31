@@ -2,7 +2,7 @@
 layout: post
 title:  "Læringsplan 2"
 author: Mike Meldgaard
-date:   2020-03-25 #01:00:12 +0530
+date:   2020-03-31 #01:00:12 +0530
 category: Laeringsplaner
 summary: 03/25 - ??/?? (2020) Anden Læringsplan.
 thumbnail: learn.png
@@ -15,21 +15,21 @@ thumbnail: learn.png
 
 **Viden - Den studerende har viden om**
 - (DevOps) <span style="color: green;">DevOps kerneværdier "CAMS" </span>(Systemudvikling)
-- (DevOps) <span style="color: gold;">Værtktøjer (Praksisser) brugt i et succesfuldt DevOps miljø</span> (Systemudvikling / Teknologi)
-- (DevOps) <span style="color: gold;">Nøglemetodologier ofte brugt i DevOps</span> (Systemudvikling)<br><br>
-- (Machine Learning) <span style="color: green;">Brug af Machine Learning i virkeligheden</span> (Teknologi / Virksomheden)
-- (Machine Learning) <span style="color: green;">Hvordan Neurale Netværk er opbygget</span> (Teknologi / Programmering)
-- (Machine Learning) <span style="color: gold;">Forskellige eksisterende algoritmer og arkitekture brugt i Machine Learning</span> (Teknologi / Programmering)
+- (DevOps) <span style="color: #cc9900;">Værtktøjer (Praksisser) brugt i et succesfuldt DevOps miljø</span> (Systemudvikling / Teknologi)
+- (DevOps) <span style="color: #cc9900;">Nøglemetodologier ofte brugt i DevOps</span> (Systemudvikling)<br><br>
+- (Machine Learning) <span style="color: #cc9900;">Brug af Machine Learning i virkeligheden</span> (Teknologi / Virksomheden)
+- (Machine Learning) <span style="color: #cc9900;">Hvordan Neurale Netværk er opbygget</span> (Teknologi / Programmering)
+- (Machine Learning) <span style="color: #cc9900;">Forskellige eksisterende algoritmer og arkitekture brugt i Machine Learning</span> (Teknologi / Programmering)
 
 **Færdigheder - Den studerende kan**
-- (DevOps) <span style="color: gold;">Brug af Pipelines som værktøj til CI/CD</span> (Teknologi)
-- (DevOps) <span style="color: gold;">Valg og brug af de rigrige værktøjer i ens værktøjsbælte, så de komplementere hinanden, teamet og systemet. </span> (Systemudvikling / Teknologi)
-- (DevOps) <span style="color: gold;">Implementering af Configuration Management</span> (Teknologi)<br><br>
-- (Machine Learning) <span style="color: gold;">Implementering af Machine Learning i praksis</span> (Programmering)
-- (Machine Learning) <span style="color: gold;">Brug af forskellige algoritmer</span> (Programmering)
+- (DevOps) <span style="color: #cc9900;">Brug af Pipelines som værktøj til CI/CD</span> (Teknologi)
+- (DevOps) <span style="color: #cc9900;">Valg og brug af de rigrige værktøjer i ens værktøjsbælte, så de komplementere hinanden, teamet og systemet. </span> (Systemudvikling / Teknologi)
+- (DevOps) <span style="color: #cc9900;">Implementering af Configuration Management</span> (Teknologi)<br><br>
+- (Machine Learning) <span style="color: #cc9900;">Implementering af Machine Learning i praksis</span> (Programmering)
+- (Machine Learning) <span style="color: #cc9900;">Brug af forskellige algoritmer</span> (Programmering)
 
 **Kompetencer - Den studerende kan**
-- (DevOps) <span style="color: gold;">Implementering og tilpasning af det korrekte workflow til opgaven</span> (Systemudvikling)<br><br>
+- (DevOps) <span style="color: #cc9900;">Implementering og tilpasning af det korrekte workflow til opgaven</span> (Systemudvikling)<br><br>
 - (Machine Learning) <span style="color: red;">Fortolkning og tilpasning af en Machine Learning algoritme for, at løse en given problemstilling </span> (Teknologi)
 
 ### Generelle læringsmål
@@ -41,8 +41,8 @@ thumbnail: learn.png
 **Færdigheder - Den studerende kan**
 - <span style="color: green;">Udvælge, beskrive og foretage litteratursøgning af en selvvalgt it - faglig pro - blemstilling</span>
 - <span style="color: green;">Diskutere samfundsmæssige aspekter knyttet til det/de valgte emner.</span>
-- <span style="color: gold;">Vurdere problemstillinger og opstille løsningsmuligheder i forhold til det/de valgte emner.</span>
-- <span style="color: gold;">Formidle centrale resultater.</span>
+- <span style="color: #cc9900;">Vurdere problemstillinger og opstille løsningsmuligheder i forhold til det/de valgte emner.</span>
+- <span style="color: #cc9900;">Formidle centrale resultater.</span>
 
 **Kompetencer - Den studerende kan**
 - <span style="color: green;">Selvstændigt sætte sig ind i nye emner inden for fagområdets teori og/eller praksis.</span>
