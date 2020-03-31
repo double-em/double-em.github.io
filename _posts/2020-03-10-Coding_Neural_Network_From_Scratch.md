@@ -192,6 +192,3 @@ Alt det forrige kan gøres i kode:
 - <https://stats.stackexchange.com/questions/154879/a-list-of-cost-functions-used-in-neural-networks-alongside-applications>
 
 - <https://towardsdatascience.com/the-most-intuitive-and-easiest-guide-for-artificial-neural-network-6a3f2bc0eecb>
-
-{% assign links = "https://www.analyticsvidhya.com/blog/2017/05/neural-network-from-scratch-in-python-and-r/, https://stats.stackexchange.com/questions/154879/a-list-of-cost-functions-used-in-neural-networks-alongside-applications, https://towardsdatascience.com/the-most-intuitive-and-easiest-guide-for-artificial-neural-network-6a3f2bc0eecb" | split: ", " %}
-
