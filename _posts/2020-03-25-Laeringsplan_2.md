@@ -18,8 +18,8 @@ thumbnail: learn.png
 - (DevOps) <span style="color: green;">DevOps kerneværdier "CAMS" </span>(Systemudvikling)
 - (DevOps) <span style="color: #cc9900;">Værtktøjer (Praksisser) brugt i et succesfuldt DevOps miljø</span> (Systemudvikling / Teknologi)
 - (DevOps) <span style="color: #cc9900;">Nøglemetodologier ofte brugt i DevOps</span> (Systemudvikling)<br><br>
-- (Machine Learning) <span style="color: #cc9900;">Brug af Machine Learning i virkeligheden</span> (Teknologi / Virksomheden)
-- (Machine Learning) <span style="color: #cc9900;">Hvordan Neurale Netværk er opbygget</span> (Teknologi / Programmering)
+- (Machine Learning) <span style="color: green;">Brug af Machine Learning i virkeligheden</span> (Teknologi / Virksomheden)
+- (Machine Learning) <span style="color: green;">Hvordan Neurale Netværk er opbygget</span> (Teknologi / Programmering)
 - (Machine Learning) <span style="color: #cc9900;">Forskellige eksisterende algoritmer og arkitekture brugt i Machine Learning</span> (Teknologi / Programmering)
 
 **Færdigheder - Den studerende kan**
