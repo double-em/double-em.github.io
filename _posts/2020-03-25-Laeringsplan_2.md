@@ -8,12 +8,11 @@ summary: 03/25 - ??/?? (2020) Anden Læringsplan.
 thumbnail: learn.png
 ---
 
-### Læringsplan 2
+# Læringsplan 2
 {% include table.html tablenumber=1 %}
+<br>
 
-
-
-### Personlige Læringsmål
+## Personlige Læringsmål
 
 **Viden - Den studerende har viden om**
 - (DevOps) <span style="color: green;">DevOps kerneværdier "CAMS" </span>(Systemudvikling)
@@ -34,7 +33,7 @@ thumbnail: learn.png
 - (DevOps) <span style="color: #cc9900;">Implementering og tilpasning af det korrekte workflow til opgaven</span> (Systemudvikling)<br><br>
 - (Machine Learning) <span style="color: red;">Fortolkning og tilpasning af en Machine Learning algoritme for, at løse en given problemstilling </span> (Teknologi)
 
-### Generelle læringsmål
+## Generelle læringsmål
 
 **Viden - Den studerende har viden om**
 - <span style="color: green;">Det/de valgte emners teori og praksis.</span>
@@ -50,7 +49,7 @@ thumbnail: learn.png
 - <span style="color: green;">Selvstændigt sætte sig ind i nye emner inden for fagområdets teori og/eller praksis.</span>
 - <span style="color: green;">Perspektivere og relatere det/de valgte emner i forhold til uddannelsens øvrige emneområder</span>
 
-### Kilder brugt
+## Kilder brugt
 
 - <http://course18.fast.ai/lessonsml1/lesson1.html>
 
