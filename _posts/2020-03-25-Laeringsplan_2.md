@@ -11,7 +11,9 @@ thumbnail: learn.png
 ### Læringsplan 2
 {% include table.html tablenumber=1 %}
 
-### Personline Læringsmål
+
+
+### Personlige Læringsmål
 
 **Viden - Den studerende har viden om**
 - (DevOps) <span style="color: green;">DevOps kerneværdier "CAMS" </span>(Systemudvikling)
