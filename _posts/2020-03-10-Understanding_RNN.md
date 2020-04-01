@@ -4,7 +4,7 @@ title:  "Forståelse Recurrent Neural Network (RNN)"
 author: Mike Meldgaard
 date:   2020-3-27 #01:00:12 +0530
 category: MachineLearning
-summary: Forståelse af RNN samt dens problemer med Vanishing og Exploding Gradient
+summary: Forståelse af RNN samt dens problemer med Vanishing og Exploding Gradient (27/3 - 1/4)
 thumbnail: learn.png
 ---
 
@@ -154,3 +154,7 @@ RNN lider derfor af Vanishing gradient problemet ved lange afhængige inputs.
 RNN bliver også utroligt svært at træne ved længere sekvenser med afhængig værdier, da i parameterne i den udrollet RNN vil være rigtig mange der skulle udregnes og det bliver derfor en udfordring.
 
 Arkitekturene LSTM(Long Short Term Memory) og GRU(Gated Recurrent Units) can blive brugt til at håndtere Vanishing Gradient problemet.
+
+## Kilder
+1. <https://www.analyticsvidhya.com/blog/2017/12/introduction-to-recurrent-neural-networks/>
+2. <https://rdipietro.github.io/friendly-intro-to-cross-entropy-loss/>
