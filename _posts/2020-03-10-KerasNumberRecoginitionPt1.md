@@ -333,7 +333,7 @@ Epoch 5/5
 268/268 - 1s - loss: 0.1888 - accuracy: 0.9578 - val_loss: 0.1626 - val_accuracy: 0.9597
 ```
 
-Tallene 1 - 5 imellem linjerne er vore "EpochCount()" klasse.
+Tallene 1 - 5 imellem linjerne er vores "EpochCount()" klasse.
 
 **(VALGFRIT)**
 Hvis man køre det i en container eller remote, vil man nogle gange ikke kunne se, hvor langt den er nået i trænings processen. Det jeg har gjort for, at få en smule feedback fra den er, at jeg har lavet en Callback klasse, som udskriver, hvilken iteration den er igang med.
