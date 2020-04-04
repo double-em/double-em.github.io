@@ -161,10 +161,11 @@ docker run -it --rm --gpus all mmgamesfull/kerasnumberrecognition:latest
 Efter at have løst alle de forskellige fejl omkring udgået pakker og nvidia driver fejl osv. Kan vi komme videre.
 
 ## Løs opgaven
-Trin for trin til, at løse opgaven.
+Trin for trin for, at løse opgaven.
+Data kan findes her: <https://datahack.analyticsvidhya.com/contest/practice-problem-identify-the-digits/>
 
 ### Trin 1
-Importer alle de nødvendige biblioteker
+Importer alle de nødvendige biblioteker.
 ```
 import os
 import numpy as np
@@ -177,21 +178,209 @@ import tensorflow as tf
 from tensorflow import keras
 ```
 
-Kontroller modellens tilfældighed ved, at sætte et seed
+Kontroller modellens tilfældighed ved, at sætte et seed.
 ```
 seed = 128
 rng = np.random.RandomState(seed)
 ```
 
-Sæt stierne der skal bruges
+Sæt stierne til ressourcerne.
+```
+root_dir = os.path.abspath('../..')
+data_dir = os.path.join(root_dir, 'data')
+```
 
+Tjek om stierne eksistere.
+```
+os.path.exists(root_dir)
+os.path.exists(data_dir)
+```
 
+### Trin 2
+Læs data sættene.
+```
+train = pd.read_csv(os.path.join(data_dir, 'train.csv'))
+test = pd.read_csv(os.path.join(data_dir, 'test.csv'))
 
+sample_submission = pd.read_csv(os.path.join(data_dir, 'sample_submission.csv'))
+```
 
+Hvis man vil se toppen af ens datafil kan man udskrive den med:
+`train.head()`
 
+Hvert billede er repræsenteret som et numpy array.
+Så for nemmere, at håndtere dataen opbevare vi billederne i numpy arrays.
+```
+temp = []
+for img_name in train.filename:
+    image_path = os.path.join(data_dir, 'Images', 'train', img_name)
+    
+    img = imread(image_path, as_gray=True)
+    img = img.astype('float32')
+    temp.append(img)
 
+    image_train_count += 1
 
+train_x = np.stack(temp)
 
+train_x /= 255.0
+train_x = train_x.reshape(-1, 784).astype('float32')
+
+image_test_count = 0
+temp = []
+for img_name in test.filename:
+    image_path = os.path.join(data_dir, 'Images', 'test', img_name)
+    img = imread(image_path, as_gray=True)
+    img = img.astype('float32')
+    temp.append(img)
+
+    image_test_count += 1
+
+test_x = np.stack(temp)
+
+test_x /= 255.0
+test_x = test_x.reshape(-1, 784).astype('float32')
+```
+
+Bemærk vi bruger as_gray=True som essentielt er det samme som flatten=True i Scipy. Vi gør det fordi vi skal kun bruge det som sort-hvid og derfor fjerner vi de andre farvekanaler som giver os end del mindre datapunkter, da farven ikke har noget, at gøre med billedet i denne omgang.
+
+Funktionen "np.stack(temp)" er en måde vi kan tage vores billede array og stable dem til den rigtige form / dimension.
+
+Vi omdanner så vores markater til en matrix af klasser. Som bruges ved f.eks. crossentropy.
+```
+train_y = keras.utils.to_categorical(train.label.values)
+```
+
+Ved ML kan det være et problem, at verificere, at ens netværk køre rigtigt. Derfor splitter vi træningsdataen op, så vi får et valideringssæt og et træningsæt.
+Vi sætter splittet til 70:30, hvor det 70% er træningssættet.
+
+```
+split_size = int(train_x.shape[0]*0.7)
+
+train_x, val_x = train_x[:split_size], train_x[split_size:]
+
+train_y, val_y = train_y[:split_size], train_y[split_size:]
+
+```
+
+Det samme gør vi for vores markater i sættet.
+```
+train.label.loc[split_size:]
+```
+
+Bemærk at .ix index'eren er udgået i pandas og blevet erstattet med .loc for label index og .iloc for positions index grundet, det forvirrede brugere, at den kunne begge.
+
+### Trin 3
+Vi kommer nu til punktet, hvor vi skal have bygget en model. Vi bruger 3 lag denne gang som er input, hidden, output. Antallet af neuroner ved input og output er fastlåst, da vores input er et 28x28 billede som giver 784 neuroner og vores output er tallene 0 - 9, som så giver 10 output neuroner. Vi vælger 50 for det gemte lag, men det kan man optimere, hvis man synes.
+
+Vi starter med, at definere variablerne.
+```
+input_num_units = 784
+hidden_num_units = 50
+output_num_units = 10
+
+epochs = 5
+batch_size = 128
+```
+
+Så importere vi modulerne vi skal bruge for vores model og bygger en model som beskrevet oppe over. Vu bruger "relu" som aktiverings funktion og softmax til vores output, da vi gerne vil have en sandsynlighed for, hvilket af de 10 tal den tror det er på billedet.
+
+```
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import Dense
+
+model = Sequential([
+    Dense(hidden_num_units, input_dim=input_num_units, activation='relu'),
+    Dropout(dropout_ratio),
+    Dense(hidden_num_units, input_dim=hidden_num_units, activation='relu'),
+    Dense(output_num_units, input_dim=hidden_num_units, activation='softmax'),
+])
+```
+Bemærk Dense() bruger ikke længere "output_dim=" for, at definere outputtets dimensioner, men det hedder i stedet "units" og kan bare skriver som det første tal.
+
+Efter første lag i modellen er det teknisk set ikke nødvendigt, at definere input størrelsen længere. Men jeg har gjort dette for, at det er nemmere, at forstå.
+
+Vi bruger "Adam" som vores optimerings funktions algoritme, som er en effektiv variant af "Gradient Decent" algoritmen. Tab bliver beregnet med kategorisk crossentropy.
+
+Vi kompilere nu vores model med de ønskede funtioner.
+```
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+```
+
+Vi kan nu træne vores model!
+```
+trained_model = model.fit(train_x, train_y, epochs=epochs, batch_size=batch_size, validation_data=(val_x, val_y))
+```
+Bemærk førhen var "epochs" parameteren kaldet "np_epochs".
+
+Ved kørsel af programmet skulle vi gerne få et output svarende til følgende:
+```
+1
+Epoch 1/5
+2020-04-04 14:55:55.946689: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+268/268 - 1s - loss: 1.0428 - accuracy: 0.6165 - val_loss: 0.3044 - val_accuracy: 0.9229
+2
+Epoch 2/5
+268/268 - 1s - loss: 0.3171 - accuracy: 0.9208 - val_loss: 0.2010 - val_accuracy: 0.9490
+3
+Epoch 3/5
+268/268 - 1s - loss: 0.2372 - accuracy: 0.9428 - val_loss: 0.1995 - val_accuracy: 0.9535
+4
+Epoch 4/5
+268/268 - 1s - loss: 0.2145 - accuracy: 0.9491 - val_loss: 0.1738 - val_accuracy: 0.9599
+5
+Epoch 5/5
+268/268 - 1s - loss: 0.1888 - accuracy: 0.9578 - val_loss: 0.1626 - val_accuracy: 0.9597
+```
+
+Tallene 1 - 5 imellem linjerne er vore "EpochCount()" klasse.
+
+**(VALGFRIT)**
+Hvis man køre det i en container eller remote, vil man nogle gange ikke kunne se, hvor langt den er nået i trænings processen. Det jeg har gjort for, at få en smule feedback fra den er, at jeg har lavet en Callback klasse, som udskriver, hvilken iteration den er igang med.
+```
+class EpochCount(keras.callbacks.Callback):
+    def on_epoch_begin(self, epoch, logs={}):
+        print(epoch + 1)
+```
+
+For at bruge vores Callback klasse "EpochCount()" skal vi have en instans af den og give den instans til model.fit() funktionen.
+```
+epoch_count = EpochCount()
+
+trained_model = model.fit(train_x, train_y, epochs=epochs, batch_size=batch_size, validation_data=(val_x, val_y), verbose=2, callbacks=[epoch_count])
+
+```
+
+### Trin 4
+Vi skal nu evaluere vores model.
+Der findes flere måder, at evaluere ens model. Hvis man har et stort datasæt, så ville man splitte dataen op ligesom vi gjorde med validerings dataen, så man har et test sæt og et trænings sæt og derefter splitte træningsdataen op i validerings sæt og trænings sæt, for vi stadig har noget validering efter, hver epoch. Hvor man så efter, at have trænet sin model ville kunne teste den op mod ens test sæt, som netværket ikke kender til, da det er et sæt for sig selv og få en præcision på baggrund af test sættet. Det er vigtigt, at man ikke tester på den data netværket allerede har trænet på, da den kender til sættet i forvejen og det er derfor svært, at fange ting som overfitting.
+
+I det her tilfælde, der på siden, hvor vi fik dataen er der en submission form, hvor man kan uploade sin .csv fil når ens netværk har gået det igennem, for at få et tal på, hvor præcist netværket har klaret det.
+
+Så vi tager vores netværk og laver forudsigelse på vores test sæt.
+```
+pred = np.argmax(model.predict(test_x), axis=-1)
+```
+Bemærk at model.predict_classes er udgået og forsvinder i fremtiden fra biblioteket.
+Man skal i stedet bruge "np.argmax(model.predict(x), axis=-1)" til multiclass classification predictions ved f.eks. softmax() som giver en sandsynligheds matrix.
+Ellers ved binær klassifikation (Ja eller Nej / True or False) f.eks. Sigmoid() som giver en værdi mellem 0 og 1 bruger man "model.predict(x) > 0.5).astype("int32")".
+
+Vi tager så vores submissions fil og definere, hvilke værdier der skal være i hver kolonne og udskriver den til vores data mappe som .csv igen.
+```
+sample_submission.filename = test.filename
+sample_submission.label = pred
+
+sample_submission.to_csv(os.path.join(data_dir, "test.csv"), index=False)
+```
+
+Hvis programmet køre lokalt på ens computer, vil den ligge lokalt på den mappe man har valgt. Hvis man dog køre programmet i en docker container, vil det være nødvendigt, at trække filen ud af containeren og ned på en lokale computer. Dette kan gøres ved:
+`docker cp CONTAINER_NAME_GOES_HERE:/path/to/test.csv /path/to/location/`
+
+Som i mit tilfælde med denne container vil se sådan her ud:
+`docker cp kerasnumberrecognition:/data/test.csv .`
+Punktummet i slutningen betyder, at den skal gemme filen i den mappe jeg står i med min terminal.
+
+Man kan nu uploade sin fil til testeren og se sit flotte resultat. Men man kan også fin-tune sit netværk med flere lag og flere neuroner, som jeg kommer ind på i næste oplæg.
 
 ## Kilder
 - Introduktion til implementering af NN i TensorFlow
@@ -226,3 +415,30 @@ Sæt stierne der skal bruges
 
 - Dockerfile cheat sheet
 <https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index>
+
+- numpy.stack
+<https://docs.scipy.org/doc/numpy/reference/generated/numpy.stack.html?highlight=numpy%20stack#numpy.stack>
+
+- Keras Utils to_categorical
+<https://keras.io/utils/>
+
+- pandas IX indexer udgået
+<https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#ix-indexer-is-deprecated>
+
+- Keras Sequential model
+<https://keras.io/getting-started/sequential-model-guide/>
+
+- tf.keras.layers.Dense
+<https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dense>
+
+- Keras Callbacks
+<https://keras.io/callbacks/>
+
+- tf.keras.callbacks.Callback
+<https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/Callback>
+
+- tf.model.predict
+<https://www.tensorflow.org/api_docs/python/tf/keras/Sequential#predict>
+
+- tf predict_classes source code
+<https://github.com/tensorflow/tensorflow/blob/v2.1.0/tensorflow/python/keras/engine/sequential.py#L324-L342>
