@@ -4,7 +4,7 @@ title:  "Implementering af Deep Learning med MLP arkitektur i Keras"
 author: Mike Meldgaard
 date:   2020-4-4 #01:00:12 +0530
 category: MachineLearning
-summary: Implementering af Deep Learning med Multi-later Perceptron i Keras biblioteket for genkendelse af billeder.
+summary: Implementering af Deep Learning med Multi-later Perceptron i Keras biblioteket for genkendelse af billeder (Keras Number Recognition Del 1).
 thumbnail: development.png
 ---
 # Implementering af Deep Learning med MLP arkitektur i Keras
