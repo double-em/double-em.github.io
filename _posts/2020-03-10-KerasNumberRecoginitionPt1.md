@@ -380,7 +380,9 @@ Som i mit tilfælde med denne container vil se sådan her ud:
 `docker cp kerasnumberrecognition:/data/test.csv .`
 Punktummet i slutningen betyder, at den skal gemme filen i den mappe jeg står i med min terminal.
 
-Man kan nu uploade sin fil til testeren og se sit flotte resultat. Men man kan også fin-tune sit netværk med flere lag og flere neuroner, som jeg kommer ind på i næste oplæg.
+Man kan nu uploade sin fil til testeren og se sit flotte resultat. Men man kan også fin-tune sit netværk med flere lag og flere neuroner, som jeg kommer ind på en anden gang.
+
+Vi har nu lært at implementere et Multi-layer Perceptron neuralt netværk, som er måske den mest simple form for neuralt netværk. Der findes mange andre netværk, som man ville kunne prøve og få bedre resultater med, som jeg vil demonstere også en anden gang.
 
 ## Kilder
 - Introduktion til implementering af NN i TensorFlow
@@ -441,4 +443,7 @@ Man kan nu uploade sin fil til testeren og se sit flotte resultat. Men man kan o
 <https://www.tensorflow.org/api_docs/python/tf/keras/Sequential#predict>
 
 - tf predict_classes source code
-<https://github.com/tensorflow/tensorflow/blob/v2.1.0/tensorflow/python/keras/engine/sequential.py#L324-L342>
+	<https://github.com/tensorflow/tensorflow/blob/v2.1.0/tensorflow/python/keras/engine/sequential.py#L324-L342>
+
+- Copy file from docker container
+	<https://stackoverflow.com/questions/22049212/copying-files-from-docker-container-to-host>
