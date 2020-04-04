@@ -442,8 +442,6 @@ Vi har nu lært at implementere et Multi-layer Perceptron neuralt netværk, som 
 - tf.model.predict
 <https://www.tensorflow.org/api_docs/python/tf/keras/Sequential#predict>
 
-- tf predict_classes source code
-	<https://github.com/tensorflow/tensorflow/blob/v2.1.0/tensorflow/python/keras/engine/sequential.py#L324-L342>
+- tf predict_classes source code<br><https://github.com/tensorflow/tensorflow/blob/v2.1.0/tensorflow/python/keras/engine/sequential.py#L324-L342>
 
-- Copy file from docker container
-	<https://stackoverflow.com/questions/22049212/copying-files-from-docker-container-to-host>
+- Copy file from docker container<br><https://stackoverflow.com/questions/22049212/copying-files-from-docker-container-to-host>
