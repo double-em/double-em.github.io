@@ -385,62 +385,43 @@ Man kan nu uploade sin fil til testeren og se sit flotte resultat. Men man kan o
 Vi har nu lært at implementere et Multi-layer Perceptron neuralt netværk, som er måske den mest simple form for neuralt netværk. Der findes mange andre netværk, som man ville kunne prøve og få bedre resultater med, som jeg vil demonstere også en anden gang.
 
 ## Kilder
-- Introduktion til implementering af NN i TensorFlow
-<https://www.analyticsvidhya.com/blog/2016/10/an-introduction-to-implementing-neural-networks-using-tensorflow/>
+- Introduktion til implementering af NN i TensorFlow<br><https://www.analyticsvidhya.com/blog/2016/10/an-introduction-to-implementing-neural-networks-using-tensorflow/>
 
-- Brug og optimatisering af NN med Keras
-<https://www.analyticsvidhya.com/blog/2016/10/tutorial-optimizing-neural-networks-using-keras-with-image-recognition-case-study/#nine>
+- Brug og optimatisering af NN med Keras<br><https://www.analyticsvidhya.com/blog/2016/10/tutorial-optimizing-neural-networks-using-keras-with-image-recognition-case-study/#nine>
 
-- Migrering fra TensorFlow v1 til v2
-<https://www.tensorflow.org/guide/migrate>
+- Migrering fra TensorFlow v1 til v2<br><https://www.tensorflow.org/guide/migrate>
 
-- imageio imread dokumentation
-<https://imageio.readthedocs.io/en/stable/userapi.html#imageio.help>
+- imageio imread dokumentation<br><https://imageio.readthedocs.io/en/stable/userapi.html#imageio.help>
 
-- Overgang fra Scipy imread til imageio imread
-<https://imageio.readthedocs.io/en/stable/scipy.html>
+- Overgang fra Scipy imread til imageio imread<br><https://imageio.readthedocs.io/en/stable/scipy.html>
 
-- TensorFlow v2 model.fit
-<https://www.tensorflow.org/api_docs/python/tf/keras/Model#fit>
+- TensorFlow v2 model.fit<br><https://www.tensorflow.org/api_docs/python/tf/keras/Model#fit>
 
-- Brug af tf.keras i stedet for Keras
-<https://keras.io/#multi-backend-keras-and-tfkeras>
+- Brug af tf.keras i stedet for Keras<br><https://keras.io/#multi-backend-keras-and-tfkeras>
 
-- TensorFlow Docker Hub images
-<https://hub.docker.com/r/tensorflow/tensorflow>
+- TensorFlow Docker Hub images<br><https://hub.docker.com/r/tensorflow/tensorflow>
 
-- Brug af GPUer i Containers
-<https://devblogs.nvidia.com/gpu-containers-runtime/>
+- Brug af GPUer i Containers<br><https://devblogs.nvidia.com/gpu-containers-runtime/>
 
-- Docker Runtime options
-<https://docs.docker.com/config/containers/resource_constraints/#access-an-nvidia-gpu>
+- Docker Runtime options<br><https://docs.docker.com/config/containers/resource_constraints/#access-an-nvidia-gpu>
 
-- Dockerfile cheat sheet
-<https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index>
+- Dockerfile cheat sheet<br><https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index>
 
-- numpy.stack
-<https://docs.scipy.org/doc/numpy/reference/generated/numpy.stack.html?highlight=numpy%20stack#numpy.stack>
+- numpy.stack<br><https://docs.scipy.org/doc/numpy/reference/generated/numpy.stack.html?highlight=numpy%20stack#numpy.stack>
 
-- Keras Utils to_categorical
-<https://keras.io/utils/>
+- Keras Utils to_categorical<br><https://keras.io/utils/>
 
-- pandas IX indexer udgået
-<https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#ix-indexer-is-deprecated>
+- pandas IX indexer udgået<br><https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#ix-indexer-is-deprecated>
 
-- Keras Sequential model
-<https://keras.io/getting-started/sequential-model-guide/>
+- Keras Sequential model<br><https://keras.io/getting-started/sequential-model-guide/>
 
-- tf.keras.layers.Dense
-<https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dense>
+- tf.keras.layers.Dense<br><https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dense>
 
-- Keras Callbacks
-<https://keras.io/callbacks/>
+- Keras Callbacks<br><https://keras.io/callbacks/>
 
-- tf.keras.callbacks.Callback
-<https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/Callback>
+- tf.keras.callbacks.Callback<br><https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/Callback>
 
-- tf.model.predict
-<https://www.tensorflow.org/api_docs/python/tf/keras/Sequential#predict>
+- tf.model.predict<br><https://www.tensorflow.org/api_docs/python/tf/keras/Sequential#predict>
 
 - tf predict_classes source code<br><https://github.com/tensorflow/tensorflow/blob/v2.1.0/tensorflow/python/keras/engine/sequential.py#L324-L342>
 
