@@ -104,9 +104,91 @@ Jeg bruger følgende pakker:
 - scikit-learn==0.22.2.post1
 - imageio==2.8.0
 
-Samtidig skal vi også have installeret TensorFlow(tf), men dog ikke Keras, da vi bruger tf.keras i stedet.
+Bemærk: Hvis du gerne vil se alle dine pakker installeret:
+`pip freeze`
+Hvis man vil indsætte alle de pakker man bruger som en del af dem der skal installeres når containeren køre(Hvis man har konfiguret det i ens Dockerfile), kan man overføre dem til en tekstfil:
+`pip freeze > requirements.txt`
+Som var en teknik jeg brugte i starten, hvor jeg brugte TensorFlows eget image. Indtil jeg byggede mit eget image, med de rigtige pakker, baseret på det image jeg brugte fra TensorFlow.
 
-Afhængig om man køre programmet lokalt eller i en container
+Samtidig skal vi også have installeret TensorFlow(tf), men dog ikke Keras, da vi bruger tf.keras i stedet, som er Keras indbygget i TensorFlow 2.0 der er bedre vedligeholdt og tilbyder bedre integration med TensorFlows funktioner og features.
+
+Afhængig om man køre programmet lokalt eller i en container skal man installere pakkerne lokalt eller sørge for ens image har dem.
+
+Bemærk det er nemmere, at have GPU understøttelse ved brug af containere, da CUDA Tools ikke er nødvendig for understøttelsen i containeren.
+
+Jeg har gjort det, at jeg har taget TensorFlows docker image med gpu og python 3 support og installeret de nødvendige pakker i det image, så jeg bagefter kunne lave mit eget image som kunnes oploades til Docker Hub til senere brug.
+
+For at bruge ens GPU til træning af netværket, skal man have nvidia og cuda drivers intalleret, sammen med nvidia-docker eller nvidia-docker2 som har swarm support og er nyere, så den bruger jeg.
+
+Når man skal køre en container i docker med gpu, bruger man "--runtime=nvidia" eller "--gpus all" flagene.
+
+Man kan teste om man kan køre containere med gpu understøttelse ved, at køre:
+`sudo docker run --rm --runtime=nvidia -ti nvidia/cuda`
+Og så køre kommandoen
+`nvidia-smi`
+
+Et eksempel output:
+```
+$ sudo docker run --rm --runtime=nvidia -ti nvidia/cuda
+roo@2d0aad394700:/# nvidia-smi
+Sat Apr  4 11:19:25 2020
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.64       Driver Version: 440.64       CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Geforce GTX 1070    Off  | 00000000:01:00.0  On |                  N/A |
+| 16%   55C    P0    31W / 151W |    7880MiB / 8119MiB |     12%      Default |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|                                                                             |
++-----------------------------------------------------------------------------+
+```
+
+I en docker-compose kan man også definere runtime til at være nvidia.
+
+For at starte mit program endte jeg ud i, at lave en scripts fil i stedet for den indbygget debug launch metode i visual studio code. Grundet at det gav mig fuld kontrol af containeren og jeg kunne sætte --gpus flaget:
+```
+docker build -t mmgamesfull/kerasnumberrecognition:latest .
+docker run -it --rm --gpus all mmgamesfull/kerasnumberrecognition:latest
+```
+
+Efter at have løst alle de forskellige fejl omkring udgået pakker og nvidia driver fejl osv. Kan vi komme videre.
+
+## Løs opgaven
+Trin for trin til, at løse opgaven.
+
+### Trin 1
+Importer alle de nødvendige biblioteker
+```
+import os
+import numpy as np
+import pandas as pd
+
+from imageio import imread
+from sklearn.metrics import accuracy_score
+
+import tensorflow as tf
+from tensorflow import keras
+```
+
+Kontroller modellens tilfældighed ved, at sætte et seed
+```
+seed = 128
+rng = np.random.RandomState(seed)
+```
+
+Sæt stierne der skal bruges
+
+
+
+
+
 
 
 
@@ -114,6 +196,9 @@ Afhængig om man køre programmet lokalt eller i en container
 ## Kilder
 - Introduktion til implementering af NN i TensorFlow
 <https://www.analyticsvidhya.com/blog/2016/10/an-introduction-to-implementing-neural-networks-using-tensorflow/>
+
+- Brug og optimatisering af NN med Keras
+<https://www.analyticsvidhya.com/blog/2016/10/tutorial-optimizing-neural-networks-using-keras-with-image-recognition-case-study/#nine>
 
 - Migrering fra TensorFlow v1 til v2
 <https://www.tensorflow.org/guide/migrate>
@@ -129,3 +214,15 @@ Afhængig om man køre programmet lokalt eller i en container
 
 - Brug af tf.keras i stedet for Keras
 <https://keras.io/#multi-backend-keras-and-tfkeras>
+
+- TensorFlow Docker Hub images
+<https://hub.docker.com/r/tensorflow/tensorflow>
+
+- Brug af GPUer i Containers
+<https://devblogs.nvidia.com/gpu-containers-runtime/>
+
+- Docker Runtime options
+<https://docs.docker.com/config/containers/resource_constraints/#access-an-nvidia-gpu>
+
+- Dockerfile cheat sheet
+<https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index>
