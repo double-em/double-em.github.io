@@ -14,9 +14,9 @@ Erfaringer med brugen og eksperimenter i ML.NET.
 ## Hvad er ML.NET?
 ML.NET er et high-level machine learning bibliotek af Microsoft, som gør brug af andre ML biblioteker som Tensorflow og ONNX.
 
-ML.NET er lige nu i Preview som giver lidt udfordringer hen af vejen, samtidig med, at dokumentationen kan være lidt manglende, da ikke alle brugs måder er tænkt efter, enten pga. det ikke er udbredt eller fordi understøttelse først kommer senere. Dette problem stødte jeg desværre ind i.
+ML.NET har også en anden funktion som svare lidt til Google's Vision som prøvet, at finde den mest effektive algoritme, nemlig AutoML. AutoML prøver, at bruge en række forskellige algoritmer med forskellige parametre og træner lidt på dem for, at se hvad der giver det bedste resultat. Når den er færdig efter den tid man har givet den, så kommer den tilbage med en liste af de bedste algoritmer den fandt til jobbet.
 
-TODO: Forklar om AutoML og hvad det gør!!!
+ML.NET er lige nu i Preview som giver lidt udfordringer hen af vejen, samtidig med, at dokumentationen kan være lidt manglende, da ikke alle brugs måder er tænkt efter, enten pga. det ikke er udbredt eller fordi understøttelse først kommer senere. Dette problem stødte jeg desværre ind i.
 
 ## Brugen af ML.NET
 Jeg startede med, at følge deres 10 minutters "Getting started" - guide. Da jeg ville forsøge mig med deres AutoML for, at se hvad den ville gøre med den billede data jeg havde.
@@ -58,7 +58,7 @@ Men jeg har kun alle 49000 billeder i en mappe og en csv fil der passer til. Så
 
 Jeg kodede så et Python script, som tager en csv fil og finder billednavnet i rækken og sortere dem efter mærkaterne.
 
-<!--script src="https://gist.github.com/Zxited/a02e7af37a26ee8bf39f65094b668604.js"></script-->
+<script src="https://gist.github.com/Zxited/a02e7af37a26ee8bf39f65094b668604.js"></script>
 
 Efter så at have kørt mit script. Prøvede jeg så, at definere mappen med og uden csv fil. Det virkede heller ikke. 
 
@@ -84,11 +84,11 @@ Og i deres csv står et billede som følgende.
 
 Jeg lavede også derfor et script til, så jeg kunne fjerne sorteringen af billederne, så de var tilbage som før.
 
-<!--script src="https://gist.github.com/Zxited/43ab0ed265138ceafe2231df79d29610.js"></script-->
+<script src="https://gist.github.com/Zxited/43ab0ed265138ceafe2231df79d29610.js"></script>
 
 Så nu skulle jeg bruge en måde, at lave mine billeder om til den her format i en csv. Men det gjorde jeg næsten på en måde i mit originale script i KerasNumberRecognition. Så jeg tog noget inspiration derfra og prøvede, at lave det om til linjer med 785 kolonner (28x28 billede = 784 + 1 til mærkaten). Der var en masse besvær med, at omforme arrays til de rigtige dimensioner. Efter en del Python dokumentation havde jeg kodet dette.
 
-<!--script src="https://gist.github.com/Zxited/ce580def221b033e754e0bd5af46b33f.js"></script-->
+<script src="https://gist.github.com/Zxited/ce580def221b033e754e0bd5af46b33f.js"></script>
 
 Koden indlæser csv filen og laver billederne flade og om til den rigtige størrelse array, samt dividere dem, deler dem op i TRAIN og VAL sæt og smider dem til sidst i en csv fil med mærkaten.
 
@@ -106,7 +106,7 @@ Efter at have givet op på AutoML og var begyndt på, at omdanne deres eksempel 
 Så 97,37% på den bedste algoritme efter en halv time, er slet ikke dårligt.
 
 ## Begrænsninger ved ML.NET og AutoML
-
+Deep Learning understøttelse? Neurale Netværk?
 
 ## Kilder 
 
