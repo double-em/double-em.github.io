@@ -1,3 +1,20 @@
 {
-    "markdown.preview.breaks": true
+    "markdown.preview.breaks": true,
+    "pasteImage.path": "${projectRoot}/assets/img/posts/${currentFileNameWithoutExt}",
+    "pasteImage.defaultName": "Y-MM-DD-HH-mm-ss-${currentFileNameWithoutExt}",
+    "pasteImage.basePath": "${projectRoot}",
+    "pasteImage.insertPattern": "${imageSyntaxPrefix}/${imageFilePath}${imageSyntaxSuffix}",
+    "spellright.language": [
+        "Danish",
+        "English (American)"
+    ],
+    "spellright.documentTypes": [
+        "latex",
+        "plaintext",
+        "markdown"
+    ],
+    "save-typing.languages": [
+        "markdown"
+    ],
+    "spellright.recheckOnSave": false
 }
