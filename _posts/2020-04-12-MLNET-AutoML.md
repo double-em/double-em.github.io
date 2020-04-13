@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Brug ML.NET og AutoML"
+title:  "Brug af ML.NET og AutoML"
 author: Mike Meldgaard
 date:   2020-4-12 #01:00:12 +0530
 category: MachineLearning
