@@ -106,7 +106,11 @@ Efter at have givet op på AutoML og var begyndt på, at omdanne deres eksempel 
 Så 97,37% på den bedste algoritme efter en halv time, er slet ikke dårligt.
 
 ## Begrænsninger ved ML.NET og AutoML
-Deep Learning understøttelse? Neurale Netværk?
+Ifølge et oplæg på en issue på dotnet/machinelearning Githubben.
+
+##### --- Great question. GPUs are excellent for accelerating DNN training and inference. Currently we do not offer DNN learners. At this point, we do not have GPU-accelerated components available. However, ML.NET is a general-purpose machine learning framework. It can support a variety of machine learning algorithms, including neural nets such as Cognitive Toolkit (CNTK). Adding support for leading DNN packages within ML.NET is on our roadmap. We will likely support GPU training and inference in the future for specific learners and transforms that can benefit from it.
+
+Så hvis man går ud fra dette svar, så har ML.NET ikke rigtig understøttelse af neurale netværk og deep learning, dog har de lidt. Men ud fra vores testresultater kan vi se, at det ikke er lige så effektivt som det neurale netværk vi lavede i KerasNumberRecognition projektet. Og det neurale netværk var mere effektivt, samtidig med det var et standard MLP der ikke nødvendigvis er lige så godt til billede håndtering som f.eks. CNN.
 
 ## Kilder 
 
