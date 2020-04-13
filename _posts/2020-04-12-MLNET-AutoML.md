@@ -112,6 +112,11 @@ Ifølge et oplæg på en issue på dotnet/machinelearning Githubben.
 
 Så hvis man går ud fra dette svar, så har ML.NET ikke rigtig understøttelse af neurale netværk og deep learning, dog har de lidt. Men ud fra vores testresultater kan vi se, at det ikke er lige så effektivt som det neurale netværk vi lavede i KerasNumberRecognition projektet. Og det neurale netværk var mere effektivt, samtidig med det var et standard MLP der ikke nødvendigvis er lige så godt til billede håndtering som f.eks. CNN.
 
+## Konklusion
+Jeg kan ud fra mine forskellige eksperimenter og undersøgelser konkludere, at ML.NET nok ikke er det bedste, at køre til vores udfordringer, da de mangler deep learning understøttelse til dels samt, at de kan mangle en række andre features.
+
+Lige nu synes jeg, at Keras og Tensorflow virker bedst pga. de har mere dokumentation og en større brugerbase, så der kan være mere hjælp, at hente. Samtidig ligner det, at TensorFlow og Keras tilbyder mere funktionalitet og er et mere modent framework. Dog ved ML.NET er der AutoML til, at hjælpe en med, at komme i gang, hvor den generere et projekt ud fra den algoritme den fandt bedst. Dette kan tilbyde hurtigere prototyper end Keras.
+
 ## Kilder 
 
 ### Microsoft
