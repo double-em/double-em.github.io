@@ -26,6 +26,7 @@ Så RNN husker kun kortvarigt. Men det kan fikses ved, at bruge en modificeret v
 
 
 
+
 # Kilder
 - Introduction to Long Short Term Memory<br><https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/>
 - Stock Prices Prediction Using ML and DL<br><https://www.analyticsvidhya.com/blog/2018/10/predicting-stock-price-machine-learningnd-deep-learning-techniques-python/>
