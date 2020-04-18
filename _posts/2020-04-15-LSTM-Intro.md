@@ -43,6 +43,7 @@ Så RNN husker kun kortvarigt. Men det kan fikses ved, at bruge en modificeret v
 - Python Range<br><https://www.w3schools.com/python/ref_func_range.asp>
 - Tensorflow Keras Layer<br><https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=nightly>
 - Tensorflow Keras Dropout<br><https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dropout?version=nightly>
+- Introduction to Recurrent Neural Networks<br><https://www.analyticsvidhya.com/blog/2017/12/introduction-to-recurrent-neural-networks/>
 
 
 
@@ -61,12 +62,15 @@ Så RNN husker kun kortvarigt. Men det kan fikses ved, at bruge en modificeret v
 - Artificial Neural Networks: Concepts and Models<br><https://missinglink.ai/guides/neural-network-concepts/complete-guide-artificial-neural-networks/>
 - Hyperparameters: Optimization Methods<br><https://missinglink.ai/guides/neural-network-concepts/hyperparameters-optimization-methods-and-real-world-model-management/>
 
+- Nvidia Container Runtime<br><https://developer.nvidia.com/nvidia-container-runtime>
 
+- Build TensorFlow input pipelines<br><https://www.tensorflow.org/guide/data>
 
 - Google Cloud AutoML<br><https://cloud.google.com/automl/>
 - Regular Expressions Cheat Sheet<br><https://cheatography.com/davechild/cheat-sheets/regular-expressions/>
 - TPUs vs GPUs for Transformers(BERT)<br><https://timdettmers.com/2018/10/17/tpus-vs-gpus-for-transformers-bert/>
 - My Experience and Advice for Using GPUs in Deep Learning<br><https://timdettmers.com/2019/04/03/which-gpu-for-deep-learning/>
+- Tensorflow Use a TPU<br><https://www.tensorflow.org/guide/tpu>
 
 ## Hyperparameter optimization
 - Hyperas<br><https://github.com/maxpumperla/hyperas>
