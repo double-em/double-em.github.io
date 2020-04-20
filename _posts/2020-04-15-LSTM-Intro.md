@@ -23,9 +23,18 @@ Så RNN er rigtig effektive til korte sammenhæng. Men hvis vi skal bruge en tid
 Så RNN husker kun kortvarigt. Men det kan fikses ved, at bruge en modificeret version af RNN som er LSTM.
 
 ## Forbedringer over RNN
+Når RNN tilføjer ny information, så transformere den egentlig alt informationen, da den bare køre en funktion på det nye input og det gamle. Dvs. at det hele bliver transformeret. Så RNN tager ikke højde for vigtigheden af det input den får og skære alt over samme kan.
 
+LSTM er i form af celler som data flyder igennem. Disse celler har en tilstand. Men disse celler har også informationer om sidste celles tilstand og sidste celles gemte tilstand samt det nuværende input i time steppet. Dette giver LSTM mulighed for via. dens 3 porte i cellen, at differentiere mellem vigtigt og mindre vigtigt. Så de modificere kun dataene en smule i stedet for det hele og kan derfor vælge, at glemme eller huske forskellige ting.
 
+![](/assets/img/posts/2020-04-15-LSTM-Intro/2020-04-20-14-41-58-2020-04-15-LSTM-Intro.png)
+Man kan tænke på det lidt ligesom et samlebånd, hvor dataene flyder fra den ene ende til den anden.
 
+## Arkitekturen af LSTM
+Som nævnt tidligere består en LSTM celle af 3 porte, forget, input og output portene.
+
+![](/assets/img/posts/2020-04-15-LSTM-Intro/2020-04-20-14-44-57-2020-04-15-LSTM-Intro.png)
+Som kan ses her er der 2 baner som køre igennem. Hvor der kommer et input til cellen og et output fra cellen.
 
 # Kilder
 - Introduction to Long Short Term Memory<br><https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/>
