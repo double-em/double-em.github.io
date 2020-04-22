@@ -8,7 +8,7 @@ summary: LSTM modeller til projektet for PO.
 thumbnail: development.png
 ---
 
-# LSTM Netværk til Projekt
+# LSTM Netværk til Projektet
 Efter, at have fået lidt styr på LSTM og have eksperimenteret med det, gik jeg i gang med, at prøve, at implementere en model for, at kunne analysere på den data vi får fra vores PO.
 
 Netværket skal kunne forudsige / estimere, hvor mange dage der til et vedligehold, så kunden kan se, hvornår de skal regne med, at lave vedligeholdelse på en given maskine.
