@@ -120,6 +120,7 @@
           criterias:
             - line: Jeg skal kunne forstå hvordan en automatiserings kæde ser ud.
           evaluations:
+            - line: Ja jeg har sat en lille smule automatisering op. Og jeg forstår cirka, hvordan en pipeline ser ud.
 
         - name: Jeg undersøger hvordan man Deployer en applikation ud til en container orchestrator.
           tools:
@@ -131,6 +132,8 @@
             - line: Jeg skal kunne komme med et eksempel på hvordan det ville kunne gøres for en given applikation.
             - line: Jeg skal kunne nævne hver del i proccessen når man deployer en containerized applikation.
           evaluations:
+            - line: Jeg kan forstå hvordan man deployer en applikation til et container miljø, samt jeg kan give nogle eksempler på, hvordan jeg vil deploye en given applikation.
+            - line: Jeg kan dog ikke nævne, hver del i proccessen til når man deployer en applikation.
 
         - name: Jeg laver forskellige forsøg med Deployment af små applikationer
           tools:
@@ -141,6 +144,8 @@
             - line: Jeg skal have deployet minimum 1 applikation
             - line: Jeg skal have deployet applikationer på forskellige måder
           evaluations:
+            - line: Jeg har deployet en test applikation.
+            - line: Jeg har ikke forsøgt på flere forskellige måder end fra Github og fra Kubernetes kubectl.
 
         - name: Jeg evaluere over mine forskellige fund omkring automatisering.
           tools:
@@ -153,6 +158,8 @@
             - line: Jeg har blog indlæg der dokumentere mine fund
             - line: Jeg har en idé om hvad automatisering indebære
           evaluations:
+            - line: Jeg har få noter til fund i form af blog.
+            - line: Jeg har en god idé om automatisering.
 
     - name: (Machine Learning) Jeg skal kunne kode mit eget lille Machine Learning projekt
       techniques:
@@ -165,6 +172,8 @@
             - line: Jeg har en forståelse for hvorfor forskellige frameworks bruges
             - line: Jeg har en forståelse for hvordan et Machine Learnings projekt er opstillet
           evaluations:
+            - line: Jeg har brugt lidt forskellige frameworks som Keras, Tensorflow, ML.NET og scikit-learn.
+            - line: Jeg har lavet og opstillet forskellige små ML projekter.
 
         - name: Jeg lære de forskellige frameworks at kende på meget basal plan og opsætter små forsøg
           tools:
@@ -172,8 +181,10 @@
             - line: Dokumentation fra de forskellige frameworks websider
           criterias:
             - line: Jeg har dannet et overblik over de forskellige frameworks der bruges
-            - line: Jeg har en forståelse for, hvorfor der findes forskellige måder at gøre tingene på afhængig af opgaven
+            - line: Jeg har en forståelse for, hvorfor der findes forskellige måder, at gøre tingene på afhængig af opgaven
           evaluations:
+            - line: Ja der bruges f.eks. Keras, Tensorflow, ML.NET og scikit-learn.
+            - line: Jeg har fundemental forståelse for, hvorfor der bliver brugt forskellige.
 
         - name: Jeg koder en lille prototybe der kan analysere den samme type data som bruges i vores projekt
           tools:
@@ -185,4 +196,64 @@
             - line: Jeg skal kunne analysere data der minder om den vi skal bruge i projektet
             - line: Jeg skal selv have kodet opsætningen af projektet
           evaluations:
+            - line: Ja. Jeg har kodet et projekt der kan behandle og analysere på dataene fra vores POs API.
 
+- name: Laeringsplan_3
+  goals:
+    - name: (DevOps) Opsætte en pipeline til ML projektet.
+      techniques:
+        - name: Undersøge forskellige pipelines.
+          tools:
+            - line: Azure
+            - line: Amazon
+            - line: Google
+            - line: Bitbucket
+            - line: Github
+          criterias:
+            - line: Jeg kender de forskellige pipelines.
+          evaluations:
+            - line: 
+
+        - name: Jeg skal finde en pipeline.
+          tools:
+            - line: Google
+            - line: Stackoverflow
+            - line: De forskellige pipeline dokumentation som jeg har fundet.
+          criterias:
+            - line: Jeg skal have valgt en pipeline jeg har vurderet som passer til opgaven.
+            - line: Den valgte pipeline skal kunne bygge projektet.
+            - line: Den valgte pipeline skal kunne deploye ML projektet.
+          evaluations:
+            - line: 
+
+        - name: Jeg implementere den valgte pipeline.
+          tools:
+            - line: Den valgte pipelines dokumentation.
+          criterias:
+            - line: Jeg har en fungerende pipeline til ML projektet.
+            - line: Den valgte pipeline kan bygge projektet.
+            - line: Den valgte pipeline kan deploye projektet.
+          evaluations:
+            - line: 
+
+    - name: (Machine Learning) Udvide på mit ML projekt til PO og optimere modellerne.
+      techniques:
+        - name: Implementere API så man kan modtage request på forudsigelser.
+          tools:
+            - line: Python dokumentation.
+            - line: Stackoverflow.
+            - line: Andre fremsøgte kilder.
+          criterias:
+            - line: Man kan kalde APIen og få en forudsigelse tilbage.
+          evaluations:
+            - line: 
+
+        - name: Modellens hyperparamtre tunes og modellen optimeres.
+          tools:
+            - line: Eksperimenter med forskellige hyperparamtre og værdier.
+            - line: Eksperimenter med forskellige modeller og/eller variationer af modellerne.
+          criterias:
+            - line: Modellen giver et tilfredstillende resultat.
+            - line: Modellen er den mindst krævende / mest effektive, så den ikke koster for mange resourcer, men samtidig levere et tilfredstillende resultat.
+          evaluations:
+            - line: 

@@ -36,41 +36,34 @@ Som nævnt tidligere består en LSTM celle af 3 porte, forget, input og output p
 ![](/assets/img/posts/2020-04-15-LSTM-Intro/2020-04-20-14-44-57-2020-04-15-LSTM-Intro.png)
 Som kan ses her er der 2 baner som køre igennem. Hvor der kommer et input til cellen og et output fra cellen.
 
+Forget porten som er den første port sørger for, at sortere information fra som ikke længere er nødvendige via. et filter. Dette er nødvendigt for, at optimere ydeevnen af LSTM.
+
+Input porten står for, at tilføje information til cellens tilstand. Input porten kan deles op i 3 trin:
+1. Regulering af værdierne ved brug af en sigmoid funktion. Dette er cirka det samme som forget porten og filtrere information fra tidligere celles output og det nuværende output.
+2. Brug af en tanh funktion til, at lave en vektor med alle de mulige værdier der kan tilføjes ud fra tidligere celles tilstand og nuværende input.
+3. Gange regulerings filtret med vores vektor for så, at tilføje kun den nyttige information i stedet for redundant information.
+
+Output porten står for, at udvælge brugbar information fra cellens tilstand og vise det som et output. Dette er igen 3 trin:
+1. Laver en vektor efter, at have brugt tanh funktionen på cellens tilstand for, så værdierne er skaleret fra -1 til +1.
+2. Laver et filter ud fra tidligere celles stadie og nuværende input  ved brug af sigmoid til, at regulere vektoren fra trin 1.
+3. Gange filteret med vektoren og smide det ud som output, men også ud til næste celles gemte tilstand.
+
+## Brugen af LSTM
+Jeg valgte, at følge en guide, hvor man fik LSTM til, forudsige næste bogstav i macbeth.
+<script src="https://gist.github.com/Zxited/85fba0ddebc1aac08e84917b4587343e.js"></script>
+Jeg brugte en række print funktioner for, at følge med i, hvad der skete. Og jeg eksperimenteret med, at ændre lidt forskelligt f.eks. shapes.
+
+Disse eksperimenter var gode for, at jeg kunne forstå, hvad der skete. Så jeg fjernede lidt, tilføje lidt, lavede lidt ændringer for at se, hvad der skete.
+
 # Kilder
 - Introduction to Long Short Term Memory<br><https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/>
-- Stock Prices Prediction Using ML and DL<br><https://www.analyticsvidhya.com/blog/2018/10/predicting-stock-price-machine-learningnd-deep-learning-techniques-python/>
-- Tensorflow LSTM Tutorial<br><https://www.tensorflow.org/tutorials/structured_data/time_series#single_step_model>
-- Tensorflow Dataset<br><https://www.tensorflow.org/api_docs/python/tf/data/Dataset?version=nightly>
-- <https://www.tensorflow.org/api_docs/python/tf/Tensor?version=nightly>
-- Keras Cheat Sheet<br><https://github.com/haribaskar/Keras_Cheat_Sheet_Python>
-- Microsoft Azure Cheat Sheet<br><https://cdn.analyticsvidhya.com/wp-content/uploads/2017/02/17090804/microsoft-machine-learning-algorithm-cheat-sheet-v6.pdf>
-- Keras Activations<br><https://keras.io/activations/>
-- Keras Advanced Activations<br><https://keras.io/layers/advanced-activations/>
-- Cheatsheet - Common Machine Learning Algorithms<br><https://www.analyticsvidhya.com/blog/2015/09/full-cheatsheet-machine-learning-algorithms/>
-- scikit-learn - Choosing the right estimator<br><https://scikit-learn.org/stable/tutorial/machine_learning_map/>
 - Tensorflow Keras Layers LSTM<br><https://www.tensorflow.org/api_docs/python/tf/keras/layers/LSTM?version=nightly>
 - Understanding slicing in Python<br><https://stackoverflow.com/questions/509211/understanding-slice-notation>
 - Python Range<br><https://www.w3schools.com/python/ref_func_range.asp>
 - Tensorflow Keras Layer<br><https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=nightly>
-- Tensorflow Keras Dropout<br><https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dropout?version=nightly>
 - Introduction to Recurrent Neural Networks<br><https://www.analyticsvidhya.com/blog/2017/12/introduction-to-recurrent-neural-networks/>
 
 
-
-- Grid Search for model tuning<br><https://towardsdatascience.com/grid-search-for-model-tuning-3319b259367e>
-- Practical Recommendations for Gradient-Based Training ofDeepArchitectures<br><https://arxiv.org/pdf/1206.5533.pdf>
-- Artificial Neural Networks: How can I estimate the number of neurons and layers?<br><https://www.quora.com/Artificial-Neural-Networks-How-can-I-estimate-the-number-of-neurons-and-layers>
-- Babysitting the learning process<br><https://cs231n.github.io/neural-networks-3/#baby>
-- Tutorial: Optimizing Neural Networks using Keras<br><https://www.analyticsvidhya.com/blog/2016/10/tutorial-optimizing-neural-networks-using-keras-with-image-recognition-case-study/#nine>
-- Machine Learning: What are some tips and tricks for training deep neural networks?<br><https://www.quora.com/Machine-Learning-What-are-some-tips-and-tricks-for-training-deep-neural-networks>
-- Rohan & Lenny #3: Recurrent Neural Networks & LSTMs<br><https://ayearofai.com/rohan-lenny-3-recurrent-neural-networks-10300100899b>
-
-
-
-- NN Overkill?<br><https://missinglink.ai/guides/neural-network-concepts/neural-networks-regression-part-1-overkill-opportunity/>
-- NN Activation Functions<br><https://missinglink.ai/guides/neural-network-concepts/7-types-neural-network-activation-functions-right/>
-- Artificial Neural Networks: Concepts and Models<br><https://missinglink.ai/guides/neural-network-concepts/complete-guide-artificial-neural-networks/>
-- Hyperparameters: Optimization Methods<br><https://missinglink.ai/guides/neural-network-concepts/hyperparameters-optimization-methods-and-real-world-model-management/>
 
 - Nvidia Container Runtime<br><https://developer.nvidia.com/nvidia-container-runtime>
 

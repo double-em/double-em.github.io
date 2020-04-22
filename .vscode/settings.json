@@ -11,10 +11,12 @@
     "spellright.documentTypes": [
         "latex",
         "plaintext",
-        "markdown"
+        "markdown",
+        "yaml"
     ],
     "save-typing.languages": [
-        "markdown"
+        "markdown",
+        "yaml"
     ],
     "spellright.recheckOnSave": false
 }

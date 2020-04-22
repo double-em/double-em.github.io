@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Læringsplan 2"
+title:  "Læringsplan 3"
 author: Mike Meldgaard
-date:   2020-03-25 #01:00:12 +0530
+date:   2020-04-20 #01:00:12 +0530
 category: Laeringsplaner
-summary: 03/25 - ??/?? (2020) Anden Læringsplan.
+summary: 20/4 - 3/5 Tredje Læringsplan.
 thumbnail: learn.png
 ---
 
-# Læringsplan 2
-{% include table.html tablenumber=1 %}
+# Læringsplan 3
+{% include table.html tablenumber=2 %}
 <br>
 
 ## Personlige Læringsmål
@@ -47,12 +47,4 @@ thumbnail: learn.png
 
 **Kompetencer - Den studerende kan**
 - <span style="color: green;">Selvstændigt sætte sig ind i nye emner inden for fagområdets teori og/eller praksis.</span>
-- <span style="color: green;">Perspektivere og relatere det/de valgte emner i forhold til uddannelsens øvrige emneområder</span>
-
-## Kilder brugt
-
-- <http://course18.fast.ai/lessonsml1/lesson1.html>
-
-- <https://www.analyticsvidhya.com/blog/2018/10/predicting-stock-price-machine-learningnd-deep-learning-techniques-python/>
-
-- <https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/>
+- <span style="color: green;">Perspektivere og relatere det/de valgte emner i forhold til uddannelsens øvrige emneområder.</span>
