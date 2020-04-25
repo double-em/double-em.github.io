@@ -48,3 +48,6 @@ thumbnail: learn.png
 **Kompetencer - Den studerende kan**
 - <span style="color: green;">Selvstændigt sætte sig ind i nye emner inden for fagområdets teori og/eller praksis.</span>
 - <span style="color: green;">Perspektivere og relatere det/de valgte emner i forhold til uddannelsens øvrige emneområder.</span>
+
+# Links
+- Bloom’s Taxonomy<br><https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/>
