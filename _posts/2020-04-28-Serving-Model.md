@@ -11,7 +11,9 @@ thumbnail: development.png
 # Servering af ML model til produktion
 
 Kør en servering med GPU:
+```
 docker run -it --rm --gpus all -p 8501:8501 --mount type=bind,source=/home/marianne/container-data/models,target=/models -e MODEL_NAME=prod -t tensorflow/serving:latest-gpu
+```
 
 
 
