@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "Hyperparameter tuning og Visualisering"
+title:  "Bedre datahåndtering"
 author: Mike Meldgaard
 date:   2020-4-26 #01:00:12 +0530
 category: MachineLearning
-summary: Hyperparameter tuning og Visualisering af fremskridt i modellerne.
+summary: Bedre håndtering af data.
 thumbnail: development.png
 ---
 
-# Hyperparameter tuning og Visualisering
+# Bedre datahåndtering
 
 
 
