@@ -92,15 +92,27 @@ Jeg smed så datatene ind i en tf.dataset som jeg gjorde før, men behandler sel
 
 <script src="https://gist.github.com/Zxited/ad02c008dd0b59b46f874031021fe8c5.js"></script>
 
+Hvor det færdige sæt kan ses som:
+
+![](/assets/img/posts/2020-04-24-Better-Datahandling/2020-05-05-18-28-13-2020-04-24-Better-Datahandling.png)
+
 Jeg shuffler, splitter, batcher, cacher og prefetcher så datasættet i min træner. Shuffler med et seed, så den blander dataene på samme vis, hver gang. Splitter for at få validerings og test sæt ud over træningssættet. Batcher for, at den ser flere sæt inden den opdatere / lære af eksemplerne. Cacher for, at dataene blive læst ind i ram ved første brug og holdt der. Caching gør jeg til sidst for, at cache sættet når det er blevet omdannet til batches, så det ikke skal gøre igen. Prefetcher, så næste batch er klar inden den er færdig med den nuværende. Dette er meget godt, hvis man har meget data der skal læses ind. Dog giver det ikke meget her, da sættene ikke er så store, at de ikke kan holdes i ram.
 
 <script src="https://gist.github.com/Zxited/c10a7012158f50c95559c198b6e05598.js"></script>
 
 Men til sidst. Taaadaa!
 
+![](/assets/img/posts/2020-04-24-Better-Datahandling/2020-05-05-19-26-34-2020-04-24-Better-Datahandling.png)
 
+Et meget tilfredsstillende resultat og et bevis på, hvor vigtig korrekt håndtering af data er. Normalt ville den ligge omkring et gennemsnitlig tab på 0,8 og en maksimal afvigelse på 5-6, men jeg har lavet lidt hyperparameter tuning siden, som jeg beskriver i et andet oplæg.
 
-Et meget tilfredsstillende resultat og et bevis på, hvor vigtig korrekt håndtering af data er. Normalt ville den ligge omkring et gennemsnitlig tab på 1 og en maksimal afvigelse på 2, men jeg har lavet lidt hyperparameter tuning siden, som jeg beskriver i et andet oplæg. 
+Den har stadig en der går over de 3 dage som vi ønsker, men ikke med meget.
+
+![](/assets/img/posts/2020-04-24-Better-Datahandling/2020-05-05-19-28-30-2020-04-24-Better-Datahandling.png)
+
+Ovenover ses den ene der var over. Som jeg også har erfaret ved andre test runder med modellen, så forudsiger den før tid i stedet for, for sent. Det er det ønskede adfærd, da vi hellere ser den siger noget før tid, end den siger noget for sent, så det kan gå galt.
+
+Denne data er selvfølgelig vores test data den ikke har set før, så vi får det mest præcise estimat af modellens ydeevne. Modellens gennemsnitlige absolutte tab er virkelig godt som det umiddelbart ser ud.
 
 # Kilder
 - Multi-worker training with Keras<br><https://www.tensorflow.org/tutorials/distribute/multi_worker_with_keras#preparing_dataset>
