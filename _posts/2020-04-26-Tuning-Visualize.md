@@ -55,7 +55,7 @@ Ovenover ses top 20 over de bedste modeller ud fra validerings tabet. Jeg valgte
 Vi kan konkludere ud fra vores resultat, at rmsprop som optimeringsfunktion er umiddelbart den bedste med få undtagelser. Vi kan også se, at antallet af gemte lag er bedst omkring 2-4 styks og bredden på de lag ligger omkring 300-600.
 
 
-## Flere parametere
+## Scheduled learning rate og batch size
 Resultaterne viser også, at vi ikke har meget overtræning i modellerne, så der vil umiddelbart ikke være en grund til, at ligge et dropout imellem lagene, som man ellers gør for, at undgå overtræning. Dropout gør det, at den deaktivere dele af modellen, så modellen ikke kan lære træningssættet udenad, da den er tvunget til, at lære med forskellige tilfældige dele deaktiveret.
 
 Hvis vi kigger på top 5, vist i forhold til trænings tid.
@@ -70,6 +70,8 @@ For yderligere, at mindske udslag kan man lave en scheduled learning rate, som m
 
 Man kan tænke på det lidt ligesom en professionel bokser. En professionel bokser har en god teknik og har trænet boksning længe. Hvis han slår forkert en gang, så tilpasser han ikke sit slag, så drastisk som da han lærte at bokse. Fordi han kender allerede teknikken. Det er derfor ikke nødvendigt, at tilpasse så drastisk, da det vil få ham længere væk fra perfektion, hver gang han ramte forkert. Det samme gælder vores model.
 
+### Implementering af Scheduled learning rate
+Coming soon TM
 
 # Kilder
 - Optimize TensorFlow performance using the Profiler<br><https://www.tensorflow.org/guide/profiler?authuser=1#gpu_kernel_stats>
