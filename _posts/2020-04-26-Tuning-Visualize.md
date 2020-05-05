@@ -27,6 +27,14 @@ thumbnail: development.png
 - Tensorboard Debugger Github<br><https://github.com/tensorflow/tensorboard/tree/master/tensorboard/plugins/debugger>
 - Nvidia GPI Problem 1<br><https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti>
 - Nvidia GPU Problem 2<br><https://developer.nvidia.com/nvidia-development-tools-solutions-ERR_NVGPUCTRPERM-permission-issue-performance-counters>
+- Role of batch size in Keras LSTM<br><https://stackoverflow.com/questions/48491737/understanding-keras-lstms-role-of-batch-size-and-statefulness>
+- How are inputs fed into the LSTM/RNN network in mini-batch method?<br><https://www.quora.com/How-are-inputs-fed-into-the-LSTM-RNN-network-in-mini-batch-method?share=1>
+- How to use Different Batch Sizes when Training and Predicting with LSTMs<br><https://machinelearningmastery.com/use-different-batch-sizes-training-predicting-python-keras/>
+- Difference between samples, timesteps and features for LSTM input<br><https://machinelearningmastery.com/faq/single-faq/what-is-the-difference-between-samples-timesteps-and-features-for-lstm-input/>
+- A Gentle Introduction to Mini-Batch Gradient Descent and How to Configure Batch Size<br><https://machinelearningmastery.com/gentle-introduction-mini-batch-gradient-descent-configure-batch-size/>
+
+
 
 - Multi-worker training with Keras<br><https://www.tensorflow.org/tutorials/distribute/multi_worker_with_keras#preparing_dataset>
 - tf.data.Dataset<br><https://www.tensorflow.org/api_docs/python/tf/data/Dataset?version=nightly#cache>
+- tf.Tensor<br><https://www.tensorflow.org/api_docs/python/tf/Tensor?version=nightly>
