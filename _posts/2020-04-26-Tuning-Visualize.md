@@ -45,7 +45,6 @@ Denne metode er den metode der samler det hele.
 Jeg lader så min computer køre igennem de 60 forskellige modeller det bliver til i alt for, at komme igennem alle parametre. Det tager på anden side af 3 timer, så det kan med fordel gøres om natten. For måske senere, at mindske træningstid kan man med fordel optimere yderligere eller bruge en stærkere GPU eller TPU. Mit træningsmiljø gør brug af Tensorflow's image: tensorflow/tensorflow:nightly-gpu, som har GPU support til nvidia kort.
 
 ### Resultater
-
 Efter at den har været igennem alle modeller kan vi åbne Tensorboard som kan læse log filerne. Tensorboard kan også køre på samme tid, hvis man ønsker, at se udviklingen live som også godt kan være interessant.
 
 ![](/assets/img/posts/2020-04-26-Tuning-Visualize/2020-05-05-20-43-18-2020-04-26-Tuning-Visualize.png)
@@ -53,7 +52,6 @@ Efter at den har været igennem alle modeller kan vi åbne Tensorboard som kan l
 Ovenover ses top 20 over de bedste modeller ud fra validerings tabet. Jeg valgte, at tage top 20, da efter top 20 kommer de fleste modeller over 1 og over 4 i absolut gennemsnitlig tab. Man skal samtidig også tage resultaterne med et gram salt, da modellerne kan klare sig forskelligt mellem hver session.
 
 Vi kan konkludere ud fra vores resultat, at rmsprop som optimeringsfunktion er umiddelbart den bedste med få undtagelser. Vi kan også se, at antallet af gemte lag er bedst omkring 2-4 styks og bredden på de lag ligger omkring 300-600.
-
 
 ## Scheduled learning rate og batch size
 Resultaterne viser også, at vi ikke har meget overtræning i modellerne, så der vil umiddelbart ikke være en grund til, at ligge et dropout imellem lagene, som man ellers gør for, at undgå overtræning. Dropout gør det, at den deaktivere dele af modellen, så modellen ikke kan lære træningssættet udenad, da den er tvunget til, at lære med forskellige tilfældige dele deaktiveret.
