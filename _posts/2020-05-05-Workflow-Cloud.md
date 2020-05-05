@@ -2,14 +2,14 @@
 layout: post
 title:  "Workflow med Cloud"
 author: Mike Meldgaard
-date:   2020-4-26 #01:00:12 +0530
-category: MachineLearning
+date:   2020-5-05 #01:00:12 +0530
+category: DevOps
 summary: Workflow pipelines i skyen
 thumbnail: development.png
 ---
 
 # Workflow med Cloud
-
+Når man tænker automatisering og pipeline er der nogle ting man kigger på. Det kan være automatisk kompilering og udgivelse af software og f.eks. automatiske integrationstest og unit test.
 
 
 # Kilder
