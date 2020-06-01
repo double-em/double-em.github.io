@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Workflow med Cloud"
+title:  "Automatiske Tests"
 author: Mike Meldgaard
 date:   2020-5-05 #01:00:12 +0530
 category: DevOps
-summary: Workflow pipelines i skyen
+summary: Automatiske tests i et workflow
 thumbnail: development.png
 ---
 
