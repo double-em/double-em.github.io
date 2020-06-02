@@ -7,7 +7,7 @@ email: meldgaardmike@gmail.com  # Your Email
 description: >-  
   Software Developer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://zxited.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://double-em.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: xplor4r
 github_username:  Zxited
 
@@ -32,7 +32,7 @@ author: Mike Meldgaard
 author_bio: Software Developer / Datamatiker 4. Sem. Student, Produktgruppe 15, Procesvejledning 8, ERFA Machine Learning 2, ERFA DevOps
 author_email: "meldgaardmike@gmail.com"
 author_location: Denmark
-author_website_url: "https://zxited.github.io"
+author_website_url: "https://double-em.github.io"
 
 # social links
 #twitter_username: xplor4r
