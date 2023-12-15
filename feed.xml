@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://double-em.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://double-em.github.io/" rel="alternate" type="text/html" /><updated>2023-12-15T20:15:22+00:00</updated><id>https://double-em.github.io/feed.xml</id><title type="html">Mike Meldgaard</title><subtitle>Software Developer</subtitle><author><name>Mike Meldgaard</name></author><entry><title type="html">Workflow med Cloud</title><link href="https://double-em.github.io/devops/2020/05/05/Workflow-Cloud-copy/" rel="alternate" type="text/html" title="Workflow med Cloud" /><published>2020-05-05T00:00:00+00:00</published><updated>2020-05-05T00:00:00+00:00</updated><id>https://double-em.github.io/devops/2020/05/05/Workflow-Cloud%20copy</id><content type="html" xml:base="https://double-em.github.io/devops/2020/05/05/Workflow-Cloud-copy/">&lt;h1 id=&quot;workflow-med-cloud&quot;&gt;Workflow med Cloud&lt;/h1&gt;
+&lt;p&gt;Når man tænker automatisering og pipeline er der nogle ting man kigger på. Det kan være automatisk kompilering og udgivelse af software og f.eks. automatiske integrationstest og unit test.&lt;/p&gt;
+
+&lt;h1 id=&quot;kilder&quot;&gt;Kilder&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Rolling update&lt;br /&gt;&lt;a href=&quot;https://cloud.google.com/kubernetes-engine/docs/how-to/updating-apps?hl=en_US&quot;&gt;https://cloud.google.com/kubernetes-engine/docs/how-to/updating-apps?hl=en_US&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Kubernetes service&lt;br /&gt;&lt;a href=&quot;https://kubernetes.io/docs/concepts/services-networking/service/#multi-port-services&quot;&gt;https://kubernetes.io/docs/concepts/services-networking/service/#multi-port-services&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Cloud SDK Install&lt;br /&gt;&lt;a href=&quot;https://cloud.google.com/sdk/docs#linux&quot;&gt;https://cloud.google.com/sdk/docs#linux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;GCR Pushing and pulling imags&lt;br /&gt;&lt;a href=&quot;https://cloud.google.com/container-registry/docs/pushing-and-pulling?hl=en_US#tag_the_local_image_with_the_registry_name&quot;&gt;https://cloud.google.com/container-registry/docs/pushing-and-pulling?hl=en_US#tag_the_local_image_with_the_registry_name&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;GCR Authentication&lt;br /&gt;&lt;a href=&quot;https://cloud.google.com/container-registry/docs/advanced-authentication#gcloud-helper&quot;&gt;https://cloud.google.com/container-registry/docs/advanced-authentication#gcloud-helper&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Use Tensorflow Serving with Kubernetes&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/tfx/serving/serving_kubernetes#part_3_deploy_in_kubernetes&quot;&gt;https://www.tensorflow.org/tfx/serving/serving_kubernetes#part_3_deploy_in_kubernetes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Docker with Github Packages&lt;br /&gt;&lt;a href=&quot;https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-docker-for-use-with-github-packages&quot;&gt;https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-docker-for-use-with-github-packages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Docker env var&lt;br /&gt;&lt;a href=&quot;https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file&quot;&gt;https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Docker build context&lt;br /&gt;&lt;a href=&quot;https://www.jamestharpe.com/include-files-outside-docker-build-context/&quot;&gt;https://www.jamestharpe.com/include-files-outside-docker-build-context/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Docker compose&lt;br /&gt;&lt;a href=&quot;https://docs.docker.com/compose/#compose-documentation&quot;&gt;https://docs.docker.com/compose/#compose-documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;GCP Uptime&lt;br /&gt;&lt;a href=&quot;https://cloud.google.com/monitoring/uptime-checks#monitoring_uptime_check_get-go&quot;&gt;https://cloud.google.com/monitoring/uptime-checks#monitoring_uptime_check_get-go&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Config kubectl for GCP&lt;br /&gt;&lt;a href=&quot;https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl#generate_kubeconfig_entry&quot;&gt;https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl#generate_kubeconfig_entry&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Check if Docker images exists with tag locally&lt;br /&gt;&lt;a href=&quot;https://stackoverflow.com/questions/30543409/how-to-check-if-a-docker-image-with-a-specific-tag-exist-locally&quot;&gt;https://stackoverflow.com/questions/30543409/how-to-check-if-a-docker-image-with-a-specific-tag-exist-locally&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Linux environment variables&lt;br /&gt;&lt;a href=&quot;https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/&quot;&gt;https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Github removing sensitive data from a repository&lt;br /&gt;&lt;a href=&quot;https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository&quot;&gt;https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;BFG Repo Cleaner&lt;br /&gt;&lt;a href=&quot;https://rtyley.github.io/bfg-repo-cleaner/&quot;&gt;https://rtyley.github.io/bfg-repo-cleaner/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Github creating and storing encrypted secrets&lt;br /&gt;&lt;a href=&quot;https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets&quot;&gt;https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Workflow syntax for GitHub Actions&lt;br /&gt;&lt;a href=&quot;https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestpaths&quot;&gt;https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestpaths&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Mike Meldgaard</name></author><category term="DevOps" /><summary type="html">Workflow med Cloud Når man tænker automatisering og pipeline er der nogle ting man kigger på. Det kan være automatisk kompilering og udgivelse af software og f.eks. automatiske integrationstest og unit test.</summary></entry><entry><title type="html">Automatiske Tests</title><link href="https://double-em.github.io/devops/2020/05/05/AutoTesting/" rel="alternate" type="text/html" title="Automatiske Tests" /><published>2020-05-05T00:00:00+00:00</published><updated>2020-05-05T00:00:00+00:00</updated><id>https://double-em.github.io/devops/2020/05/05/AutoTesting</id><content type="html" xml:base="https://double-em.github.io/devops/2020/05/05/AutoTesting/">&lt;h1 id=&quot;workflow-med-cloud&quot;&gt;Workflow med Cloud&lt;/h1&gt;
+&lt;p&gt;Når man tænker automatisering og pipeline er der nogle ting man kigger på. Det kan være automatisk kompilering og udgivelse af software og f.eks. automatiske integrationstest og unit test.&lt;/p&gt;
+
+&lt;h1 id=&quot;kilder&quot;&gt;Kilder&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Docker automated testing&lt;br /&gt;&lt;a href=&quot;https://docs.docker.com/docker-hub/builds/automated-testing/&quot;&gt;https://docs.docker.com/docker-hub/builds/automated-testing/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;pytest docs&lt;br /&gt;&lt;a href=&quot;https://docs.pytest.org/en/latest/contents.html&quot;&gt;https://docs.pytest.org/en/latest/contents.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;pytest examples&lt;br /&gt;&lt;a href=&quot;https://docs.pytest.org/en/latest/example/simple.html#pytest-current-test-environment-variable&quot;&gt;https://docs.pytest.org/en/latest/example/simple.html#pytest-current-test-environment-variable&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;pytest env vars&lt;br /&gt;&lt;a href=&quot;https://stackoverflow.com/questions/36141024/how-to-pass-environment-variables-to-pytest&quot;&gt;https://stackoverflow.com/questions/36141024/how-to-pass-environment-variables-to-pytest&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Badges&lt;br /&gt;&lt;a href=&quot;https://shields.io/&quot;&gt;https://shields.io/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Uptime Robot&lt;br /&gt;&lt;a href=&quot;https://uptimerobot.com/&quot;&gt;https://uptimerobot.com/&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Python 3 logging&lt;br /&gt;&lt;a href=&quot;https://docs.python.org/3/library/logging.html#logging.LogRecord&quot;&gt;https://docs.python.org/3/library/logging.html#logging.LogRecord&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Python 3.8 logging&lt;br /&gt;&lt;a href=&quot;https://docs.python.org/3.8/library/logging.html#levels&quot;&gt;https://docs.python.org/3.8/library/logging.html#levels&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Python logging formatting&lt;br /&gt;&lt;a href=&quot;https://realpython.com/python-logging/#formatting-the-output&quot;&gt;https://realpython.com/python-logging/#formatting-the-output&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Replace print with debug logging&lt;br /&gt;&lt;a href=&quot;https://stackoverflow.com/questions/13116543/how-to-replace-print-debug-message-with-the-logging-module&quot;&gt;https://stackoverflow.com/questions/13116543/how-to-replace-print-debug-message-with-the-logging-module&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Python strptime&lt;br /&gt;&lt;a href=&quot;https://www.programiz.com/python-programming/datetime/strptime&quot;&gt;https://www.programiz.com/python-programming/datetime/strptime&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Access environment variables in Python&lt;br /&gt;&lt;a href=&quot;https://stackoverflow.com/questions/4906977/how-to-access-environment-variable-values&quot;&gt;https://stackoverflow.com/questions/4906977/how-to-access-environment-variable-values&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Mike Meldgaard</name></author><category term="DevOps" /><summary type="html">Workflow med Cloud Når man tænker automatisering og pipeline er der nogle ting man kigger på. Det kan være automatisk kompilering og udgivelse af software og f.eks. automatiske integrationstest og unit test.</summary></entry><entry><title type="html">Servering af ML Model</title><link href="https://double-em.github.io/devops/2020/04/28/Serving-Model/" rel="alternate" type="text/html" title="Servering af ML Model" /><published>2020-04-28T00:00:00+00:00</published><updated>2020-04-28T00:00:00+00:00</updated><id>https://double-em.github.io/devops/2020/04/28/Serving-Model</id><content type="html" xml:base="https://double-em.github.io/devops/2020/04/28/Serving-Model/">&lt;h1 id=&quot;servering-af-ml-model-til-produktion&quot;&gt;Servering af ML model til produktion&lt;/h1&gt;
+
+&lt;p&gt;Kør en servering med GPU:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -it --rm --gpus all -p 8501:8501 --mount type=bind,source=/home/marianne/container-data/models,target=/models -e MODEL_NAME=prod -t tensorflow/serving:latest-gpu
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;kilder&quot;&gt;Kilder&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Train and serve a TensorFlow model&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/tfx/tutorials/serving/rest_simple#install_tensorflow_serving&quot;&gt;https://www.tensorflow.org/tfx/tutorials/serving/rest_simple#install_tensorflow_serving&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;TensorFlow Serving with Docker&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/tfx/serving/docker&quot;&gt;https://www.tensorflow.org/tfx/serving/docker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;tf.keras.models.save_model&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/keras/models/save_model?version=nightly&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/keras/models/save_model?version=nightly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Use a GPU&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/guide/gpu#overview&quot;&gt;https://www.tensorflow.org/guide/gpu#overview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Storing values in a 3D array to csv&lt;br /&gt;&lt;a href=&quot;https://stackoverflow.com/questions/46852741/python-storing-values-in-a-3d-array-to-csv&quot;&gt;https://stackoverflow.com/questions/46852741/python-storing-values-in-a-3d-array-to-csv&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Hyperparameter Tuning with the HParams Dashboard&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/tensorboard/hyperparameter_tuning_with_hparams#3_start_runs_and_log_them_all_under_one_parent_directory&quot;&gt;https://www.tensorflow.org/tensorboard/hyperparameter_tuning_with_hparams#3_start_runs_and_log_them_all_under_one_parent_directory&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Tensorflow Serving Github&lt;br /&gt;&lt;a href=&quot;https://github.com/tensorflow/serving&quot;&gt;https://github.com/tensorflow/serving&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;How do I check whether a file exists without exceptions?&lt;br /&gt;&lt;a href=&quot;https://stackoverflow.com/questions/82831/how-do-i-check-whether-a-file-exists-without-exceptions&quot;&gt;https://stackoverflow.com/questions/82831/how-do-i-check-whether-a-file-exists-without-exceptions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Mike Meldgaard</name></author><category term="DevOps" /><summary type="html">Servering af ML model til produktion</summary></entry><entry><title type="html">Datahåndtering 3.0</title><link href="https://double-em.github.io/machinelearning/2020/04/26/Better-Datahandling/" rel="alternate" type="text/html" title="Datahåndtering 3.0" /><published>2020-04-26T00:00:00+00:00</published><updated>2020-04-26T00:00:00+00:00</updated><id>https://double-em.github.io/machinelearning/2020/04/26/Better-Datahandling</id><content type="html" xml:base="https://double-em.github.io/machinelearning/2020/04/26/Better-Datahandling/">&lt;h1 id=&quot;datahåndtering-30&quot;&gt;Datahåndtering 3.0&lt;/h1&gt;
+&lt;p&gt;Jeg valgte, at gå mere væk fra pandas og numpy omkring håndteringen og forbehandlingen af dataene jeg trækker ned. For i stedet, at gå mere over mod Tensorflow’s indbygget funktioner. Men hvorfor?&lt;/p&gt;
+
+&lt;h2 id=&quot;problemet-med-datahåndetering-uden-for-tensorflow&quot;&gt;Problemet med datahåndetering uden for Tensorflow&lt;/h2&gt;
+&lt;p&gt;Tensorflow er evnen til, at kompilere forskellig funktionalitet i “grafer” som de kalder det. Hvor disse grafer kan kompileres og brugeres senere. Men man har også mulighed for, at køre med eager execution, som gør det muligt, at debugge kode fordi, hver funktion bliver evalueret med det samme og har et naturligt kontrol flow, som basalt set er ligesom man kender normal Python eksekvering.&lt;/p&gt;
+
+&lt;p&gt;Fordelen ved graferne er, at den ved første gennemgang af en funktion, husker og kompilere den, så den bliver kaldt hurtigere næste gang. Det er selvfølgelig sådan Tensorflow køre deres ting bag kulisserne pga. den højere ydeevne, som betyder en del i machine learning. Dette var mere tydeligt i Tensorflow 1.0, da 2.0 har introduceret en mere naturlig måde, at kode på, da man bare kan kode normal python og sessions samt kompilering af modeller bliver udført ved metode kald.&lt;/p&gt;
+
+&lt;p&gt;Fordelen ved Tensorflow’s dataset ud over ydeevne er også kortere kode samt bedre interaktion med Tensorflow biblioteket og TPU understøttelse, da Tensorflow er lavet til GPU og TPU eksekvering og kan gøre effektivt brug af disse resurser. TPU er Google Cloud’s machine learning processorer som er optimeret til matrix beregning.&lt;/p&gt;
+
+&lt;p&gt;Brugen af pandas og numpy kan ikke undgås, men det er heller ikke nødvendigt for, at få meget hurtigere håndtering af data. Da man bl.a. også kan putte normale python metoder ind i en @tf.funktion som angiver den som en Tensorflow funktion. Samtidig kan man også kalde python metoder i en dataset.map() funktion, som så bruges på hvert emne i datasættet.&lt;/p&gt;
+
+&lt;p&gt;Tensorflow dataset er en stream kompatibel instans. Da Tensorflow streamer datasættet i stedet for det er en liste eller array. Dette gør det derfor muligt, at cache, shuffle, prefetch osv. på sættet, så man nemmere kan styre, hvor meget lagres. Men samtidig har man også mulighed for, at dele dem op i batches og tidsvinduer som også kan gentages, så man egentlig har et uendeligt datasæt, dog med de samme værdier blandet. Men det brugbart i nogen situationer. Tidsvinduer er vores historik / sekvens af data features, hvor batches er hvor mange af disse vinduer / eksempler der skal bruge per. gradient opdatering i netværket.&lt;/p&gt;
+
+&lt;p&gt;Batch størrelse er også en faktor i netværkets præcision, da det styre, hvor mange eksempler netværket ser inden den vægter netværket. Dette er f.eks. relevant, hvis man oplever meget ustabil træning, hvor nogle gange ligger tabet højt og andre gange lavt med små spikes, kan man øje stabiliteten ved, at den ser mere variation per. vægtning.&lt;/p&gt;
+
+&lt;h2 id=&quot;implementering-og-bedre-brug-af-tfdataset&quot;&gt;Implementering og bedre brug af tf.dataset&lt;/h2&gt;
+&lt;p&gt;Hvis man kigger på lidt eksempel data her over nedbrud på en dag:
+&lt;script src=&quot;https://gist.github.com/Zxited/088e2060a582375522c04e3c2ed32206.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Value er antallet af sekunder nedbruddet varede og timestamp er sluttidspunktet for nedbruddet.&lt;/p&gt;
+
+&lt;p&gt;Man kan meget hurtigt se, at der ikke rigtig er enighed om hvordan et punkt skal se ud. Da nogle af de gamle punkter f.eks. har sat kommentaren til en kategories nummer og andre har slet ikke kommentarer eller kategorier. Alt dette skulle helst udbedres ligesom i de forrige metoder, hvor jeg forbehandlede dataene.&lt;/p&gt;
+
+&lt;p&gt;Jeg startede fra bunden og skrev en ny metode til behandlingen af dataene. Jeg for det meste prøvede, at holde mig til de indbyggede metoder i pandas dataframe samt numpy arrays, da jeg gerne ville undgå de mange loops i den tidligere metode for bedre ydeevne, overskuelighed samt bedre mulighed for, at vedligeholde koden. Det endte også derfor med en del refaktorering.&lt;/p&gt;
+
+&lt;p&gt;Jeg startede med, at trække dataene fra PO’s API ind i en Dataframe.
+&lt;script src=&quot;https://gist.github.com/Zxited/848268da13d62035d6f05dbbb38cc780.js&quot;&gt;&lt;/script&gt;
+Hvor jeg så dropper pointid, da det ikke skal bruges og laver værdierne om til de korrekte typer. Jeg fylder også alle manglende kommentarer med 0, da dette felt er brugt til både kategori numre, men også selve kommentarerne, hvor 0 betyder “Uncategorized” nedbrud.&lt;/p&gt;
+
+&lt;p&gt;Da vi gerne vil forudsiger ud fra samlet data per. dag, da det er dage imellem vedligehold vi regner med, så lagde jeg alle disse nedbrud sammen på dags basis.
+&lt;script src=&quot;https://gist.github.com/Zxited/d82441f5aa26257d358d200d74fc14b1.js&quot;&gt;&lt;/script&gt;
+Her kigge jeg på hvornår de har haft planlagt og ikke planlagte reparations nedbrud. Og giver dem 0 for ikke kategoriseret og 1 for førnævnte. På den måde får jeg samlet antallet af nedbrud pr. dag samt den totale nede tid.&lt;/p&gt;
+
+&lt;p&gt;Jeg havde over nogle dage arbejdet med datahåndtering og effektivisering af modellen samtidig, hvor jeg løb ind i nogle problemer med modellens præcision grundet, at jeg glemte ting som jeg havde gjort førhen.&lt;/p&gt;
+
+&lt;p&gt;Det var bl.a. normalisering af dataene. Man kan se nedenstående hvorfor.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-24-Better-Datahandling/2020-05-05-16-44-42-2020-04-24-Better-Datahandling.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Denne graf viser daglig produktion for de sidste 2 år og sidst jeg tjekkede kan en maskine der normalt producere 887 produkter hvert 15 min. ikke tage næsten 30 millioner produkter ud på en gang. Så der er en tydelig fejl i datene.&lt;/p&gt;
+
+&lt;p&gt;Det jeg gjorde var, at for alle punkter under 0 og over 5000 blev sat til NaN, da jeg så kunne tage gennemsnittet i sættet, da NaN værdier ikke tages med i udregning af gennemsnittet i en Dataframe.
+&lt;script src=&quot;https://gist.github.com/Zxited/ed5355d73549fb384065208d6150dfe9.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Men hvorfor værdier over 5000? Der er jo ikke nogle andre kæmpe udfald ud over den vi har håndteret? Det troede jeg også indtil jeg kiggede på dataene uden det store minus.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-24-Better-Datahandling/2020-05-05-16-54-46-2020-04-24-Better-Datahandling.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Men hvad er nu det her? Det viser sig, at den på et kvarter produceret 45.000 enheder. Det er lige så usandsynligt som det store minus samtidig med, at tidspunktet var uden for produktionstid, så vidt jeg kan se. Da maskinen godt kan producere på den anden side af 1.500 enheder pr. 15 min. satte jeg grænsen til 5.000, da der umiddelbart ikke er andre udfald.&lt;/p&gt;
+
+&lt;p&gt;Jeg beregnede så antallet af dage til næste vedligehold for hver dag. Så nu kom modellens gennemsnitlige absolutte tab ned fra cirka 5 dage til cirka 1,5 dag. En stor forskel meget store udsving med støj kan gøre. Men jeg oplevede stadig et problem. Jeg havde stadig nogle forudsigelser som varierede med 8-33 dage fra det reelle tidspunkt.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-24-Better-Datahandling/2020-05-05-17-14-26-2020-04-24-Better-Datahandling.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-24-Better-Datahandling/2020-05-05-17-08-48-2020-04-24-Better-Datahandling.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;F.eks. ovenover ses det, at det maksimale tab er 8 dage. Og 10 af forudsigelserne er over mit treshold på 3 dage. Den grønne tekst er for data den aldrig har set og hvid tekst for test på hele datasættet.&lt;/p&gt;
+
+&lt;p&gt;Jeg prøvede, at øge batch størrelsen, da jeg måske tænkte af nogle af datasættene havde meget kraftige signaler, som måske skulle spredes lidt mellem flere.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-24-Better-Datahandling/2020-05-05-17-20-46-2020-04-24-Better-Datahandling.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-24-Better-Datahandling/2020-05-05-17-20-37-2020-04-24-Better-Datahandling.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Men selv efter gradvist, at have øget batch størrelsen, så jeg testede med 32, 64 og 128. Så var det bedste med 64 som ses ovenfor. Men ikke meget bedre. Vi skulle helst ned, så ingen forudsigelser skød mere end 3 dage ved siden af og gerne mindre.&lt;/p&gt;
+
+&lt;p&gt;Efter nogle dage, hvor jeg havde arbejdet på andre ting og accepteret den store afvigelse indtil videre kiggede jeg på det igen. Jeg fandt en mulig fejl i min datahåndtering, noget som jeg havde tænkt over i tidligere metoder.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-24-Better-Datahandling/2020-05-05-17-35-55-2020-04-24-Better-Datahandling.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kolonner: Dage til vedligehold, Nede tid, Antal nedbrud, Produceret på dagen, Vedligeholdelsesdag (0:Nej, 1:Ja).&lt;/p&gt;
+
+&lt;p&gt;Hvis man kigger på ovenstående data, så kan man se, at 75% af alle dagene har under 21 dage til vedligehold. Men hvorfor ser vi så dem fra 182 - 178 i række 0 - 4?
+Det gør vi meget simpelt fordi jeg havde glemt, at fjerne alt den data i starten, hvor der ikke er logget typer af nedbrud. Som gør, at flere sæt på størrelsen af 60 dage, slet ikke har vedligehold før den første gang det ses. Dette håndteret jeg i sidste metode på den måde, at jeg fandt det første vedligehold og det sidste for så, at lave sæt ud af mellemliggende dage. Så det gjorde jeg.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/79d14f845d96f34e31a2c71e31c98467.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Ovenover tager jeg datasættet og vender om, så jeg starter med nutiden og går bagud, da det er nemmere så, at holde næste vedligehold tidspunkt, da jeg starter med det og går bagud. Jeg sortere også de første dage fra indtil det sidste vedligehold der blev holdt, da de dage efter sidste vedligehold ikke har et kendt tidspunkt for næste vedligehold, da det ikke eksistere endnu. Jeg efterfølgende erstattede alle dage med over 40 nedbrud med et gennemsnit, da nogle dage havde 100 nedbrud som ikke alle var reelle nedbrud.&lt;/p&gt;
+
+&lt;p&gt;Jeg smed så datatene ind i en tf.dataset som jeg gjorde før, men behandler selve tidsvinduerne i dem. Jeg skubber hvert vindue en plads pr. vindue og kan derfor lave mange vinduer af 60 dages størrelse.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/ad02c008dd0b59b46f874031021fe8c5.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Hvor det færdige sæt kan ses som:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-24-Better-Datahandling/2020-05-05-18-28-13-2020-04-24-Better-Datahandling.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jeg shuffler, splitter, batcher, cacher og prefetcher så datasættet i min træner. Shuffler med et seed, så den blander dataene på samme vis, hver gang. Splitter for at få validerings og test sæt ud over træningssættet. Batcher for, at den ser flere sæt inden den opdatere / lære af eksemplerne. Cacher for, at dataene blive læst ind i ram ved første brug og holdt der. Caching gør jeg til sidst for, at cache sættet når det er blevet omdannet til batches, så det ikke skal gøre igen. Prefetcher, så næste batch er klar inden den er færdig med den nuværende. Dette er meget godt, hvis man har meget data der skal læses ind. Dog giver det ikke meget her, da sættene ikke er så store, at de ikke kan holdes i ram.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/c10a7012158f50c95559c198b6e05598.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Men til sidst. Taaadaa!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-24-Better-Datahandling/2020-05-05-19-26-34-2020-04-24-Better-Datahandling.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Et meget tilfredsstillende resultat og et bevis på, hvor vigtig korrekt håndtering af data er. Normalt ville den ligge omkring et gennemsnitlig tab på 0,8 og en maksimal afvigelse på 5-6, men jeg har lavet lidt hyperparameter tuning siden, som jeg beskriver i et andet oplæg.&lt;/p&gt;
+
+&lt;p&gt;Den har stadig en der går over de 3 dage som vi ønsker, men ikke med meget.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-24-Better-Datahandling/2020-05-05-19-28-30-2020-04-24-Better-Datahandling.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ovenover ses den ene der var over. Som jeg også har erfaret ved andre test runder med modellen, så forudsiger den før tid i stedet for, for sent. Det er det ønskede adfærd, da vi hellere ser den siger noget før tid, end den siger noget for sent, så det kan gå galt.&lt;/p&gt;
+
+&lt;p&gt;Denne data er selvfølgelig vores test data den ikke har set før, så vi får det mest præcise estimat af modellens ydeevne. Modellens gennemsnitlige absolutte tab er virkelig godt som det umiddelbart ser ud.&lt;/p&gt;
+
+&lt;h1 id=&quot;kilder&quot;&gt;Kilder&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Multi-worker training with Keras&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/tutorials/distribute/multi_worker_with_keras#preparing_dataset&quot;&gt;https://www.tensorflow.org/tutorials/distribute/multi_worker_with_keras#preparing_dataset&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;tf.data.Dataset&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/data/Dataset?version=nightly#cache&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/data/Dataset?version=nightly#cache&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Adding a dataset&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/datasets/add_dataset#use_the_default_template&quot;&gt;https://www.tensorflow.org/datasets/add_dataset#use_the_default_template&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;tf.data.Dataset&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/data/Dataset?version=nightly&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/data/Dataset?version=nightly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;TFRecord and tf.Example&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/tutorials/load_data/tfrecord?version=nightly&quot;&gt;https://www.tensorflow.org/tutorials/load_data/tfrecord?version=nightly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;tf.Tensor&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/Tensor?version=nightly&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/Tensor?version=nightly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;pandas Dataframe&lt;br /&gt;&lt;a href=&quot;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html&quot;&gt;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;numpy delete&lt;br /&gt;&lt;a href=&quot;https://numpy.org/doc/stable/reference/generated/numpy.delete.html?highlight=delete#numpy.delete&quot;&gt;https://numpy.org/doc/stable/reference/generated/numpy.delete.html?highlight=delete#numpy.delete&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Mike Meldgaard</name></author><category term="MachineLearning" /><summary type="html">Datahåndtering 3.0 Jeg valgte, at gå mere væk fra pandas og numpy omkring håndteringen og forbehandlingen af dataene jeg trækker ned. For i stedet, at gå mere over mod Tensorflow’s indbygget funktioner. Men hvorfor?</summary></entry><entry><title type="html">Hyperparameter tuning og Visualisering</title><link href="https://double-em.github.io/machinelearning/2020/04/26/Tuning-Visualize/" rel="alternate" type="text/html" title="Hyperparameter tuning og Visualisering" /><published>2020-04-26T00:00:00+00:00</published><updated>2020-04-26T00:00:00+00:00</updated><id>https://double-em.github.io/machinelearning/2020/04/26/Tuning-Visualize</id><content type="html" xml:base="https://double-em.github.io/machinelearning/2020/04/26/Tuning-Visualize/">&lt;h1 id=&quot;hyperparameter-tuning-og-visualisering&quot;&gt;Hyperparameter tuning og Visualisering&lt;/h1&gt;
+&lt;p&gt;Når man har identificeret sit problem og valgt, hvilken type netværk fungere bedst, samt når man har behandlet sin data, så kommer man til hyperparameter tuning, hvor vi effektivisere modellen.&lt;/p&gt;
+
+&lt;p&gt;Hyperparametre er parametre der ikke kan kan læres, men er værdier som er sat ude fra modellen. Det kan f.eks. være, hvor mange gemte lag der er i modellen eller, hvilken optimerings funktion man bruger.&lt;/p&gt;
+
+&lt;h2 id=&quot;implementering&quot;&gt;Implementering&lt;/h2&gt;
+&lt;p&gt;Efter noget research på lignende problemer, som min model og netværk løser, og hvad jeg har forsøgt mig med i tidligere eksperimenter som jeg har beskrevet i mit “LSTM til Projektet” oplæg. Så kom jeg frem til lidt forskellige intervaller af parametre som jeg skrev ind i min kode.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/52f3349051f4bc275e3b4bd7c70b36ea.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Her har jeg 4 forskellige optimeringsfunktioner som jeg har haft nogenlunde held med i tidligere forsøg. Samt har jeg erfaret, at over 4 gemte lag ikke giver gode resultater, det samme med output enhederne når man kommer over 600. Denne forundersøgelse, hvor jeg tager nogle få kørsler med høje eller små værdier, er rigtig god til, at estimere, hvilke intervaller der giver mening, så man ikke køre en masse store modeller igennem som egentlig ikke har nogen chance for, at være bedre.&lt;/p&gt;
+
+&lt;p&gt;Men hvor i disse intervaller ligger den optimale kombination? Det får vi maskinen til, at afprøve for os. Så jeg skrev et loop der gik alle kombinationer igennem.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/96f017a1f548f7c4882079dfba4ff468.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Dette loop bygger så, hver model og træner den.&lt;/p&gt;
+
+&lt;p&gt;Jeg har så et callback som indsamler hyperparameter værdierne, så jeg kan se dem senere, men også angiver et tidlig stop, som stopper med, at træne modellen, hvis den ikke har forbedret sig over X antal epochs, som så går tilbage til den iteration med bedste ydeevne og genskaber dens værdier. Jeg har sat patience til 60 epochs, da modellen helst skal nå, at gå over sit optimale punkt, så vi ved den ikke kan yde bedre, da vi som sagt til sidst gendanner ud fra den mest optimale iteration, så vi får den optimale model for de givet parametre.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/27333a45b0800ca690124890f90ffe30.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Callback metoden kaldes fra min metode som træner modellen som også står for, at kalde min model-bygger metode.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/f6436ea16de61a2d54ed8f78c0ac0551.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Denne model-bygger metode som ses ovenfor tager ganske enkelt vores hyperparametre og laver en model ud fra. Metoden sørger også for, at det sidste lag inden output laget ikke sender udregnet sekvenser med, men kun outputtet, da det kun bruges fra LSTM til LSTM lag. Den returnere så modellen til vore træne metode som kaldte den.&lt;/p&gt;
+
+&lt;p&gt;Træner metoden ses nedenfor.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/85e94f697c1e188f4a3431be71b85365.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Denne metode er den metode der samler det hele.&lt;/p&gt;
+
+&lt;p&gt;Jeg lader så min computer køre igennem de 60 forskellige modeller det bliver til i alt for, at komme igennem alle parametre. Det tager på anden side af 3 timer, så det kan med fordel gøres om natten. For måske senere, at mindske træningstid kan man med fordel optimere yderligere eller bruge en stærkere GPU eller TPU. Mit træningsmiljø gør brug af Tensorflow’s image: tensorflow/tensorflow:nightly-gpu, som har GPU support til nvidia kort.&lt;/p&gt;
+
+&lt;h3 id=&quot;resultater&quot;&gt;Resultater&lt;/h3&gt;
+&lt;p&gt;Efter at den har været igennem alle modeller kan vi åbne Tensorboard som kan læse log filerne. Tensorboard kan også køre på samme tid, hvis man ønsker, at se udviklingen live som også godt kan være interessant.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-26-Tuning-Visualize/2020-05-05-20-43-18-2020-04-26-Tuning-Visualize.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ovenover ses top 20 over de bedste modeller ud fra validerings tabet. Jeg valgte, at tage top 20, da efter top 20 kommer de fleste modeller over 1 og over 4 i absolut gennemsnitlig tab. Man skal samtidig også tage resultaterne med et gram salt, da modellerne kan klare sig forskelligt mellem hver session.&lt;/p&gt;
+
+&lt;p&gt;Vi kan konkludere ud fra vores resultat, at rmsprop som optimeringsfunktion er umiddelbart den bedste med få undtagelser. Vi kan også se, at antallet af gemte lag er bedst omkring 2-4 styks og bredden på de lag ligger omkring 300-600.&lt;/p&gt;
+
+&lt;h2 id=&quot;scheduled-learning-rate-og-batch-size&quot;&gt;Scheduled learning rate og batch size&lt;/h2&gt;
+&lt;p&gt;Resultaterne viser også, at vi ikke har meget overtræning i modellerne, så der vil umiddelbart ikke være en grund til, at ligge et dropout imellem lagene, som man ellers gør for, at undgå overtræning. Dropout gør det, at den deaktivere dele af modellen, så modellen ikke kan lære træningssættet udenad, da den er tvunget til, at lære med forskellige tilfældige dele deaktiveret.&lt;/p&gt;
+
+&lt;p&gt;Hvis vi kigger på top 5, vist i forhold til trænings tid.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-26-Tuning-Visualize/2020-05-05-21-05-36-2020-04-26-Tuning-Visualize.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jeg har jævnet dataene lidt med Tensorboard’s indbygget smoothing funktion, som jeg har sat til 0,8. Grundet til jeg har valgt, at vise i forhold til træningstid er fordi, det samtidig er vigtigt, at tænke på, hvor mange ressourcer man bruger.&lt;/p&gt;
+
+&lt;p&gt;Vi kan se en del spikes, da jeg på daværende tidspunkt kun brugte en batch størrelse på 1. Fordi jeg ikke kendte til overførte vægte på daværende tidspunkt. I Keras / Tensorflow har man muligheden for, at træne en model med én batch størrelse for så efter, at overføre de lærte parametre til en anden model, som gør brug af den rigtige batch størrelse. Ens ønsket batch størrelse afhænger af, hvor mange target værdier man har. I mit tilfælde forudsiger jeg 1 tal som er dage til næste vedligehold, så jeg ønsker kun 1 forudsigelse af gangen, så min produktionsmodel skal helst gøre brug af en batch størrelse på 1. Da jeg ellers helst skulle lave 16 forudsigelser af gangen, hvis mine batches havde en størrelse på 16.&lt;/p&gt;
+
+&lt;p&gt;For yderligere, at mindske udslag kan man lave en scheduled learning rate, som mindskes over tid. Grunden til det kan være en god idé er, at efterhånden som modellen bliver bedre ønsker man ikke den lære lige så aggressivt som den gjorde i starten. Da den er på mod sit optimale punkt og helst ikke skal afvige yderligere.&lt;/p&gt;
+
+&lt;p&gt;Man kan tænke på det lidt ligesom en professionel bokser. En professionel bokser har en god teknik og har trænet boksning længe. Hvis han slår forkert en gang, så tilpasser han ikke sit slag, så drastisk som da han lærte at bokse. Fordi han kender allerede teknikken. Det er derfor ikke nødvendigt, at tilpasse så drastisk, da det vil få ham længere væk fra perfektion, hver gang han ramte forkert. Det samme gælder vores model.&lt;/p&gt;
+
+&lt;h3 id=&quot;implementering-af-scheduled-learning-rate&quot;&gt;Implementering af Scheduled learning rate&lt;/h3&gt;
+&lt;p&gt;Coming soon TM&lt;/p&gt;
+
+&lt;h1 id=&quot;kilder&quot;&gt;Kilder&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Optimize TensorFlow performance using the Profiler&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/guide/profiler?authuser=1#gpu_kernel_stats&quot;&gt;https://www.tensorflow.org/guide/profiler?authuser=1#gpu_kernel_stats&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Mixed precision&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/guide/keras/mixed_precision?authuser=1&quot;&gt;https://www.tensorflow.org/guide/keras/mixed_precision?authuser=1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;tf.keras.callbacks.TensorBoard&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/TensorBoard?authuser=1&amp;amp;version=nightly&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/TensorBoard?authuser=1&amp;amp;version=nightly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;TensorFlow Profiler: Profile model performance&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/tensorboard/tensorboard_profiling_keras&quot;&gt;https://www.tensorflow.org/tensorboard/tensorboard_profiling_keras&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Better performance with the tf.data API&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/guide/data_performance?authuser=1#the_dataset&quot;&gt;https://www.tensorflow.org/guide/data_performance?authuser=1#the_dataset&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Save and load models&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/tutorials/keras/save_and_load#save_the_entire_model&quot;&gt;https://www.tensorflow.org/tutorials/keras/save_and_load#save_the_entire_model&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Get started with TensorBoard&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/tensorboard/get_started&quot;&gt;https://www.tensorflow.org/tensorboard/get_started&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;tf.keras.Sequential&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/keras/Sequential?version=nightly#compile&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/keras/Sequential?version=nightly#compile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;tf.keras.Model&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/keras/Model?version=nightly&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/keras/Model?version=nightly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Understanding RMSprop&lt;br /&gt;&lt;a href=&quot;https://towardsdatascience.com/understanding-rmsprop-faster-neural-network-learning-62e116fcf29a&quot;&gt;https://towardsdatascience.com/understanding-rmsprop-faster-neural-network-learning-62e116fcf29a&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Visualizing Optimization Algos&lt;br /&gt;&lt;a href=&quot;https://imgur.com/a/Hqolp#NKsFHJb&quot;&gt;https://imgur.com/a/Hqolp#NKsFHJb&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Tensorboard Debugger Github&lt;br /&gt;&lt;a href=&quot;https://github.com/tensorflow/tensorboard/tree/master/tensorboard/plugins/debugger&quot;&gt;https://github.com/tensorflow/tensorboard/tree/master/tensorboard/plugins/debugger&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Role of batch size in Keras LSTM&lt;br /&gt;&lt;a href=&quot;https://stackoverflow.com/questions/48491737/understanding-keras-lstms-role-of-batch-size-and-statefulness&quot;&gt;https://stackoverflow.com/questions/48491737/understanding-keras-lstms-role-of-batch-size-and-statefulness&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;How are inputs fed into the LSTM/RNN network in mini-batch method?&lt;br /&gt;&lt;a href=&quot;https://www.quora.com/How-are-inputs-fed-into-the-LSTM-RNN-network-in-mini-batch-method?share=1&quot;&gt;https://www.quora.com/How-are-inputs-fed-into-the-LSTM-RNN-network-in-mini-batch-method?share=1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;How to use Different Batch Sizes when Training and Predicting with LSTMs&lt;br /&gt;&lt;a href=&quot;https://machinelearningmastery.com/use-different-batch-sizes-training-predicting-python-keras/&quot;&gt;https://machinelearningmastery.com/use-different-batch-sizes-training-predicting-python-keras/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Difference between samples, timesteps and features for LSTM input&lt;br /&gt;&lt;a href=&quot;https://machinelearningmastery.com/faq/single-faq/what-is-the-difference-between-samples-timesteps-and-features-for-lstm-input/&quot;&gt;https://machinelearningmastery.com/faq/single-faq/what-is-the-difference-between-samples-timesteps-and-features-for-lstm-input/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A Gentle Introduction to Mini-Batch Gradient Descent and How to Configure Batch Size&lt;br /&gt;&lt;a href=&quot;https://machinelearningmastery.com/gentle-introduction-mini-batch-gradient-descent-configure-batch-size/&quot;&gt;https://machinelearningmastery.com/gentle-introduction-mini-batch-gradient-descent-configure-batch-size/&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Multi-worker training with Keras&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/tutorials/distribute/multi_worker_with_keras#preparing_dataset&quot;&gt;https://www.tensorflow.org/tutorials/distribute/multi_worker_with_keras#preparing_dataset&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;tf.data.Dataset&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/data/Dataset?version=nightly#cache&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/data/Dataset?version=nightly#cache&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;tf.Tensor&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/Tensor?version=nightly&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/Tensor?version=nightly&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Nvidia GPU Problem 1&lt;br /&gt;&lt;a href=&quot;https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti&quot;&gt;https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Nvidia GPU Problem 2&lt;br /&gt;&lt;a href=&quot;https://developer.nvidia.com/nvidia-development-tools-solutions-ERR_NVGPUCTRPERM-permission-issue-performance-counters&quot;&gt;https://developer.nvidia.com/nvidia-development-tools-solutions-ERR_NVGPUCTRPERM-permission-issue-performance-counters&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Mike Meldgaard</name></author><category term="MachineLearning" /><summary type="html">Hyperparameter tuning og Visualisering Når man har identificeret sit problem og valgt, hvilken type netværk fungere bedst, samt når man har behandlet sin data, så kommer man til hyperparameter tuning, hvor vi effektivisere modellen.</summary></entry><entry><title type="html">LSTM til Projektet</title><link href="https://double-em.github.io/machinelearning/2020/04/22/ProductionLSTM/" rel="alternate" type="text/html" title="LSTM til Projektet" /><published>2020-04-22T00:00:00+00:00</published><updated>2020-04-22T00:00:00+00:00</updated><id>https://double-em.github.io/machinelearning/2020/04/22/ProductionLSTM</id><content type="html" xml:base="https://double-em.github.io/machinelearning/2020/04/22/ProductionLSTM/">&lt;h1 id=&quot;lstm-netværk-til-projektet&quot;&gt;LSTM Netværk til Projektet&lt;/h1&gt;
+&lt;p&gt;Efter, at have fået lidt styr på LSTM og have eksperimenteret med det, gik jeg i gang med, at prøve, at implementere en model for, at kunne analysere på den data vi får fra vores PO.&lt;/p&gt;
+
+&lt;p&gt;Netværket skal kunne forudsige / estimere, hvor mange dage der til et vedligehold, så kunden kan se, hvornår de skal regne med, at lave vedligeholdelse på en given maskine.&lt;/p&gt;
+
+&lt;p&gt;Jeg har allerede testet, hvor effektiv en regressions model er, hvor det bedste gennemsnitlige absolutte tab jeg fik var 3.5, som ikke er godt nok. Da det er gennemsnitligt, så en del af forudsigelserne vil være over 3.5, så det kan være for stor en afvigelse og det er derfor jeg begyndte med Deep Learning med time series / sekvens problemer. Da også RNN ikke var god nok til, at holde styr på længere afhængigheder og vigtig data, da den har vanishing gradient problemet, som LSTM klare bedre.&lt;/p&gt;
+
+&lt;h2 id=&quot;lstm-opbygningen&quot;&gt;LSTM opbygningen&lt;/h2&gt;
+&lt;p&gt;Jeg startede med, at undersøge, hvordan jeg skulle fodre mit netværk med data. Jeg fejlede en del gange, da jeg første gang kun fordret den en række af gangen og ikke f.eks. 60 sammenhængende rækker, som er meningen, da det er sekvensen af dataene LSTM håndtere.&lt;/p&gt;
+
+&lt;p&gt;Jeg lavede en metode til, at dele dataene op i sæt af 60 rækker per sæt med en target værdi.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/30735eade1c8b5ab436b2293cb708165.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Den modtager, hvor lang tid vi vil se tilbage og et form for “offset” som er vores step. Da vi her bestemmer, hvor mange skridt vi skal gå frem for næste sæt. På denne måde kan vi lave mange flere sæt, da jeg førhen delte alle modtagne data op i 60 og fik kun 103 sæt. På denne måde får jeg op til 716 sæt af samme data.&lt;/p&gt;
+
+&lt;p&gt;Jeg skalere dataene til mellen 0 og 1. Jeg kalder så den forrige metode jeg skrev for, at få X og y, som er features og target værdier.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/4b831be800ff559cdf748f439314ebd8.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Til sidst laver jeg dataene om til typen dataset fra Tensorflow, da det er den nye måde, at håndtere batch størrelse, shuffling af data og datasæt generelt. Så i stedet for, at splitte dataene op i X og y, samt blande dem tilfældigt kan man dele dem også i dataset.&lt;/p&gt;
+
+&lt;p&gt;Man bruger repeat til, at man kan supplere data uendeligt.&lt;/p&gt;
+
+&lt;p&gt;Jeg definere modellen og efter en del refactoring kom jeg frem til en fin metode til, at kompilere og træne mine modeller, så jeg senere kan have flere modeller uden, at skulle skrive det samme kode flere gange.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/c7ef4b01b580f6d49c900ec25c02fad9.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Jeg kalder til sidst min metode, så den kompilere og træner modellen.&lt;/p&gt;
+
+&lt;h2 id=&quot;eksperimenter&quot;&gt;Eksperimenter&lt;/h2&gt;
+&lt;p&gt;Jeg har eksperimenteret med forskellige LSTM modeller, optimeringsfunktioner og tabsfunktioner for, at finde det der passede bedst.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/92ba228fcb0360872eb1ddf82ccf4bf3.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Ovenover ses de forskellige modeller jeg har eksperimenteret med. De er forskellige dybder og “bredder” som er output dimensionen.&lt;/p&gt;
+
+&lt;p&gt;Samtidig har jeg eksperimenteret med 1, 32 og 64 batch størrelser.&lt;/p&gt;
+
+&lt;p&gt;I neurale netværk bruger man også nogle gange en nedadgående learning rate, som jeg ikke har eksperimenteret med endnu. Det gør man fordi jo længere modellen er kommet, jo mindre skulle den helst variere efter det. Så man kan kalde de sidste trænings runder for finpudsnings runder. Dette opnår man ved, at sænke learning rate efterhånden som den kommer længere med dens træning, da den så tager mindre og mindre fra dens træning. Jeg har ikke udført dette endnu, da jeg ikke har forsøgt, at træne en model til perfektion eller så godt som den kan være, da jeg stadig er i gang med, at teste forskellige variationer.&lt;/p&gt;
+
+&lt;p&gt;Jeg har også eksperimenteret med diverse optimeringsfunktioner som er tilgængelig i Tensorflow og Keras bibliotekerne såsom Adam, Nadam og RMSprop, da jeg læste om lignende problemer der gjorde brug af dem. Indtil videre har Nadam været den bedste aktiveringsfunktion.&lt;/p&gt;
+
+&lt;p&gt;Jeg har samtidig givet, hver model 10 epochs, at forbedre sig i eller stoppes træningen af modellen, da det ikke så ikke ligner den forbedre sig yderligere og på den måde undgår vi overfitting og spildte computer ressourcer.&lt;/p&gt;
+
+&lt;h1 id=&quot;resultater&quot;&gt;Resultater&lt;/h1&gt;
+&lt;p&gt;Efter forskellige eksperimenter og en smule tuning er jeg kommet frem til nogle resultater.&lt;/p&gt;
+
+&lt;h2 id=&quot;tensorboard&quot;&gt;Tensorboard&lt;/h2&gt;
+&lt;p&gt;Men jeg havde ikke nogen god måde, at præsentere mine fund. Men så fandt jeg Tensorboard som allerede er med i pip installationen af Tensorflow.&lt;/p&gt;
+
+&lt;p&gt;For at bruge Tensorboard skal jeg sørge for, at mine modeller generere Tensorboard logs. Dette kan jeg gøre med Callbacks i trænings kaldet for modellen.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/4b9ca86e40bcaa3d34f1e24f1f05aa18.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Overover kan man se den metoder jeg bruger til, at definere mine callbacks i. Hvor bl.a. Tensorboard logs callback ligger, så vi generere logs som vi kan se i Tensorboard.&lt;/p&gt;
+
+&lt;p&gt;Da jeg køre mine modeller i en container for nem GPU support, så skulle jeg have en måde, hvor jeg fik de logs ud og kunne hoste et Tensorboard lokalt på min host computer.&lt;/p&gt;
+
+&lt;p&gt;Jeg tilføje en volume til mit run script:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker build -t lstmexperiment:latest .
+docker run -it --rm --gpus all -v /home/marianne/container-data/LSTMdata:/logs lstmexperiment:latest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Volumen er en lokal mappe på min host som bliver monteret som “/logs” i containeren.&lt;/p&gt;
+
+&lt;p&gt;Jeg køre så Tensorboard lokalt og definere min log mappe med:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tensorboard serve --logdir LSTMdata
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Hvor vidst alt går godt får man en localhost adresse med port, hvor den hoster boardet:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TensorBoard 2.2.1 at http://localhost:6006/ (Press CTRL+C to quit)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Hvis man får en error omkring “Duplicate plugins…” som jeg oplevet, så er det nok fordi man har flere versioner af Tensorflow / Tensorboard.&lt;/p&gt;
+
+&lt;p&gt;Man tilgår så bare det link med en browser og bliver præsenteret med Tensorflow.&lt;/p&gt;
+
+&lt;h2 id=&quot;præsentation-af-resultater&quot;&gt;Præsentation af resultater&lt;/h2&gt;
+&lt;p&gt;Grunden til jeg valgte, at bruge tid på, at sætte Tensorboard op var, så jeg nemt kunne sammenligne de forskellige modeller jeg testede. Men også for, at kunne præsentere mine fund overfor PO.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-17-ProductionLSTM/2020-04-22-14-57-04-2020-04-17-ProductionLSTM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Her kan man se, hvordan de forskellige modeller klarede sig. Nogen dyrere, at træne end andre og nogle meget bedre end størstedelen.&lt;/p&gt;
+
+&lt;p&gt;Hvis man så sortere de værst ydende modeller fra.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-17-ProductionLSTM/2020-04-22-14-44-42-2020-04-17-ProductionLSTM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Her har jeg valgt, at beholde den lyserøde model i grafen, da de er min første standard model, så jeg bruger den som et reference punkt for, hvor meget bedre eller værre forskellige modeller er i forhold til den.&lt;/p&gt;
+
+&lt;p&gt;Som vi kan se, så er den grå, orange og røde lovende. Men det står i følge disse test mellem den grå og orange, da den røde er den samme model som den orange med en anden batch størrelse og er generelt værre i både træningstid og præcision.&lt;/p&gt;
+
+&lt;p&gt;Så hvis vi kigger på den grå og orange så har de, hver deres fordel. Den grå opnår en utrolig præcision, hvor orange opnår en acceptabel præcision, men på næsten den halve træningstid.&lt;/p&gt;
+
+&lt;p&gt;PO var ganske tilfreds med det opnåede resultat og snakker om vedligeholdelses intervaller, man måske kan udregne eller ressourceforbrug.&lt;/p&gt;
+
+&lt;h1 id=&quot;kilder&quot;&gt;Kilder&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Introduction to Long Short Term Memory&lt;br /&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/&quot;&gt;https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Stock Prices Prediction Using ML and DL&lt;br /&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/10/predicting-stock-price-machine-learningnd-deep-learning-techniques-python/&quot;&gt;https://www.analyticsvidhya.com/blog/2018/10/predicting-stock-price-machine-learningnd-deep-learning-techniques-python/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Tensorflow LSTM Tutorial&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/tutorials/structured_data/time_series#single_step_model&quot;&gt;https://www.tensorflow.org/tutorials/structured_data/time_series#single_step_model&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Tensorflow Dataset&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/data/Dataset?version=nightly&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/data/Dataset?version=nightly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/Tensor?version=nightly&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/Tensor?version=nightly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Keras Cheat Sheet&lt;br /&gt;&lt;a href=&quot;https://github.com/haribaskar/Keras_Cheat_Sheet_Python&quot;&gt;https://github.com/haribaskar/Keras_Cheat_Sheet_Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Microsoft Azure Cheat Sheet&lt;br /&gt;&lt;a href=&quot;https://cdn.analyticsvidhya.com/wp-content/uploads/2017/02/17090804/microsoft-machine-learning-algorithm-cheat-sheet-v6.pdf&quot;&gt;https://cdn.analyticsvidhya.com/wp-content/uploads/2017/02/17090804/microsoft-machine-learning-algorithm-cheat-sheet-v6.pdf&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Keras Activations&lt;br /&gt;&lt;a href=&quot;https://keras.io/activations/&quot;&gt;https://keras.io/activations/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Keras Advanced Activations&lt;br /&gt;&lt;a href=&quot;https://keras.io/layers/advanced-activations/&quot;&gt;https://keras.io/layers/advanced-activations/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Cheatsheet - Common Machine Learning Algorithms&lt;br /&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2015/09/full-cheatsheet-machine-learning-algorithms/&quot;&gt;https://www.analyticsvidhya.com/blog/2015/09/full-cheatsheet-machine-learning-algorithms/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;scikit-learn - Choosing the right estimator&lt;br /&gt;&lt;a href=&quot;https://scikit-learn.org/stable/tutorial/machine_learning_map/&quot;&gt;https://scikit-learn.org/stable/tutorial/machine_learning_map/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Tensorflow Keras Layers LSTM&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/keras/layers/LSTM?version=nightly&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/keras/layers/LSTM?version=nightly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Understanding slicing in Python&lt;br /&gt;&lt;a href=&quot;https://stackoverflow.com/questions/509211/understanding-slice-notation&quot;&gt;https://stackoverflow.com/questions/509211/understanding-slice-notation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Python Range&lt;br /&gt;&lt;a href=&quot;https://www.w3schools.com/python/ref_func_range.asp&quot;&gt;https://www.w3schools.com/python/ref_func_range.asp&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Tensorflow Keras Layer&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=nightly&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=nightly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Tensorflow Keras Dropout&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dropout?version=nightly&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dropout?version=nightly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to Recurrent Neural Networks&lt;br /&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2017/12/introduction-to-recurrent-neural-networks/&quot;&gt;https://www.analyticsvidhya.com/blog/2017/12/introduction-to-recurrent-neural-networks/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Importing other Python files&lt;br /&gt;&lt;a href=&quot;https://stackoverflow.com/questions/2349991/how-to-import-other-python-files&quot;&gt;https://stackoverflow.com/questions/2349991/how-to-import-other-python-files&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Grid Search for model tuning&lt;br /&gt;&lt;a href=&quot;https://towardsdatascience.com/grid-search-for-model-tuning-3319b259367e&quot;&gt;https://towardsdatascience.com/grid-search-for-model-tuning-3319b259367e&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Practical Recommendations for Gradient-Based Training ofDeepArchitectures&lt;br /&gt;&lt;a href=&quot;https://arxiv.org/pdf/1206.5533.pdf&quot;&gt;https://arxiv.org/pdf/1206.5533.pdf&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Artificial Neural Networks: How can I estimate the number of neurons and layers?&lt;br /&gt;&lt;a href=&quot;https://www.quora.com/Artificial-Neural-Networks-How-can-I-estimate-the-number-of-neurons-and-layers&quot;&gt;https://www.quora.com/Artificial-Neural-Networks-How-can-I-estimate-the-number-of-neurons-and-layers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Babysitting the learning process&lt;br /&gt;&lt;a href=&quot;https://cs231n.github.io/neural-networks-3/#baby&quot;&gt;https://cs231n.github.io/neural-networks-3/#baby&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Tutorial: Optimizing Neural Networks using Keras&lt;br /&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2016/10/tutorial-optimizing-neural-networks-using-keras-with-image-recognition-case-study/#nine&quot;&gt;https://www.analyticsvidhya.com/blog/2016/10/tutorial-optimizing-neural-networks-using-keras-with-image-recognition-case-study/#nine&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Machine Learning: What are some tips and tricks for training deep neural networks?&lt;br /&gt;&lt;a href=&quot;https://www.quora.com/Machine-Learning-What-are-some-tips-and-tricks-for-training-deep-neural-networks&quot;&gt;https://www.quora.com/Machine-Learning-What-are-some-tips-and-tricks-for-training-deep-neural-networks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Rohan &amp;amp; Lenny #3: Recurrent Neural Networks &amp;amp; LSTMs&lt;br /&gt;&lt;a href=&quot;https://ayearofai.com/rohan-lenny-3-recurrent-neural-networks-10300100899b&quot;&gt;https://ayearofai.com/rohan-lenny-3-recurrent-neural-networks-10300100899b&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;NN Overkill?&lt;br /&gt;&lt;a href=&quot;https://missinglink.ai/guides/neural-network-concepts/neural-networks-regression-part-1-overkill-opportunity/&quot;&gt;https://missinglink.ai/guides/neural-network-concepts/neural-networks-regression-part-1-overkill-opportunity/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;NN Activation Functions&lt;br /&gt;&lt;a href=&quot;https://missinglink.ai/guides/neural-network-concepts/7-types-neural-network-activation-functions-right/&quot;&gt;https://missinglink.ai/guides/neural-network-concepts/7-types-neural-network-activation-functions-right/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Artificial Neural Networks: Concepts and Models&lt;br /&gt;&lt;a href=&quot;https://missinglink.ai/guides/neural-network-concepts/complete-guide-artificial-neural-networks/&quot;&gt;https://missinglink.ai/guides/neural-network-concepts/complete-guide-artificial-neural-networks/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Hyperparameters: Optimization Methods&lt;br /&gt;&lt;a href=&quot;https://missinglink.ai/guides/neural-network-concepts/hyperparameters-optimization-methods-and-real-world-model-management/&quot;&gt;https://missinglink.ai/guides/neural-network-concepts/hyperparameters-optimization-methods-and-real-world-model-management/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Mike Meldgaard</name></author><category term="MachineLearning" /><summary type="html">LSTM Netværk til Projektet Efter, at have fået lidt styr på LSTM og have eksperimenteret med det, gik jeg i gang med, at prøve, at implementere en model for, at kunne analysere på den data vi får fra vores PO.</summary></entry><entry><title type="html">Læringsplan 3</title><link href="https://double-em.github.io/laeringsplaner/2020/04/20/Laeringsplan_3/" rel="alternate" type="text/html" title="Læringsplan 3" /><published>2020-04-20T00:00:00+00:00</published><updated>2020-04-20T00:00:00+00:00</updated><id>https://double-em.github.io/laeringsplaner/2020/04/20/Laeringsplan_3</id><content type="html" xml:base="https://double-em.github.io/laeringsplaner/2020/04/20/Laeringsplan_3/">&lt;h1 id=&quot;læringsplan-3&quot;&gt;Læringsplan 3&lt;/h1&gt;
+&lt;!----&gt;
+
+&lt;table class=&quot;learnTable&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Mål&lt;/th&gt;
+    &lt;th&gt;Teknik / Værktøj&lt;/th&gt;
+    &lt;th&gt;Kriterier&lt;/th&gt;
+    &lt;th&gt;Evaluering&lt;/th&gt;
+  &lt;/tr&gt;
+  
+  
+    
+      &lt;tr&gt;
+        &lt;td&gt;
+          
+            (DevOps) Opsætte en pipeline til ML projektet.
+            
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          Undersøge forskellige pipelines.&lt;br /&gt;&lt;br /&gt;
+          
+          - Azure&lt;br /&gt;
+          
+          - Amazon&lt;br /&gt;
+          
+          - Google&lt;br /&gt;
+          
+          - Bitbucket&lt;br /&gt;
+          
+          - Github&lt;br /&gt;
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          
+          Jeg kender de forskellige pipelines.&lt;br /&gt;&lt;br /&gt;
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          
+          &lt;br /&gt;&lt;br /&gt;
+          
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    
+      &lt;tr&gt;
+        &lt;td&gt;
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          Jeg skal finde en pipeline.&lt;br /&gt;&lt;br /&gt;
+          
+          - Google&lt;br /&gt;
+          
+          - Stackoverflow&lt;br /&gt;
+          
+          - De forskellige pipeline dokumentation som jeg har fundet.&lt;br /&gt;
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          
+          Jeg skal have valgt en pipeline jeg har vurderet som passer til opgaven.&lt;br /&gt;&lt;br /&gt;
+          
+          Den valgte pipeline skal kunne bygge projektet.&lt;br /&gt;&lt;br /&gt;
+          
+          Den valgte pipeline skal kunne deploye ML projektet.&lt;br /&gt;&lt;br /&gt;
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          
+          &lt;br /&gt;&lt;br /&gt;
+          
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    
+      &lt;tr&gt;
+        &lt;td&gt;
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          Jeg implementere den valgte pipeline.&lt;br /&gt;&lt;br /&gt;
+          
+          - Den valgte pipelines dokumentation.&lt;br /&gt;
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          
+          Jeg har en fungerende pipeline til ML projektet.&lt;br /&gt;&lt;br /&gt;
+          
+          Den valgte pipeline kan bygge projektet.&lt;br /&gt;&lt;br /&gt;
+          
+          Den valgte pipeline kan deploye projektet.&lt;br /&gt;&lt;br /&gt;
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          
+          &lt;br /&gt;&lt;br /&gt;
+          
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    
+  
+  
+    
+      &lt;tr&gt;
+        &lt;td&gt;
+          
+            (Machine Learning) Udvide på mit ML projekt til PO og optimere modellerne.
+            
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          Implementere API så man kan modtage request på forudsigelser.&lt;br /&gt;&lt;br /&gt;
+          
+          - Python dokumentation.&lt;br /&gt;
+          
+          - Stackoverflow.&lt;br /&gt;
+          
+          - Andre fremsøgte kilder.&lt;br /&gt;
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          
+          Man kan kalde APIen og få en forudsigelse tilbage.&lt;br /&gt;&lt;br /&gt;
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          
+          &lt;br /&gt;&lt;br /&gt;
+          
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    
+      &lt;tr&gt;
+        &lt;td&gt;
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          Modellens hyperparamtre tunes og modellen optimeres.&lt;br /&gt;&lt;br /&gt;
+          
+          - Eksperimenter med forskellige hyperparamtre og værdier.&lt;br /&gt;
+          
+          - Eksperimenter med forskellige modeller og/eller variationer af modellerne.&lt;br /&gt;
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          
+          Modellen giver et tilfredstillende resultat.&lt;br /&gt;&lt;br /&gt;
+          
+          Modellen er den mindst krævende / mest effektive, så den ikke koster for mange resourcer, men samtidig levere et tilfredstillende resultat.&lt;br /&gt;&lt;br /&gt;
+          
+        &lt;/td&gt;
+        &lt;td&gt;
+          
+          &lt;br /&gt;&lt;br /&gt;
+          
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    
+  
+&lt;/table&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;personlige-læringsmål&quot;&gt;Personlige Læringsmål&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Viden - Den studerende har viden om&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;(DevOps) &lt;span style=&quot;color: green;&quot;&gt;DevOps kerneværdier “CAMS” &lt;/span&gt;(Systemudvikling)&lt;/li&gt;
+  &lt;li&gt;(DevOps) &lt;span style=&quot;color: green;&quot;&gt;Værktøjer (Praksisser) brugt i et succesfuldt DevOps miljø&lt;/span&gt; (Systemudvikling / Teknologi)&lt;/li&gt;
+  &lt;li&gt;(DevOps) &lt;span style=&quot;color: #cc9900;&quot;&gt;Nøglemetodologier ofte brugt i DevOps&lt;/span&gt; (Systemudvikling)&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;(Machine Learning) &lt;span style=&quot;color: green;&quot;&gt;Brug af Machine Learning i virkeligheden&lt;/span&gt; (Teknologi / Virksomheden)&lt;/li&gt;
+  &lt;li&gt;(Machine Learning) &lt;span style=&quot;color: green;&quot;&gt;Hvordan Neurale Netværk er opbygget&lt;/span&gt; (Teknologi / Programmering)&lt;/li&gt;
+  &lt;li&gt;(Machine Learning) &lt;span style=&quot;color: green;&quot;&gt;Forskellige eksisterende algoritmer og arkitekture brugt i Machine Learning&lt;/span&gt; (Teknologi / Programmering)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Færdigheder - Den studerende kan&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;(DevOps) &lt;span style=&quot;color: #cc9900;&quot;&gt;Brug af Pipelines som værktøj til CI/CD&lt;/span&gt; (Teknologi)&lt;/li&gt;
+  &lt;li&gt;(DevOps) &lt;span style=&quot;color: #cc9900;&quot;&gt;Valg og brug af de rigtige værktøjer i ens værktøjsbælte, så de komplementere hinanden, teamet og systemet. &lt;/span&gt; (Systemudvikling / Teknologi)&lt;/li&gt;
+  &lt;li&gt;(DevOps) &lt;span style=&quot;color: #cc9900;&quot;&gt;Implementering af Configuration Management&lt;/span&gt; (Teknologi)&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;(Machine Learning) &lt;span style=&quot;color: green;&quot;&gt;Implementering af Machine Learning i praksis&lt;/span&gt; (Programmering)&lt;/li&gt;
+  &lt;li&gt;(Machine Learning) &lt;span style=&quot;color: green;&quot;&gt;Brug af forskellige Machine Learning algoritmer&lt;/span&gt; (Programmering)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Kompetencer - Den studerende kan&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;(DevOps) &lt;span style=&quot;color: #cc9900;&quot;&gt;Implementering og tilpasning af det korrekte workflow til opgaven&lt;/span&gt; (Systemudvikling)&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;(Machine Learning) &lt;span style=&quot;color: green;&quot;&gt;Fortolkning og tilpasning af en Machine Learning algoritme for, at løse en given problemstilling &lt;/span&gt; (Teknologi / Programmering)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;generelle-læringsmål&quot;&gt;Generelle læringsmål&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Viden - Den studerende har viden om&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;span style=&quot;color: green;&quot;&gt;Det/de valgte emners teori og praksis.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color: green;&quot;&gt;Det/de valgte emners relevans i forhold til IT - fagets teori og praksis.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Færdigheder - Den studerende kan&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;span style=&quot;color: green;&quot;&gt;Udvælge, beskrive og foretage litteratursøgning af en selvvalgt it - faglig problemstilling&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color: green;&quot;&gt;Diskutere samfundsmæssige aspekter knyttet til det/de valgte emner.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color: green;&quot;&gt;Vurdere problemstillinger og opstille løsningsmuligheder i forhold til det/de valgte emner.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color: green;&quot;&gt;Formidle centrale resultater.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Kompetencer - Den studerende kan&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;span style=&quot;color: green;&quot;&gt;Selvstændigt sætte sig ind i nye emner inden for fagområdets teori og/eller praksis.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color: green;&quot;&gt;Perspektivere og relatere det/de valgte emner i forhold til uddannelsens øvrige emneområder.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Bloom’s Taxonomy&lt;br /&gt;&lt;a href=&quot;https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/&quot;&gt;https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Mike Meldgaard</name></author><category term="Laeringsplaner" /><summary type="html">Læringsplan 3 Mål Teknik / Værktøj Kriterier Evaluering (DevOps) Opsætte en pipeline til ML projektet. Undersøge forskellige pipelines. - Azure - Amazon - Google - Bitbucket - Github Jeg kender de forskellige pipelines. Jeg skal finde en pipeline. - Google - Stackoverflow - De forskellige pipeline dokumentation som jeg har fundet. Jeg skal have valgt en pipeline jeg har vurderet som passer til opgaven. Den valgte pipeline skal kunne bygge projektet. Den valgte pipeline skal kunne deploye ML projektet. Jeg implementere den valgte pipeline. - Den valgte pipelines dokumentation. Jeg har en fungerende pipeline til ML projektet. Den valgte pipeline kan bygge projektet. Den valgte pipeline kan deploye projektet. (Machine Learning) Udvide på mit ML projekt til PO og optimere modellerne. Implementere API så man kan modtage request på forudsigelser. - Python dokumentation. - Stackoverflow. - Andre fremsøgte kilder. Man kan kalde APIen og få en forudsigelse tilbage. Modellens hyperparamtre tunes og modellen optimeres. - Eksperimenter med forskellige hyperparamtre og værdier. - Eksperimenter med forskellige modeller og/eller variationer af modellerne. Modellen giver et tilfredstillende resultat. Modellen er den mindst krævende / mest effektive, så den ikke koster for mange resourcer, men samtidig levere et tilfredstillende resultat.</summary></entry><entry><title type="html">Installation og brug af Kubeflow</title><link href="https://double-em.github.io/devops/2020/04/18/Kubeflow/" rel="alternate" type="text/html" title="Installation og brug af Kubeflow" /><published>2020-04-18T00:00:00+00:00</published><updated>2020-04-18T00:00:00+00:00</updated><id>https://double-em.github.io/devops/2020/04/18/Kubeflow</id><content type="html" xml:base="https://double-em.github.io/devops/2020/04/18/Kubeflow/">&lt;h1 id=&quot;installation-og-brug-af-kubeflow&quot;&gt;Installation og brug af Kubeflow&lt;/h1&gt;
+&lt;p&gt;Manglende GPU support på minikube.&lt;/p&gt;
+
+&lt;p&gt;Microk8s Juju pakke fejl. Løst med dry-run osv. Kan ikke kontakte API selvom pc kan.&lt;/p&gt;
+
+&lt;p&gt;API link: &lt;a href=&quot;https://api.jujucharms.com/charmstore/v5/~kubeflow-charmers/ambassador-78/archive?channel=stable:&quot;&gt;https://api.jujucharms.com/charmstore/v5/~kubeflow-charmers/ambassador-78/archive?channel=stable:&lt;/a&gt; - Husk fjerne kolon.&lt;/p&gt;
+
+&lt;p&gt;Der var også noget med at enable insecure registries, hvis man havde docker? &lt;a href=&quot;https://docs.docker.com/registry/insecure/&quot;&gt;https://docs.docker.com/registry/insecure/&lt;/a&gt; Som gjorde docker ikke kørte indtil jeg satte configgen rigtigt.&lt;/p&gt;
+
+&lt;h1 id=&quot;kilder&quot;&gt;Kilder&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Introduction to Kubeflow - Kubeflow 101&lt;br /&gt;&lt;a href=&quot;https://www.youtube.com/watch?time_continue=8&amp;amp;v=cTZArDgbIWw&amp;amp;feature=emb_title&quot;&gt;https://www.youtube.com/watch?time_continue=8&amp;amp;v=cTZArDgbIWw&amp;amp;feature=emb_title&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Installing Kubeflow&lt;br /&gt;&lt;a href=&quot;https://www.kubeflow.org/docs/started/getting-started/&quot;&gt;https://www.kubeflow.org/docs/started/getting-started/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Microk8s for Kubeflow&lt;br /&gt;&lt;a href=&quot;https://www.kubeflow.org/docs/started/workstation/getting-started-multipass/&quot;&gt;https://www.kubeflow.org/docs/started/workstation/getting-started-multipass/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Kubeflow on Linux&lt;br /&gt;&lt;a href=&quot;https://www.kubeflow.org/docs/started/workstation/getting-started-linux/&quot;&gt;https://www.kubeflow.org/docs/started/workstation/getting-started-linux/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Microk8s&lt;br /&gt;&lt;a href=&quot;https://microk8s.io/&quot;&gt;https://microk8s.io/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Mircok8s Troubleshooting&lt;br /&gt;&lt;a href=&quot;https://microk8s.io/docs/troubleshooting#common-issues&quot;&gt;https://microk8s.io/docs/troubleshooting#common-issues&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Microk8s Quick Start Guide&lt;br /&gt;&lt;a href=&quot;https://microk8s.io/docs/&quot;&gt;https://microk8s.io/docs/&lt;/a&gt;(Der var noget med like sudo rettigheder som ikke var i kubeflow docs???)&lt;/li&gt;
+  &lt;li&gt;Microk8s Alternative install methods&lt;br /&gt;&lt;a href=&quot;https://microk8s.io/docs/install-alternatives&quot;&gt;https://microk8s.io/docs/install-alternatives&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Deploy Kubeflow using MiniKube on Linux&lt;br /&gt;&lt;a href=&quot;https://www.kubeflow.org/docs/started/workstation/minikube-linux/&quot;&gt;https://www.kubeflow.org/docs/started/workstation/minikube-linux/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Kubeflow with MiniKF&lt;br /&gt;&lt;a href=&quot;https://www.kubeflow.org/docs/started/workstation/getting-started-minikf/&quot;&gt;https://www.kubeflow.org/docs/started/workstation/getting-started-minikf/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;kfctl&lt;br /&gt;&lt;a href=&quot;https://github.com/kubeflow/kfctl&quot;&gt;https://github.com/kubeflow/kfctl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Multipass&lt;br /&gt;&lt;a href=&quot;https://multipass.run/#install&quot;&gt;https://multipass.run/#install&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Kubernetes Dashboard&lt;br /&gt;&lt;a href=&quot;https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/#deploying-the-dashboard-ui&quot;&gt;https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/#deploying-the-dashboard-ui&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Kubectl Cheat Sheet&lt;br /&gt;&lt;a href=&quot;https://kubernetes.io/docs/reference/kubectl/cheatsheet/&quot;&gt;https://kubernetes.io/docs/reference/kubectl/cheatsheet/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Creating sample user (Den der storage ting den advare omkring RBAC mener jeg)&lt;a href=&quot;https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md&quot;&gt;https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Juju&lt;br /&gt;&lt;a href=&quot;https://juju.is/&quot;&gt;https://juju.is/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Using Juju with Microk8s&lt;br /&gt;&lt;a href=&quot;https://juju.is/docs/microk8s-cloud&quot;&gt;https://juju.is/docs/microk8s-cloud&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Minikube Configuration&lt;br /&gt;&lt;a href=&quot;https://minikube.sigs.k8s.io/docs/handbook/config/&quot;&gt;https://minikube.sigs.k8s.io/docs/handbook/config/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Minikube Drivers&lt;br /&gt;&lt;a href=&quot;https://minikube.sigs.k8s.io/docs/drivers/&quot;&gt;https://minikube.sigs.k8s.io/docs/drivers/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Minikube start&lt;br /&gt;&lt;a href=&quot;https://minikube.sigs.k8s.io/docs/start/&quot;&gt;https://minikube.sigs.k8s.io/docs/start/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Minikube GPU support issue&lt;br /&gt;&lt;a href=&quot;https://github.com/kubernetes/minikube/issues/2115&quot;&gt;https://github.com/kubernetes/minikube/issues/2115&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Dev environment for kubernetes with GPUs&lt;br /&gt;&lt;a href=&quot;https://tensorflight.blog/2018/02/23/dev-environment-for-gke/&quot;&gt;https://tensorflight.blog/2018/02/23/dev-environment-for-gke/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Can’t install Kubeflow to Microk8s issue&lt;br /&gt;&lt;a href=&quot;https://github.com/kubeflow/kubeflow/issues/1854&quot;&gt;https://github.com/kubeflow/kubeflow/issues/1854&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Mike Meldgaard</name></author><category term="DevOps" /><summary type="html">Installation og brug af Kubeflow Manglende GPU support på minikube.</summary></entry><entry><title type="html">Forbehandling af data</title><link href="https://double-em.github.io/machinelearning/2020/04/16/Datahandling/" rel="alternate" type="text/html" title="Forbehandling af data" /><published>2020-04-16T00:00:00+00:00</published><updated>2020-04-16T00:00:00+00:00</updated><id>https://double-em.github.io/machinelearning/2020/04/16/Datahandling</id><content type="html" xml:base="https://double-em.github.io/machinelearning/2020/04/16/Datahandling/">&lt;h1 id=&quot;forbehandling-af-data&quot;&gt;Forbehandling af data&lt;/h1&gt;
+&lt;p&gt;I machine learning er behandlingen af data meget vigtig. Da der er flere måder, at behandle manglende værdier eller omregne værdier til brugbare værdier. Dette var noget jeg også var nød til, at beskæftige mig med i forhold til vores projekt, da jeg ikke direkte kunne bruge værdierne fra kundens API.&lt;/p&gt;
+
+&lt;p&gt;Man kan bruge forskellige måder til, at håndtere manglende værdier f.eks. at erstatte dem med den gennemsnitlige værdi for den kolonne. Eller f.eks. ved kategorier, at erstatter en manglende værdi med den kategori der er oftest brugt.&lt;/p&gt;
+
+&lt;h2 id=&quot;trækning-af-data-fra-api-i-python&quot;&gt;Trækning af data fra API i Python&lt;/h2&gt;
+&lt;p&gt;Jeg startede med, at arbejde på, at hente dataene fra API’en. Så først undersøgte jeg, hvordan API’en kaldes på deres online platform, hvor jeg fandt ud af, at den tager 7 værdier i en POST request for, at give data tilbage. Jeg trækker antal produceret produkter og nedbruds historikken.&lt;/p&gt;
+
+&lt;p&gt;Jeg behandler så den json string jeg får tilbage.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/815495fa22e73d03913821c0dbb40166.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Herover ses, hvordan jeg behandler nedbruds historikken. Det jeg gør er, at jeg laver et nyt dictionary som skal være de “rene” omformet værdier, så jeg senere kan behandle dem.&lt;/p&gt;
+
+&lt;p&gt;Da nogen af nedbrudene ikke har en kategori bliver de sat til “Uncategorised”, da det er brugt af kunden selv, men nogen af de tidlige nedbrud har ikke en kategori kunne jeg se, da jeg undersøgte dataene.&lt;/p&gt;
+
+&lt;p&gt;Samtidig er nogen af de tidlige “comment” felter brugt som kategori felter, så jeg tjekker om feltet kun indeholder tal. Hvis det er tilfældet laver jeg det om til kategorien i stedet for.&lt;/p&gt;
+
+&lt;p&gt;Mange “comment” felter har ikke en kommentar til nedbruddet, så de bliver også fyldt med “Uncategorised”.&lt;/p&gt;
+
+&lt;p&gt;Jeg laver til sidst en dataframe ud fra det dictionary jeg defineret tidligere som nu har alle de “rene” værdier jeg skal bruge.&lt;/p&gt;
+
+&lt;p&gt;Jeg begynder så herefter, at lave dataene om til noget jeg kan bruge i mine machine learning modeller.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Zxited/a610e66a46935e39163e494625e94cdc.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Som kan ses ovenfor laver jeg et nyt dictionary, hvor alle mine omregnede værdier skal være.&lt;/p&gt;
+
+&lt;p&gt;Jeg tager den tidligere behandlet data og laver om til brugbar data. De data jeg har tænkt mig, at bruge er data der gerne skulle kunne repræsenteres som tal.&lt;/p&gt;
+
+&lt;p&gt;Så det jeg vil forudsige eller komme frem til er antallet af dage til næste vedligeholdelse. Antallet af dage til næste vedligehold er afhængig af:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dag på ugen&lt;/li&gt;
+  &lt;li&gt;Dage siden sidste vedligehold&lt;/li&gt;
+  &lt;li&gt;Nedbrud siden sidste vedligehold&lt;/li&gt;
+  &lt;li&gt;Nede tid siden sidste vedligehold&lt;/li&gt;
+  &lt;li&gt;Antal produceret vare siden sidste vedligehold&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Det er de informationer jeg har mulighed for, at beregne og trække ud af den tilgængelige data som jeg synes giver mening.&lt;/p&gt;
+
+&lt;p&gt;Jeg ligger target værdien “days_to_maintenance” ind i sidste kolonne.&lt;/p&gt;
+
+&lt;p&gt;Jeg laver til sidst det sidste dictionary om til en dataframe og returnere dens værdier til ML scriptet.&lt;/p&gt;
+
+&lt;p&gt;Når ML scriptet modtager dataene, bliver alle felter undtagen target Min Maxed Scaled, så de er mellem 0 og 1.&lt;/p&gt;
+
+&lt;h1 id=&quot;kilder&quot;&gt;Kilder&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Converting string to Datetime in Python&lt;br /&gt;&lt;a href=&quot;https://stackabuse.com/converting-strings-to-datetime-in-python/&quot;&gt;https://stackabuse.com/converting-strings-to-datetime-in-python/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Datetime&lt;br /&gt;&lt;a href=&quot;https://docs.python.org/2/library/datetime.html&quot;&gt;https://docs.python.org/2/library/datetime.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;isDigit&lt;br /&gt;&lt;a href=&quot;https://docs.python.org/2/library/stdtypes.html#str.isdigit&quot;&gt;https://docs.python.org/2/library/stdtypes.html#str.isdigit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Pandas Dataframe&lt;br /&gt;&lt;a href=&quot;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html&quot;&gt;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;scikit-learn LabelEncoder&lt;br /&gt;&lt;a href=&quot;https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html#sklearn.preprocessing.LabelEncoder.get_params&quot;&gt;https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html#sklearn.preprocessing.LabelEncoder.get_params&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;scikit-learn preprocessing-scaler&lt;br /&gt;&lt;a href=&quot;https://scikit-learn.org/stable/modules/preprocessing.html#preprocessing-scaler&quot;&gt;https://scikit-learn.org/stable/modules/preprocessing.html#preprocessing-scaler&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Datacamp Credit Card approval project&lt;br /&gt;https://projects.datacamp.com/projects/558&lt;/li&gt;
+  &lt;li&gt;Python loop control&lt;br /&gt;&lt;a href=&quot;https://www.tutorialspoint.com/python/python_loop_control.htm&quot;&gt;https://www.tutorialspoint.com/python/python_loop_control.htm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Python striptime&lt;br /&gt;&lt;a href=&quot;https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior&quot;&gt;https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Pandas query&lt;br /&gt;&lt;a href=&quot;https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#indexing-query&quot;&gt;https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#indexing-query&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;How to iterate over rows in a Dataframe in pandas&lt;br /&gt;&lt;a href=&quot;https://stackoverflow.com/questions/16476924/how-to-iterate-over-rows-in-a-dataframe-in-pandas&quot;&gt;https://stackoverflow.com/questions/16476924/how-to-iterate-over-rows-in-a-dataframe-in-pandas&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;How to select rows from a Dataframe based on column values&lt;br /&gt;&lt;a href=&quot;https://stackoverflow.com/questions/17071871/how-to-select-rows-from-a-dataframe-based-on-column-values&quot;&gt;https://stackoverflow.com/questions/17071871/how-to-select-rows-from-a-dataframe-based-on-column-values&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Mike Meldgaard</name></author><category term="MachineLearning" /><summary type="html">Forbehandling af data I machine learning er behandlingen af data meget vigtig. Da der er flere måder, at behandle manglende værdier eller omregne værdier til brugbare værdier. Dette var noget jeg også var nød til, at beskæftige mig med i forhold til vores projekt, da jeg ikke direkte kunne bruge værdierne fra kundens API.</summary></entry><entry><title type="html">Introduktion til LSTM</title><link href="https://double-em.github.io/machinelearning/2020/04/15/LSTM-Intro/" rel="alternate" type="text/html" title="Introduktion til LSTM" /><published>2020-04-15T00:00:00+00:00</published><updated>2020-04-15T00:00:00+00:00</updated><id>https://double-em.github.io/machinelearning/2020/04/15/LSTM-Intro</id><content type="html" xml:base="https://double-em.github.io/machinelearning/2020/04/15/LSTM-Intro/">&lt;h1 id=&quot;long-short-term-memorylstm&quot;&gt;Long Short Term Memory(LSTM)&lt;/h1&gt;
+&lt;p&gt;Ifølge seneste gennembrud er LSTM blevet observeret som den mest effektive løsning på time series problemer. Altså problemer, hvor rækkefølgen betyder noget. Givet en række data og så forudsige næste data i den række f.eks.&lt;/p&gt;
+
+&lt;p&gt;LSTM har en fordel over konventionelle feed-forward neurale netværk sådan som MLP, hvor dataene er skubbet fra input til gemte lag til output (feed forward) og så noget back propagation til, at optimere netværket. Men LSTM har også en fordel over RNN, da LSTM har evnen til, at vælge, at huske mønstre i lange perioder.&lt;/p&gt;
+
+&lt;h2 id=&quot;begrænsninger-ved-rnn&quot;&gt;Begrænsninger ved RNN&lt;/h2&gt;
+&lt;p&gt;Hvis man f.eks. vil forudsiger en akties pris, så vil man ved en konventionel feed-forward NN model have svært ved, at tage tid med i dens overvejelser, da ved sådan et netværk vil den se alle scenarier som individuelle isoleret scenarier, og derfor ikke tiden med. Så ved f.eks. ved en akties pris, der er det ikke kun åbningsprisen eller volumen af aktien, men også tidligere dages pris aka. trenden.&lt;/p&gt;
+
+&lt;p&gt;Så bruger vi da bare RNN? Ja man ville godt kunne løse det med RNN. Men man ville hurtigt løbe ind i problemer ved længere trends eller sammenhænge, da RNN ville fungere, men kun i det korte løb, da tidligere inputs features vil blive mindre og mindre pga. den måde den tager tidligere time steps med i dens beregning.&lt;/p&gt;
+
+&lt;p&gt;Så RNN er rigtig effektive til korte sammenhæng. Men hvis vi skal bruge en tidligere væsentlig værdi, så har den glemt det pga. Vanishing Gradient problemet. Det samme ved feed forward. Da ved feed forward NN’s der er aktiverings funktionens afledte værdier som er i fejl funktionen ganget flere gange efterhånden som vi bevæger tilbage mod input laget, fordi et givet lags fejl er et produkt af tidligere lags fejl. Det gør, at de første lag ville være svære, at træne da gradienten ikke længere er særlig tydelig.&lt;/p&gt;
+
+&lt;p&gt;Så RNN husker kun kortvarigt. Men det kan fikses ved, at bruge en modificeret version af RNN som er LSTM.&lt;/p&gt;
+
+&lt;h2 id=&quot;forbedringer-over-rnn&quot;&gt;Forbedringer over RNN&lt;/h2&gt;
+&lt;p&gt;Når RNN tilføjer ny information, så transformere den egentlig alt informationen, da den bare køre en funktion på det nye input og det gamle. Dvs. at det hele bliver transformeret. Så RNN tager ikke højde for vigtigheden af det input den får og skære alt over samme kan.&lt;/p&gt;
+
+&lt;p&gt;LSTM er i form af celler som data flyder igennem. Disse celler har en tilstand. Men disse celler har også informationer om sidste celles tilstand og sidste celles gemte tilstand samt det nuværende input i time steppet. Dette giver LSTM mulighed for via. dens 3 porte i cellen, at differentiere mellem vigtigt og mindre vigtigt. Så de modificere kun dataene en smule i stedet for det hele og kan derfor vælge, at glemme eller huske forskellige ting.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-15-LSTM-Intro/2020-04-20-14-41-58-2020-04-15-LSTM-Intro.png&quot; alt=&quot;&quot; /&gt;
+Man kan tænke på det lidt ligesom et samlebånd, hvor dataene flyder fra den ene ende til den anden.&lt;/p&gt;
+
+&lt;h2 id=&quot;arkitekturen-af-lstm&quot;&gt;Arkitekturen af LSTM&lt;/h2&gt;
+&lt;p&gt;Som nævnt tidligere består en LSTM celle af 3 porte, forget, input og output portene.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/2020-04-15-LSTM-Intro/2020-04-20-14-44-57-2020-04-15-LSTM-Intro.png&quot; alt=&quot;&quot; /&gt;
+Som kan ses her er der 2 baner som køre igennem. Hvor der kommer et input til cellen og et output fra cellen.&lt;/p&gt;
+
+&lt;p&gt;Forget porten som er den første port sørger for, at sortere information fra som ikke længere er nødvendige via. et filter. Dette er nødvendigt for, at optimere ydeevnen af LSTM.&lt;/p&gt;
+
+&lt;p&gt;Input porten står for, at tilføje information til cellens tilstand. Input porten kan deles op i 3 trin:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Regulering af værdierne ved brug af en sigmoid funktion. Dette er cirka det samme som forget porten og filtrere information fra tidligere celles output og det nuværende output.&lt;/li&gt;
+  &lt;li&gt;Brug af en tanh funktion til, at lave en vektor med alle de mulige værdier der kan tilføjes ud fra tidligere celles tilstand og nuværende input.&lt;/li&gt;
+  &lt;li&gt;Gange regulerings filtret med vores vektor for så, at tilføje kun den nyttige information i stedet for redundant information.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Output porten står for, at udvælge brugbar information fra cellens tilstand og vise det som et output. Dette er igen 3 trin:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Laver en vektor efter, at have brugt tanh funktionen på cellens tilstand for, så værdierne er skaleret fra -1 til +1.&lt;/li&gt;
+  &lt;li&gt;Laver et filter ud fra tidligere celles stadie og nuværende input  ved brug af sigmoid til, at regulere vektoren fra trin 1.&lt;/li&gt;
+  &lt;li&gt;Gange filteret med vektoren og smide det ud som output, men også ud til næste celles gemte tilstand.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;brugen-af-lstm&quot;&gt;Brugen af LSTM&lt;/h2&gt;
+&lt;p&gt;Jeg valgte, at følge en guide, hvor man fik LSTM til, forudsige næste bogstav i macbeth.
+&lt;script src=&quot;https://gist.github.com/Zxited/85fba0ddebc1aac08e84917b4587343e.js&quot;&gt;&lt;/script&gt;
+Jeg brugte en række print funktioner for, at følge med i, hvad der skete. Og jeg eksperimenteret med, at ændre lidt forskelligt f.eks. shapes.&lt;/p&gt;
+
+&lt;p&gt;Disse eksperimenter var gode for, at jeg kunne forstå, hvad der skete. Så jeg fjernede lidt, tilføje lidt, lavede lidt ændringer for at se, hvad der skete.&lt;/p&gt;
+
+&lt;h1 id=&quot;kilder&quot;&gt;Kilder&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Introduction to Long Short Term Memory&lt;br /&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/&quot;&gt;https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Tensorflow Keras Layers LSTM&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/keras/layers/LSTM?version=nightly&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/keras/layers/LSTM?version=nightly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Understanding slicing in Python&lt;br /&gt;&lt;a href=&quot;https://stackoverflow.com/questions/509211/understanding-slice-notation&quot;&gt;https://stackoverflow.com/questions/509211/understanding-slice-notation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Python Range&lt;br /&gt;&lt;a href=&quot;https://www.w3schools.com/python/ref_func_range.asp&quot;&gt;https://www.w3schools.com/python/ref_func_range.asp&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Tensorflow Keras Layer&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=nightly&quot;&gt;https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=nightly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Introduction to Recurrent Neural Networks&lt;br /&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2017/12/introduction-to-recurrent-neural-networks/&quot;&gt;https://www.analyticsvidhya.com/blog/2017/12/introduction-to-recurrent-neural-networks/&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Nvidia Container Runtime&lt;br /&gt;&lt;a href=&quot;https://developer.nvidia.com/nvidia-container-runtime&quot;&gt;https://developer.nvidia.com/nvidia-container-runtime&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Build TensorFlow input pipelines&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/guide/data&quot;&gt;https://www.tensorflow.org/guide/data&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Google Cloud AutoML&lt;br /&gt;&lt;a href=&quot;https://cloud.google.com/automl/&quot;&gt;https://cloud.google.com/automl/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Regular Expressions Cheat Sheet&lt;br /&gt;&lt;a href=&quot;https://cheatography.com/davechild/cheat-sheets/regular-expressions/&quot;&gt;https://cheatography.com/davechild/cheat-sheets/regular-expressions/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;TPUs vs GPUs for Transformers(BERT)&lt;br /&gt;&lt;a href=&quot;https://timdettmers.com/2018/10/17/tpus-vs-gpus-for-transformers-bert/&quot;&gt;https://timdettmers.com/2018/10/17/tpus-vs-gpus-for-transformers-bert/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;My Experience and Advice for Using GPUs in Deep Learning&lt;br /&gt;&lt;a href=&quot;https://timdettmers.com/2019/04/03/which-gpu-for-deep-learning/&quot;&gt;https://timdettmers.com/2019/04/03/which-gpu-for-deep-learning/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Tensorflow Use a TPU&lt;br /&gt;&lt;a href=&quot;https://www.tensorflow.org/guide/tpu&quot;&gt;https://www.tensorflow.org/guide/tpu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hyperparameter-optimization&quot;&gt;Hyperparameter optimization&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hyperas&lt;br /&gt;&lt;a href=&quot;https://github.com/maxpumperla/hyperas&quot;&gt;https://github.com/maxpumperla/hyperas&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Kopt&lt;br /&gt;&lt;a href=&quot;https://github.com/Avsecz/kopt&quot;&gt;https://github.com/Avsecz/kopt&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Talos&lt;br /&gt;&lt;a href=&quot;https://github.com/autonomio/talos&quot;&gt;https://github.com/autonomio/talos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Mike Meldgaard</name></author><category term="MachineLearning" /><summary type="html">Long Short Term Memory(LSTM) Ifølge seneste gennembrud er LSTM blevet observeret som den mest effektive løsning på time series problemer. Altså problemer, hvor rækkefølgen betyder noget. Givet en række data og så forudsige næste data i den række f.eks.</summary></entry></feed>
